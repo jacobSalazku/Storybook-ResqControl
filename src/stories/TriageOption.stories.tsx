@@ -16,14 +16,20 @@ export const Base: Story = {
     args: {},
 }
 
-export const TriageOnee: Story = {
-    args: {},
+export const TriageOne: Story = {
+    args: {
+        triageSelection: 'T1',
+    },
 }
 
 export const TriageTwo: Story = {
-    args: {},
+    args: {
+        triageSelection: 'T2',
+    },
 }
 
 export const TriageThree: Story = {
-    args: {},
+    args: {
+        triageSelection: 'T3',
+    },
 }

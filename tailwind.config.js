@@ -7,7 +7,6 @@ export default {
                 'dark-green': '#1B6067',
                 'light-blue': '#66CDCC',
                 'background-color': '#EDF6F5',
-
                 'brown-accent': '#EAC893',
                 'p-text-color': '#152A23',
                 's-text-color': '#141414',

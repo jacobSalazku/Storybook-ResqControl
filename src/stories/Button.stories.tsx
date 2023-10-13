@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Button } from './Button'
 
-import ExitIcon from './helpers/icons/ExitICon'
+import { ExitIcon } from './helpers/ClientDataFunctions'
 
 const meta: Meta<typeof Button> = {
     component: Button,
@@ -132,7 +132,7 @@ export const ExitButton2: Story = {
         primary: false,
         backgroundColor: 'bg-[#B94D4D] border--[#B94D4D] text-white ',
         size: 'w-32',
-        icon: <ExitIcon />,
+        icon: ExitIcon,
         variant: 'rounded-full',
     },
 }

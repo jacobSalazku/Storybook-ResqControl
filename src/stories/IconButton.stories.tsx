@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { IconButton } from './iconButton'
-import ExitIcon from './helpers/icons/ExitICon'
+import { ExitIcon } from './helpers/ClientDataFunctions'
 import {
     AllergiesIcon,
     iconDelete,
@@ -53,7 +53,7 @@ export const Cancel: Story = {
     args: {
         backgroundColor: 'bg-[#B94D4D]  border-[#B94D4D] ',
         size: 'w-32',
-        icon: <ExitIcon />,
+        icon: ExitIcon,
         variant: 'rounded-full',
     },
 }

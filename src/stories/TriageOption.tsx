@@ -3,12 +3,16 @@ import { AllergiesIcon } from './helpers/ClientDataFunctions'
 import { Button } from './Button'
 import { useState } from 'react'
 
-const TriageOption = () => {
-    const [selectedTriageButton, setSelectedTriageButton] = useState('')
+interface TriageOptionProps {
+    triageSelection: string
+}
+const TriageOption = ({ triageSelection }: TriageOptionProps) => {
+    const [selectedTriageButton, setSelectedTriageButton] =
+        useState(triageSelection)
 
-    const SelectTriage = (triageButton: string) => {
-        setSelectedTriageButton(triageButton)
-    }
+    //const SelectTriage = (triageButton: string) => {
+    //    setSelectedTriageButton(triageButton)
+    //}
 
     return (
         <div className="w-full flex flex-row justify-between px-4">
@@ -24,33 +28,30 @@ const TriageOption = () => {
                 backgroundColor={
                     selectedTriageButton === 'T1'
                         ? 'bg-dark-green text-brown-accent'
-                        : 'bg-white text-dark-green hover:bg-dark-green hover:text-brown-accent'
+                        : 'bg-white text-dark-green '
                 }
                 size="w-14"
                 variant="rounded"
-                onClick={() => SelectTriage('T1')}
             />
             <Button
                 label="T2"
                 backgroundColor={
                     selectedTriageButton === 'T2'
                         ? 'bg-dark-green text-brown-accent'
-                        : 'bg-white text-dark-green hover:bg-dark-green hover:text-brown-accent'
+                        : 'bg-white text-dark-green '
                 }
                 size="w-14"
                 variant="rounded"
-                onClick={() => SelectTriage('T2')}
             />
             <Button
                 label="T3"
                 backgroundColor={
                     selectedTriageButton === 'T3'
                         ? 'bg-dark-green text-brown-accent'
-                        : 'bg-white text-dark-green hover:bg-dark-green hover:text-brown-accent'
+                        : 'bg-white text-dark-green '
                 }
                 size="w-14"
                 variant="rounded"
-                onClick={() => SelectTriage('T3')}
             />
         </div>
     )

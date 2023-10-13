@@ -7,8 +7,8 @@ import { useState } from 'react'
 export type ButtonProps = {
     primary?: boolean
     variant: string
-    backgroundColor?: string
-    size?: string
+    backgroundColor: string
+    size: string
     label?: string
     icon?: any
     selected?: boolean

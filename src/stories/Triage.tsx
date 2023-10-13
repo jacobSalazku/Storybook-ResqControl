@@ -1,9 +1,9 @@
-import { PatientDataCard } from './PatientDataCard'
-import { EyeLogo, iconDelete } from './helpers/ClientDataFunctions'
+import { EyeLogo, SendIcon, SofaIcon } from './helpers/ClientDataFunctions'
 import { IconButton } from './IconButton'
-
 import TitleCard from './TitleCard'
-import { NextIcon } from './helpers/ClientDataFunctions'
+import { ExitIcon } from './helpers/ClientDataFunctions'
+import TriagePatientDataCard from './TriagePatientDataCard'
+import Pathology from './Pathology'
 
 export const Triage = () => {
     const Patient = {
@@ -12,43 +12,51 @@ export const Triage = () => {
         name: 'John Doe',
         language: 'DE',
         date: '20-03',
+        triageLevel: 'T2',
     }
     return (
-        <>
-            <TitleCard
-                title="Patient Overzicht"
-                rightLogo={EyeLogo}
-                button={
-                    <IconButton
-                        backgroundColor="bg-[#F59E0B]"
-                        size="w-32"
-                        icon={NextIcon}
-                        variant="rounded-3xl"
-                    />
-                }
-            />
-            <div className="h-[26rem] w-[58rem] bg-card-background-color  text-p-text-color flex flex-col justify-start  my-0 items-center rounded-lg overflow-hidden ">
-                <div className=" w-full flex flex-row justify-center my-6 ">
-                    <div className="mx-6">
-                        <PatientDataCard {...Patient}></PatientDataCard>
-                    </div>
-                    <div className=" w-full mr-4 "></div>
-                </div>
-                <div
-                    className="w-full h-full flex flex-row justify-start items-end ml-11
-                mb-4  "
-                >
-                    {
+        <div className="w-full h-screen  flex flex-col  items-center">
+            <div className="w-[60rem] flex flex-col justify-center items-center before: bg-background-color py-7 gap-2">
+                <TitleCard
+                    title="Triage"
+                    rightLogo={EyeLogo}
+                    button={
                         <IconButton
-                            backgroundColor="bg-[#B94D4D]"
+                            backgroundColor="bg-dark-green"
                             size="w-32"
-                            variant="rounded-full"
-                            icon={iconDelete}
+                            icon={SofaIcon}
+                            variant="rounded-3xl"
                         />
                     }
+                />
+                <div className=" flex flex-col px-10 gap-6">
+                    <div className=" w-full flex flex-row justify-center ">
+                        <div className="w-full flex flex-row justify-between gap-4 ">
+                            <TriagePatientDataCard {...Patient} />
+                            <Pathology />
+                        </div>
+                    </div>
+                    <div className=" w-full flex flex-row justify-center ">
+                        <div className="w-full flex flex-row justify-between">
+                            <IconButton
+                                icon={ExitIcon}
+                                size="w-32"
+                                variant=" rounded-full"
+                                backgroundColor="bg-[#B94D4D]"
+                                selected={false}
+                            />
+                            <IconButton
+                                icon={SendIcon}
+                                size="w-32"
+                                variant=" rounded-full"
+                                backgroundColor="bg-dark-green"
+                                selected={false}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 export default Triage

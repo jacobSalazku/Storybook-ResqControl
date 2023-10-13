@@ -37,54 +37,57 @@ export const PatientOverview = () => {
 
     return (
         <>
-            <div className="w-full h-full bg-background-color">
-                <TitleCard
-                    title="Patient Overzicht"
-                    rightLogo={EyeLogo}
-                    button={
-                        <IconButton
-                            backgroundColor="bg-[#F59E0B]"
-                            size="w-32"
-                            icon={NextIcon}
-                            variant="rounded-3xl"
-                        />
-                    }
-                />
-                <div className="h-[26rem] w-[58rem] bg-card-background-color  text-p-text-color flex flex-col justify-start  my-0 items-center rounded-lg overflow-hidden ">
-                    <div className=" w-full flex flex-row justify-center my-6 ">
-                        <div className="mx-6">
-                            <PatientDataCard {...Patient} />
-                        </div>
-                        <div className=" w-full mr-4 ">
-                            <TreatmentCard
-                                isCompleted={completedTreatments[0]}
-                                description="Basis Verzorging"
-                                onClick={handleClick}
-                            />
-                            <TreatmentCard
-                                isCompleted={completedTreatments[1]}
-                                description="Behandelingen"
-                                onClick={handleClick}
-                            />
-                            <TreatmentCard
-                                isCompleted={completedTreatments[2]}
-                                description="Ontslag"
-                                onClick={handleClick}
-                            />
-                        </div>
-                    </div>
-                    <div
-                        className="w-full h-full flex flex-row justify-start items-end ml-11
-                mb-4  "
-                    >
-                        {
+            <div className="w-full h-screen  flex flex-col  items-center">
+                <div className="w-[60rem] flex flex-col justify-center items-center before: bg-background-color">
+                    <TitleCard
+                        title="Patient Overzicht"
+                        rightLogo={EyeLogo}
+                        button={
                             <IconButton
-                                backgroundColor="bg-[#B94D4D]"
+                                backgroundColor="bg-[#F59E0B]"
                                 size="w-32"
-                                variant="rounded-full"
-                                icon={iconDelete}
+                                icon={NextIcon}
+                                variant="rounded-3xl"
                             />
                         }
+                    />
+                    <div className="h-[26rem] w-[58rem] bg-card-background-color  text-p-text-color flex flex-col justify-start  my-0 items-center rounded-lg overflow-hidden ">
+                        <div className=" w-full flex flex-row justify-center my-6 ">
+                            <div className="mx-6">
+                                <PatientDataCard {...Patient} />
+                            </div>
+                            <div className=" w-full mr-4 ">
+                                <TreatmentCard
+                                    isCompleted={completedTreatments[0]}
+                                    description="Basis Verzorging"
+                                    onClick={handleClick}
+                                    className="bg-light-blue"
+                                />
+                                <TreatmentCard
+                                    isCompleted={completedTreatments[1]}
+                                    description="Behandelingen"
+                                    onClick={handleClick}
+                                />
+                                <TreatmentCard
+                                    isCompleted={completedTreatments[2]}
+                                    description="Ontslag"
+                                    onClick={handleClick}
+                                />
+                            </div>
+                        </div>
+                        <div
+                            className="w-full h-full flex flex-row justify-start items-end ml-11
+                mb-4  "
+                        >
+                            {
+                                <IconButton
+                                    backgroundColor="bg-[#B94D4D]"
+                                    size="w-32"
+                                    variant="rounded-full"
+                                    icon={iconDelete}
+                                />
+                            }
+                        </div>
                     </div>
                 </div>
             </div>

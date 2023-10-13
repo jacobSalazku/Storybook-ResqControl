@@ -12,6 +12,7 @@ export interface TriagePatientprops {
     language: string
     urgency?: string | undefined
     time: string
+    triageLevel: string
 }
 
 // bg-gradient-to-r from-white to-light-green
@@ -21,9 +22,10 @@ export const TriagePatientDataCard = ({
     name,
     language,
     date,
+    triageLevel,
 }: TriagePatientprops) => {
     return (
-        <div className="h-[19rem] w-[22rem] bg-card-background-color flex flex-row justify-between  border-2 border-dark-green rounded-2xl pt-4  ">
+        <div className="h-[20rem] w-[22rem] bg-card-background-color flex flex-row justify-between  border-2 border-dark-green rounded-2xl pt-4  ">
             <div className=" flex flex-col  ">
                 <div className="flex flex-col gap-2 pl-8">
                     <div>
@@ -75,7 +77,7 @@ export const TriagePatientDataCard = ({
                     </div>
                 </div>
                 <div className="  w-[22rem] h-full flex flex-row justify-center  items-center  ">
-                    <TriageOption />
+                    <TriageOption triageSelection={triageLevel} />
                 </div>
             </div>
             <div className="pr-4 flex flex-col justify-center cursor-pointer">

@@ -12,6 +12,7 @@ import sofaIcon from './icons/sofaIcon.png'
 import allergiesIcon from './icons/allergiesIcon.png'
 import searchIcon from './icons/searchIcon.png'
 import stethoscopeIcon from './icons/stethoscopeIcon.png'
+import deleteLogo from './icons/deleteLogo.png'
 
 export const IconExit = <img src={exitIcon}></img>
 
@@ -21,13 +22,17 @@ export const EyeLogo = <img src={eyeLogo} alt="next"></img>
 
 export const NextIcon = <img src={nextIcon} alt="next"></img>
 
-export const SofaIcon = <img src={sofaIcon} alt="next"></img>
+export const SofaIcon = <img src={sofaIcon} alt=""></img>
 
-export const AllergiesIcon = <img src={allergiesIcon} alt="next"></img>
+export const AllergiesIcon = <img src={allergiesIcon} alt=""></img>
 
-export const SearchIcon = <img src={searchIcon} alt="next"></img>
+export const SearchIcon = <img src={searchIcon} alt="searcj"></img>
 
-export const StethoscopeIcon = <img src={stethoscopeIcon} alt="next"></img>
+export const StethoscopeIcon = <img src={stethoscopeIcon} alt=""></img>
+
+export const ExitIcon = <img src={exitIcon} alt="Exit"></img>
+
+export const DeleteLogo = <img src={deleteLogo} alt="Delete" width="50"></img>
 
 export const getUrgencyIcon = (urgency: string | undefined) => {
     if (urgency === 'T1') {
@@ -47,7 +52,7 @@ export const getBorderColorClass = (urgency: string | undefined) => {
     } else if (urgency === 'T2') {
         return 'border-p-yellow'
     } else if (urgency === 'T3') {
-        return 'border-dark-red'
+        return 'border-p-red'
     } else if (urgency === 'base') {
         return 'border-dark-green'
     }
@@ -59,7 +64,7 @@ export const getBorderBottomColorClass = (urgency: string | undefined) => {
     } else if (urgency === 'T2') {
         return 'border-b-p-yellow'
     } else if (urgency === 'T3') {
-        return 'border-b-dark-red'
+        return 'border-b-p-red'
     } else if (urgency === 'base') {
         return 'border-b-dark-green'
     }
