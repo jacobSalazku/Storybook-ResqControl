@@ -30,6 +30,7 @@ type Story = StoryObj<typeof meta>
 export const Base: Story = {
     args: {
         name: 'John Doe',
+        urgency: 'base',
         time: stringTime,
         date: stringDate,
     },

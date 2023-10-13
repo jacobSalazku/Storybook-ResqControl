@@ -11,14 +11,13 @@ const meta: Meta<typeof Button> = {
         backgroundColor: {
             control: { type: 'select' },
             options: {
-                'Dark Blue': 'bg-[#1E293B] text-white',
-                'Light Blue': 'bg-[#60A5FA] text-white',
-                'Primary Blue': 'bg-[#0648B3] text-white border-p-blue',
-                'Primary Red': 'bg-[#EF4444] text-white',
-                'Primary Purple': 'bg-[#C4B5FD] text-white',
-                'Primary Green': 'bg-[#34D399] text-white',
-                'Light Green': 'bg-[#6EE7B7] text-white',
-                'Light Grey': 'bg-[#EBEBEB] text-white',
+                'Dark Blue': 'bg-[#1E293B] text-white ',
+                'Light Blue': 'bg-light-blue text-white border-light-blue',
+                'Primary Blue': 'bg-[#0648B3] text-white',
+                'Primary Red': 'bg-[#B94D4D] text-white',
+                'Primary Green': 'bg-dark-green  text-brown-accent',
+                'Light Green': 'bg-[#6EE7B7] ',
+                'Light Grey': 'bg-[#EBEBEB] ',
                 white: 'bg-white text-p-blue border-p-blue',
             },
         },
@@ -64,9 +63,9 @@ export const Base: Story = {
 export const ButtonOption: Story = {
     args: {
         label: 'Kleine wondzorg',
-        backgroundColor: 'bg-white text-p-blue border-p-blue',
+        backgroundColor: 'bg-white text-dark-green border-dark-green',
         size: 'w-44',
-        variant: 'rounded',
+        variant: 'rounded-full',
     },
 }
 
@@ -75,61 +74,84 @@ export const ButtonCheck: Story = {
     args: {
         primary: true,
         label: 'Kleine wondzorg',
-        backgroundColor: 'bg-[#6EE7B7]  text-p-blue border-p-blue',
+        backgroundColor: 'bg-dark-green  text-brown-accent border-dark-green',
         size: 'w-44',
-        variant: 'rounded-lg',
+        variant: 'rounded-full',
     },
 }
 
 /** Selected button variation */
 export const ButtonCheck2: Story = {
     args: {
-        label: 'Kleine wondzorg',
+        label: 'Text',
+        primary: true,
+        backgroundColor: 'bg-white text-dark-green border-dark-green  hover',
+        size: 'w-44',
+        variant: 'rounded-full',
+        selected: true,
+    },
+}
+/** Hover */
+export const ButtonHover: Story = {
+    args: {
+        label: 'Text',
         primary: true,
         backgroundColor:
-            'border-p-blue text-p-blue hover:bg-p-blue  hover:text-white ',
+            'bg-white text-dark-green border-dark-green border  hover:text-brown-accent hover:bg-dark-green',
         size: 'w-44',
-        variant: 'rounded',
+        variant: 'rounded-full',
         selected: true,
     },
 }
 
-export const Primary: Story = {
+export const Start: Story = {
+    args: {
+        primary: true,
+        label: 'start',
+        backgroundColor: 'bg-light-blue text-white border-light-blue',
+        size: 'w-32',
+        variant: 'rounded-lg',
+    },
+}
+
+export const Volgende: Story = {
     args: {
         primary: true,
         label: 'volgende',
         backgroundColor: 'bg-[#0648B3] text-white border-p-blue',
-        size: 'w-44',
+        size: 'w-32',
         variant: 'rounded-lg',
     },
 }
 
 /** Exit the place by usign this button  */
-export const Cancel: Story = {
-    args: {
-        primary: false,
-        backgroundColor: 'bg-[#EF4444] text-white',
-        size: 'w-32',
-        icon: <ExitIcon />,
-    },
-}
 
 export const ExitButton2: Story = {
     args: {
         label: 'Exit',
         primary: false,
-        backgroundColor: 'bg-[#EF4444] text-white',
+        backgroundColor: 'bg-[#B94D4D] border--[#B94D4D] text-white ',
         size: 'w-32',
         icon: <ExitIcon />,
+        variant: 'rounded-full',
     },
 }
 export const Wachtzaal: Story = {
     args: {
         label: 'Exit',
         primary: false,
+        backgroundColor: 'bg-[#B94D4D] border-[#B94D4D] text-white ',
+        size: 'w-32',
+        variant: 'rounded-full',
+    },
+}
+export const TriageLevel: Story = {
+    args: {
+        label: 'T1',
+        primary: false,
         backgroundColor:
-            'bg-[#EF4444] text-white hover:bg-white hover:text-p-blue ',
-        size: 'w-48',
-        variant: 'circle',
+            'bg-white text-dark-green hover:bg-dark-green hover:text-brown-accent',
+        size: 'w-14',
+        variant: 'rounded',
     },
 }

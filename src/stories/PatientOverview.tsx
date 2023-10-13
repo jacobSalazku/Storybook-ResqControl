@@ -1,63 +1,91 @@
 import { PatientDataCard } from './PatientDataCard'
-import { Button } from './Button'
-import ExitIcon from './helpers/icons/ExitICon'
-import sendIcon from './icons/send.png'
-import { checkIfCompleted } from './helpers/ClientDataFunctions'
+import { EyeLogo, iconDelete } from './helpers/ClientDataFunctions'
+import { IconButton } from './IconButton'
+import TreatmentCard from './TreatmentCard'
+import TitleCard from './TitleCard'
+import { NextIcon } from './helpers/ClientDataFunctions'
+import { useState } from 'react'
 
-interface PatientOverviewInterface {
-    isCompleted: boolean
+const Patient = {
+    time: '12:50',
+    urgency: 'base',
+    name: 'John Doe',
+    language: 'DE',
+    date: '20',
 }
 
-export const PatientOverview = ({ isCompleted }: PatientOverviewInterface) => {
-    const patientProps = {
-        time: '12/:50',
-        urgency: 'T2',
-        name: 'jacob',
-        language: 'DE',
-        date: '20-03',
+export const PatientOverview = () => {
+    const [completedTreatments, setCompletedTreatments] = useState([
+        false,
+        false,
+        false,
+    ])
+    const [currentTreatmentCardIndex, setCurrentTreatmentCardIndex] =
+        useState(0)
+
+    const handleClick = () => {
+        const newCompletedTreatments = [...completedTreatments]
+
+        for (let i = 0; i <= currentTreatmentCardIndex; i++) {
+            newCompletedTreatments[i] = true
+        }
+
+        setCompletedTreatments(newCompletedTreatments)
+
+        setCurrentTreatmentCardIndex(currentTreatmentCardIndex + 1)
     }
+
     return (
         <>
-            <div className="h-16 w-[58rem] bg-white  flex flex-column justify-start content-center px-8 my-0 items-center  rounded-lg overflow-hidden border-2 shadow-md mb-4">
-                <h1 className=" text-3xl text-black justify-start">
-                    Patiënt Overzicht
-                </h1>
-            </div>
-
-            <div className="h-[36rem] bg-white w-[58rem] flex flex-col justify-start content-center  my-0 items-center rounded-lg overflow-hidden border-2 shadow-md">
-                <div className=" w-full flex flex-row justify-center my-6 ">
-                    <div className="mx-6">
-                        <PatientDataCard {...patientProps}></PatientDataCard>
+            <div className="w-full h-full bg-background-color">
+                <TitleCard
+                    title="Patient Overzicht"
+                    rightLogo={EyeLogo}
+                    button={
+                        <IconButton
+                            backgroundColor="bg-[#F59E0B]"
+                            size="w-32"
+                            icon={NextIcon}
+                            variant="rounded-3xl"
+                        />
+                    }
+                />
+                <div className="h-[26rem] w-[58rem] bg-card-background-color  text-p-text-color flex flex-col justify-start  my-0 items-center rounded-lg overflow-hidden ">
+                    <div className=" w-full flex flex-row justify-center my-6 ">
+                        <div className="mx-6">
+                            <PatientDataCard {...Patient} />
+                        </div>
+                        <div className=" w-full mr-4 ">
+                            <TreatmentCard
+                                isCompleted={completedTreatments[0]}
+                                description="Basis Verzorging"
+                                onClick={handleClick}
+                            />
+                            <TreatmentCard
+                                isCompleted={completedTreatments[1]}
+                                description="Behandelingen"
+                                onClick={handleClick}
+                            />
+                            <TreatmentCard
+                                isCompleted={completedTreatments[2]}
+                                description="Ontslag"
+                                onClick={handleClick}
+                            />
+                        </div>
                     </div>
-                    <div className=" w-full mr-4 ">
-                        <div className="h-16 bg-white w-full flex flex-row justify-between content-start px-8 my-0 items-center  rounded-lg overflow-hidden border-2 shadow-md mb-4">
-                            <h1 className="justify-start text-sm text-black">
-                                Basis verzorging
-                            </h1>
-                            {checkIfCompleted(isCompleted)}
-                        </div>
-                        <div className="h-16 bg-white w-full flex flex-row justify-between  content-start px-8 my-0 items-center rounded-lg overflow-hidden border-2 shadow-md mb-4">
-                            <h1 className="justify-start text-sm text-black">
-                                Behandelingen
-                            </h1>
-                            {checkIfCompleted(isCompleted)}
-                        </div>
-                        <div className="h-16 bg-white w-full flex flex-row justify-between content-start px-8 my-0 items-center rounded-lg overflow-hidden border-2 shadow-md mb-4">
-                            <h1 className="justify-start text-sm text-black">
-                                Ontslag
-                            </h1>
-                            {checkIfCompleted(isCompleted)}
-                        </div>
+                    <div
+                        className="w-full h-full flex flex-row justify-start items-end ml-11
+                mb-4  "
+                    >
+                        {
+                            <IconButton
+                                backgroundColor="bg-[#B94D4D]"
+                                size="w-32"
+                                variant="rounded-full"
+                                icon={iconDelete}
+                            />
+                        }
                     </div>
-                </div>
-                <div className="flex flex-row  justify-around mt-32  ">
-                    <Button
-                        backgroundColor="bg-[#EF4444] text-white"
-                        icon={<ExitIcon />}
-                        label="Exit"
-                        size="w-32"
-                        variant="small"
-                    />
                 </div>
             </div>
         </>

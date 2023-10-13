@@ -4,7 +4,7 @@ import CheckIcon from './icons/checkIcon'
 
 import { useState } from 'react'
 
-export interface ButtonProps {
+export type ButtonProps = {
     primary?: boolean
     variant: string
     backgroundColor?: string
@@ -12,6 +12,7 @@ export interface ButtonProps {
     label?: string
     icon?: any
     selected?: boolean
+    onClick?: () => void
 }
 
 /** Primary button for our user interface */
@@ -22,25 +23,21 @@ export const Button = ({
     size,
     backgroundColor,
     variant,
+    onClick,
 }: ButtonProps) => {
     const [isSelected, setIsSelected] = useState(false)
 
-    const handleClick = () => {
-        if (selected) {
-            setIsSelected(!isSelected)
-        }
-    }
-
     return (
         <button
-            className={`${size} py-2 px-2 flex  justify-center border-2 ${variant} cursor-pointer ${backgroundColor} }
-    text-sm transition duration-300 ease-in-out mb-5 font-normal  transition duration-300 ease-in-out${
-        selected ? 'border-p-blue' : ''
-    }`}
-            onClick={handleClick}
+            className={`${size} h-12 py-2 px-2 flex  justify-center  items-center border ${variant} cursor-pointer 
+            ${isSelected ? 'bg-dark-green text-brown-accent' : backgroundColor} 
+            text-sm transition duration-300 ease-in-out  font-normal gap-2  
+            ${selected ? '' : 'selectedStyle '}`}
+            onClick={onClick}
         >
             {isSelected && <CheckIcon />}
-            {label} {icon}
+            {icon}
+            <div>{label}</div>
         </button>
     )
 }
