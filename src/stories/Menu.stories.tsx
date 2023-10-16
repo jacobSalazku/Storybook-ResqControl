@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import InputSelect from './InputSelect'
+import Menu from './Menu'
 
-const meta: Meta<typeof InputSelect> = {
-    component: InputSelect,
+const meta: Meta<typeof Menu> = {
+    component: Menu,
     tags: ['autodocs'],
-    title: 'InputSelect',
+    title: 'Menu',
     argTypes: {},
 }
 

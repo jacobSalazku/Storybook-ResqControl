@@ -32,7 +32,7 @@ export const PatientOverview: Story = {
         button: (
             <IconButton
                 icon={NextIcon}
-                backgroundColor="bg-p-yellow"
+                backgroundColor="bg-brown-accent border-brown-accent"
                 variant="rounded-3xl"
                 size="w-32"
             />

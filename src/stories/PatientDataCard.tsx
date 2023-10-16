@@ -12,10 +12,10 @@ import {
 /** Card with all the Patient information */
 export interface PatientProps {
     name: string
-    date: string | number
     language: string
     urgency?: string | undefined
     time: string
+    date: string | number
 }
 
 // bg-gradient-to-r from-white to-light-green
@@ -28,11 +28,11 @@ export const PatientDataCard = ({
 }: PatientProps) => {
     return (
         <div
-            className={`h-[12.5rem] bg-card-background-color border-2 ${getBorderColorClass(
+            className={` h-[12.5rem] w-[24rem] bg-card-background-color border-2 ${getBorderColorClass(
                 urgency
-            )} flex flex-row justify-between w-80 rounded-2xl pt-4 pl-4 `}
+            )} flex flex-row justify-between rounded-2xl pt-4 pl-4 `}
         >
-            <div className=" flex flex-col gap ">
+            <div className=" flex flex-col gap">
                 <div>
                     <h1 className=" text-2xl text-black ">{name}</h1>
                 </div>

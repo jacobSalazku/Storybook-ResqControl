@@ -12,7 +12,17 @@ import sofaIcon from './icons/sofaIcon.png'
 import allergiesIcon from './icons/allergiesIcon.png'
 import searchIcon from './icons/searchIcon.png'
 import stethoscopeIcon from './icons/stethoscopeIcon.png'
+import taskIconGreen from './icons/taskIconGreen.png'
+import taskIconBrown from './icons/taskIconBrown.png'
+import timeIconGreen from './icons/timeIconGreen.png'
+import timeIconBrown from './icons/timeIconBrown.png'
+import cycleIconGreen from './icons/cycleIconGreen.png'
+import cycleIconBrown from './icons/cycleIconBrown.png'
 import deleteLogo from './icons/deleteLogo.png'
+import printIcon from './icons/printIcon.png'
+import timeIconWhite from './icons/timeIconWhite.png'
+import taskIconWhite from './icons/taskIconWhite.png'
+import cycleIconWhite from './icons/cycleIconWhite.png'
 
 export const IconExit = <img src={exitIcon}></img>
 
@@ -32,7 +42,37 @@ export const StethoscopeIcon = <img src={stethoscopeIcon} alt=""></img>
 
 export const ExitIcon = <img src={exitIcon} alt="Exit"></img>
 
-export const DeleteLogo = <img src={deleteLogo} alt="Delete" width="50"></img>
+export const DeleteLogo = <img src={deleteLogo} alt="Exit"></img>
+
+export const PrintIcon = <img src={printIcon} alt="Exit"></img>
+
+export const TaskIconGreen = (
+    <img src={taskIconGreen} alt="Delete" width=""></img>
+)
+export const TaskIconBrown = (
+    <img src={taskIconBrown} alt="Delete" width=""></img>
+)
+export const TaskIconWhite = (
+    <img src={taskIconWhite} alt="Delete" width=""></img>
+)
+export const TimeIconGreen = (
+    <img src={timeIconGreen} alt="Delete" width=""></img>
+)
+export const TimeIconBrown = (
+    <img src={timeIconBrown} alt="Delete" width=""></img>
+)
+export const TimeIconWhite = (
+    <img src={timeIconWhite} alt="Delete" width=""></img>
+)
+export const CycleIconGreen = (
+    <img src={cycleIconGreen} alt="Delete" width=""></img>
+)
+export const CycleIconBrown = (
+    <img src={cycleIconBrown} alt="Delete" width=""></img>
+)
+export const CycleIconWhite = (
+    <img src={cycleIconWhite} alt="Delete" width=""></img>
+)
 
 export const getUrgencyIcon = (urgency: string | undefined) => {
     if (urgency === 'T1') {
@@ -52,7 +92,7 @@ export const getBorderColorClass = (urgency: string | undefined) => {
     } else if (urgency === 'T2') {
         return 'border-p-yellow'
     } else if (urgency === 'T3') {
-        return 'border-p-red'
+        return 'border-[#B94D4D]'
     } else if (urgency === 'base') {
         return 'border-dark-green'
     }
@@ -64,7 +104,7 @@ export const getBorderBottomColorClass = (urgency: string | undefined) => {
     } else if (urgency === 'T2') {
         return 'border-b-p-yellow'
     } else if (urgency === 'T3') {
-        return 'border-b-p-red'
+        return 'border-[#B94D4D]'
     } else if (urgency === 'base') {
         return 'border-b-dark-green'
     }
@@ -88,4 +128,8 @@ export const checkIfCompleted = (isCompleted: boolean) => {
 
 export const iconDelete = (
     <img className="cursor-pointer" src={deleteIcon} alt="Delete"></img>
+)
+
+export const checkingIcon = (
+    <img className="cursor-pointer" src={brownCheck} alt="Delete"></img>
 )

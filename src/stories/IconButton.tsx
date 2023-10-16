@@ -8,7 +8,7 @@ export interface IconButtonProps {
     selected?: boolean
 }
 
-/** Primary button for our user interface */
+/** Primary button for our user interface  without text only Icons */
 export const IconButton = ({
     selected,
     icon,

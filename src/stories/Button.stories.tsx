@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { Button } from './Button'
 
 import { ExitIcon } from './helpers/ClientDataFunctions'
+import CheckIcon from './icons/checkIcon'
 
 const meta: Meta<typeof Button> = {
     component: Button,
@@ -44,12 +45,7 @@ const meta: Meta<typeof Button> = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-/** this is our button it comes wieh 2 variants
- * you can add label and backgroundColor
- * 3 different buttons sizes
- *  multiple border-sizes
- */
-
+/** as pors */
 export const Base: Story = {
     args: {
         label: 'Kleine wondzorg',
@@ -81,17 +77,19 @@ export const ButtonCheck: Story = {
 }
 
 /** Selected button variation */
+
 export const ButtonCheck2: Story = {
     args: {
         label: 'Text',
         primary: true,
-        backgroundColor: 'bg-white text-dark-green border-dark-green  hover',
+        backgroundColor: 'bg-dark-green text-brown-accent',
         size: 'w-44',
         variant: 'rounded-full',
-        selected: true,
+        selected: false,
+        icon: <CheckIcon />,
     },
 }
-/** Hover */
+/** Hover state of the Dashboard Hover */
 export const ButtonHover: Story = {
     args: {
         label: 'Text',
@@ -114,7 +112,7 @@ export const Start: Story = {
     },
 }
 
-export const Volgende: Story = {
+export const Next: Story = {
     args: {
         primary: true,
         label: 'volgende',
@@ -126,7 +124,7 @@ export const Volgende: Story = {
 
 /** Exit the place by usign this button  */
 
-export const ExitButton2: Story = {
+export const ExitButton: Story = {
     args: {
         label: 'Exit',
         primary: false,
@@ -136,7 +134,7 @@ export const ExitButton2: Story = {
         variant: 'rounded-full',
     },
 }
-export const Wachtzaal: Story = {
+export const ExitButtonWachtzaal: Story = {
     args: {
         label: 'Exit',
         primary: false,
@@ -145,6 +143,7 @@ export const Wachtzaal: Story = {
         variant: 'rounded-full',
     },
 }
+/** this displays the level of urgency */
 export const TriageLevel: Story = {
     args: {
         label: 'T1',

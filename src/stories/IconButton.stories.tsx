@@ -1,11 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { IconButton } from './iconButton'
 import { ExitIcon } from './helpers/ClientDataFunctions'
-import {
-    AllergiesIcon,
-    iconDelete,
-    NextIcon,
-} from './helpers/ClientDataFunctions'
+import { iconDelete, NextIcon } from './helpers/ClientDataFunctions'
 
 const meta: Meta<typeof IconButton> = {
     component: IconButton,
@@ -15,11 +11,11 @@ const meta: Meta<typeof IconButton> = {
         backgroundColor: {
             control: { type: 'select' },
             options: {
-                'Dark Blue': 'bg-[#1E293B] ',
-                'Light Blue': 'bg-[##6CDCC] ',
-                'Primary Blue': 'bg-[#0648B3]',
-                'Primary Red': 'bg-[#B94D4D] ',
-                'Primary Green': 'bg-[#34D399] ',
+                'Dark Blue': 'bg-[#1E293B] text-white ',
+                'Light Blue': 'bg-light-blue text-white border-light-blue',
+                'Primary Blue': 'bg-[#0648B3] text-white',
+                'Primary Red': 'bg-[#B94D4D] text-white',
+                'Primary Green': 'bg-dark-green  text-brown-accent',
                 'Light Green': 'bg-[#6EE7B7] ',
                 'Light Grey': 'bg-[#EBEBEB] ',
                 white: 'bg-white text-p-blue border-p-blue',
@@ -69,17 +65,9 @@ export const Delete: Story = {
 /** Button to go to the next Treatment */
 export const Next: Story = {
     args: {
-        backgroundColor: 'bg-p-yellow border-p-yellow',
+        backgroundColor: 'bg-brown-accent border-brown-accent',
         size: 'w-32',
         icon: NextIcon,
         variant: 'rounded-3xl',
-    },
-}
-export const Allergies: Story = {
-    args: {
-        backgroundColor: 'bg-brown-accent border-brown-accent',
-        size: 'w-14',
-        icon: AllergiesIcon,
-        variant: 'rounded',
     },
 }

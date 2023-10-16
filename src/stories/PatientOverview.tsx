@@ -1,5 +1,5 @@
 import { PatientDataCard } from './PatientDataCard'
-import { EyeLogo, iconDelete } from './helpers/ClientDataFunctions'
+import { EyeLogo } from './helpers/ClientDataFunctions'
 import { IconButton } from './IconButton'
 import TreatmentCard from './TreatmentCard'
 import TitleCard from './TitleCard'
@@ -13,8 +13,17 @@ const Patient = {
     language: 'DE',
     date: '20',
 }
+interface PatientOverviewProp {
+    leftButton: JSX.Element
+    middleButton: JSX.Element
+    rightButton: JSX.Element
+}
 
-export const PatientOverview = () => {
+export const PatientOverview = ({
+    leftButton,
+    middleButton,
+    rightButton,
+}: PatientOverviewProp) => {
     const [completedTreatments, setCompletedTreatments] = useState([
         false,
         false,
@@ -44,7 +53,7 @@ export const PatientOverview = () => {
                         rightLogo={EyeLogo}
                         button={
                             <IconButton
-                                backgroundColor="bg-[#F59E0B]"
+                                backgroundColor="bg-brown-accent border-brown-accent"
                                 size="w-32"
                                 icon={NextIcon}
                                 variant="rounded-3xl"
@@ -75,18 +84,12 @@ export const PatientOverview = () => {
                                 />
                             </div>
                         </div>
-                        <div
-                            className="w-full h-full flex flex-row justify-start items-end ml-11
-                mb-4  "
-                        >
-                            {
-                                <IconButton
-                                    backgroundColor="bg-[#B94D4D]"
-                                    size="w-32"
-                                    variant="rounded-full"
-                                    icon={iconDelete}
-                                />
-                            }
+                        <div className="w-full h-full flex flex-row justify-center items-end px-5 mt-10  ">
+                            <div className=" w-full h-full flex flex-row items-center justify-between ">
+                                {leftButton}
+                                {middleButton}
+                                {rightButton}
+                            </div>
                         </div>
                     </div>
                 </div>
