@@ -1,18 +1,18 @@
 const TreatmentMenu = () => {
     return (
         <div className=" w-full flex flex-col items-center">
-            <div className="w-[60rem]  bg-background-color h-11 flex flex-row justify-around items-center font-bold  ">
-                <div className="cursor-pointer hover:border-b-2 hover:border-b-light-blue py-1 mx-1">
-                    Verzorging
+            <div className="w-[60rem]  bg-background-color h-11 flex flex-row justify-center items-center font-bold gap-16  ">
+                <div className="cursor-pointer hover:border-b-2 border-b-light-blue p-2">
+                    <p>Verzorging</p>
                 </div>
-                <div className=" cursor-pointer border-b-2 hover:border-b-light-blue py-1 mx-1">
-                    Medicatie
+                <div className=" cursor-pointer  hover:border-b-2 border-b-light-blue p-2">
+                    <p>Medicatie</p>
                 </div>
-                <div className="cursor-pointer border-b-2 border-b-light-blue py-2 mx-1">
-                    Materiaal
+                <div className="cursor-pointer hover:border-b-2 border-b-light-blue p-2">
+                    <p>Materiaal</p>
                 </div>
-                <div className="cursor-pointer border-b-2 border-b-light-blue py-2 mx-1">
-                    Opmerkingen
+                <div className="cursor-pointer hover:border-b-2 border-b-light-blue p-2">
+                    <p>Opmerkingen</p>
                 </div>
             </div>
         </div>

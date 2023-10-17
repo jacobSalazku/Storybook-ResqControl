@@ -11,7 +11,7 @@ interface InputSelectProps {
     menuItems: string[]
 }
 
-function InputSelect({ title, menuItems }: InputSelectProps) {
+const InputSelect = ({ title, menuItems }: InputSelectProps) => {
     const [selectedItem, setSelectedItem] = useState('')
 
     return (

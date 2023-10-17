@@ -176,3 +176,22 @@ export const patientData = [
         date: '23-10',
     },
 ]
+
+export const lozenges = [
+    { id: 1, name: 'HALL' },
+    { id: 2, name: 'RICO' },
+    { id: 3, name: 'STRE' },
+    { id: 4, name: 'FISH' },
+    { id: 5, name: 'CEPA' },
+    { id: 6, name: 'LUDE' },
+    { id: 7, name: 'VICK' },
+    { id: 8, name: 'ROBI' },
+    { id: 9, name: 'SMIT' },
+    { id: 10, name: 'SURE' },
+    { id: 11, name: 'PINE' },
+    { id: 12, name: 'SMIT' },
+    { id: 13, name: 'TRAD' },
+    { id: 14, name: 'YOGI' },
+    { id: 15, name: 'CHLO' },
+    { id: 16, name: 'CEPA' },
+]

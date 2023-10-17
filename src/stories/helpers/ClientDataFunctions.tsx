@@ -23,6 +23,9 @@ import printIcon from './icons/printIcon.png'
 import timeIconWhite from './icons/timeIconWhite.png'
 import taskIconWhite from './icons/taskIconWhite.png'
 import cycleIconWhite from './icons/cycleIconWhite.png'
+import arrowUp from './icons/arrowUp.png'
+import arrowDown from './icons/arrowDown.png'
+import prikIcon from './icons/prikIcon.png'
 
 export const IconExit = <img src={exitIcon}></img>
 
@@ -73,6 +76,11 @@ export const CycleIconBrown = (
 export const CycleIconWhite = (
     <img src={cycleIconWhite} alt="Delete" width=""></img>
 )
+
+export const PrikIcon = <img src={prikIcon} alt="Delete" width=""></img>
+
+export const ArrowUp = <img src={arrowUp} alt="Delete" width=""></img>
+export const ArrowDown = <img src={arrowDown} alt="Delete" width=""></img>
 
 export const getUrgencyIcon = (urgency: string | undefined) => {
     if (urgency === 'T1') {
