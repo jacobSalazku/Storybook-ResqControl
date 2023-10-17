@@ -159,4 +159,20 @@ export const patientData = [
         time: '11:30',
         date: '25-10',
     },
+    {
+        id: 20,
+        name: 'Emma Clark',
+        language: 'FR',
+        urgency: 'T1',
+        time: '11:30',
+        date: '25-10',
+    },
+    {
+        id: 18,
+        name: 'Mia Johnson',
+        language: 'BE',
+        urgency: 'T2',
+        time: '15:25',
+        date: '23-10',
+    },
 ]
