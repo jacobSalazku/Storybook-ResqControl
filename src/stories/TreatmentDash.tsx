@@ -48,7 +48,7 @@ export const TreatmentDash = ({
                 </div>
                 <div
                     className={`transition-max-h transition-opacity duration-300 ease-in-out ${
-                        show ? '-h-[17.8rem] opacity-100' : 'max-h-0 opacity-0'
+                        show ? '-h-[17.rem] opacity-100' : 'max-h-0 opacity-0'
                     } w-full border-8 border-white rounded-md mb-2 flex flex-row justify-center mt-4`}
                 >
                     <div className="w-full h-full flex flex-row flex-wrap justify-between items-center mx-5 gap-5">
