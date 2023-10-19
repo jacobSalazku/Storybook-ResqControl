@@ -1,29 +1,34 @@
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { useState, Fragment } from 'react'
-
+import { ArrowDown, ArrowUp } from './helpers/ClientDataFunctions'
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
-interface InputSelectProps {
+interface SelectProps {
     title: string
     menuItems: string[]
+    width: string
+    ringColor: string
 }
 
-const InputSelect = ({ title, menuItems }: InputSelectProps) => {
+const Select = ({ title, menuItems, width, ringColor }: SelectProps) => {
     const [selectedItem, setSelectedItem] = useState('')
 
     return (
         <>
-            <Menu as="div" className="relative inline-block text-left">
+            <Menu
+                as="div"
+                className={` ${width} relative inline-block text-left`}
+            >
                 <div>
-                    <Menu.Button className="inline-flex w-full justify-centert gap-x-1.5 rounded-full bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-2 ring-inset ring-light-blue hover:bg-gray-50">
-                        {selectedItem ? selectedItem : title}
-                        <ChevronDownIcon
-                            className="mr-1 h-5 w-5 text-dark-blue"
-                            aria-hidden="true"
-                        />
+                    <Menu.Button
+                        className={`flex flex-row w-full justify-between h-8 items-center rounded-full bg-white px-3 py-2 text-base font-medium text-dark-blue ring-2 ring-inset ${ringColor} hover:bg-gray-50`}
+                    >
+                        <div> {selectedItem ? selectedItem : title}</div>
+
+                        <div>{ArrowDown}</div>
                     </Menu.Button>
                 </div>
 
@@ -65,4 +70,4 @@ const InputSelect = ({ title, menuItems }: InputSelectProps) => {
     )
 }
 
-export default InputSelect
+export default Select

@@ -14,7 +14,7 @@ const filteredDataImmediate = patientData.filter(
 const UrgencyDashboard = () => {
     return (
         <div className="w-full h-full flex flex-col flex-wrap items-center pt-8 gap-10 px-10  ">
-            <div className="w-full flex flex-row flex-wrap border-t-4 border-[#B94D4D] pt-3 gap-6 ">
+            <div className="w-full flex flex-row flex-wrap border-t-4 border-[#DF2935] pt-3 gap-6 ">
                 {filteredDataImmediate.map((patient) => (
                     <PatientDataCard key={patient.name} {...patient} />
                 ))}

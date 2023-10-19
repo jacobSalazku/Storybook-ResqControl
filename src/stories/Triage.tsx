@@ -42,7 +42,7 @@ export const Triage = () => {
                                 icon={ExitIcon}
                                 size="w-32"
                                 variant=" rounded-full"
-                                backgroundColor="bg-[#B94D4D]"
+                                backgroundColor="bg-[#DF2935]"
                                 selected={false}
                             />
                             <IconButton

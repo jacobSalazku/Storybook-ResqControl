@@ -18,7 +18,7 @@ const meta: Meta<typeof IconButton> = {
                 'Dark Blue': 'bg-[#1E293B] text-white ',
                 'Light Blue': 'bg-light-blue text-white border-light-blue',
                 'Primary Blue': 'bg-[#0648B3] text-white',
-                'Primary Red': 'bg-[#B94D4D] text-white',
+                'Primary Red': 'bg-[#DF2935] text-white',
                 'Primary Green': 'bg-dark-blue  text-brown-accent',
                 'Light Green': 'bg-[#6EE7B7] ',
                 'Light Grey': 'bg-[#EBEBEB] ',
@@ -51,7 +51,7 @@ type Story = StoryObj<typeof meta>
 
 export const Cancel: Story = {
     args: {
-        backgroundColor: 'bg-[#B94D4D]  border-[#B94D4D] ',
+        backgroundColor: 'bg-[#DF2935]  border-[#DF2935] ',
         size: 'w-32',
         icon: ExitIcon,
         variant: 'rounded-full',
@@ -60,7 +60,7 @@ export const Cancel: Story = {
 /** Button to stop the actions in Treatment */
 export const Delete: Story = {
     args: {
-        backgroundColor: 'bg-[#B94D4D] border-[#B94D4D]',
+        backgroundColor: 'bg-[#DF2935] border-[#DF2935]',
         size: 'w-32',
         icon: iconDelete,
         variant: 'rounded-full',

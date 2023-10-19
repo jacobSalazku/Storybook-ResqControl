@@ -1,8 +1,9 @@
 import '../index.css'
-import acuteIcon from './icons/acute.png'
-import eventIcon from './icons/event.png'
-import globeIcon from './icons/globe.png'
 import TriageOption from './TriageOption'
+
+import globeIcon from './icons/globe.png'
+import eventIcon from './icons/event.png'
+import acuteIcon from './icons/acute.png'
 import { getUrgencyIcon } from './helpers/ClientDataFunctions'
 
 /** Card with all the Patient information */
@@ -36,29 +37,19 @@ export const TriagePatientDataCard = ({
 
                     <div className=" w-[17.5rem] flex flex-row justify-start gap-5 pt-2 border-b-2 border-dark-blue pb-2 text-p-text-color ">
                         <div className="flex flex-row  gap-2 ">
-                            <div>
-                                <img
-                                    src={acuteIcon}
-                                    color={urgency}
-                                    alt="acute"
-                                />
-                            </div>
+                            <img src={acuteIcon} />
                             <div>
                                 <p>{time}</p>
                             </div>
                         </div>
                         <div className="flex flex-row gap-2">
-                            <div>
-                                <img src={eventIcon} alt="date" />
-                            </div>
+                            <img src={eventIcon} />
                             <div>
                                 <p>{date}</p>
                             </div>
                         </div>
                         <div className="flex flex-row gap-2">
-                            <div>
-                                <img src={globeIcon} alt="globe" />
-                            </div>
+                            <img src={globeIcon} />
                             <div>
                                 <p>{language}</p>
                             </div>

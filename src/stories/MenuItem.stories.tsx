@@ -23,7 +23,7 @@ const meta: Meta<typeof MenuItem> = {
                 'Dark Blue': 'bg-[#1E293B] text-white ',
                 'Light Blue': 'bg-light-blue text-white border-light-blue',
                 'Primary Blue': 'bg-[#0648B3] text-white',
-                'Primary Red': 'bg-[#B94D4D] text-white',
+                'Primary Red': 'bg-[#DF2935] text-white',
                 'Primary Green': 'bg-dark-blue  text-brown-accent',
                 'Light Green': 'bg-[#6EE7B7] ',
                 'Light Grey': 'bg-[#EBEBEB] ',

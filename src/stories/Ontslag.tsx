@@ -1,9 +1,4 @@
-import { SofaIcon } from './helpers/ClientDataFunctions'
-import Menu from './Menu'
-import TitleCard from './TitleCard'
-
-import UrgencyDashboardSmall from './UrgencyDashboardSmall'
-const WaitingRoom = () => {
+const Ontslag = () => {
     return (
         <div className="w-full h-full flex flex-row justify-center">
             <div className=" max-w-[58rem]  w-[58rem]  bg-white h-fullflex flex-col items-center ">
@@ -12,16 +7,10 @@ const WaitingRoom = () => {
                         <div>Post Alpha - Tommorowland</div>
                         <div>Exit</div>
                     </div>
-                    <Menu />
-                    <TitleCard
-                        rightLogo={SofaIcon}
-                        title="Wacthzaal Inschrijvingen"
-                    />
-                    <UrgencyDashboardSmall />
                 </div>
             </div>
         </div>
     )
 }
 
-export default WaitingRoom
+export default Ontslag

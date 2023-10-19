@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>
 export const BasisTreament: Story = {
     args: {
         description: 'Basis verzorging',
-        isCompleted: true,
+        isCompleted: false,
     },
 }
 export const Treatment: Story = {

@@ -1,4 +1,4 @@
-import { PatientDataCard } from './PatientDataCard'
+import { PatientOverviewCard } from './PatientOverviewCard'
 import { EyeLogo } from './helpers/ClientDataFunctions'
 import { IconButton } from './IconButton'
 import TreatmentCard from './TreatmentCard'
@@ -47,7 +47,7 @@ export const PatientOverview = ({
     return (
         <>
             <div className="w-full h-screen  flex flex-col  items-center">
-                <div className="w-[60rem] flex flex-col justify-center items-center before: bg-background-color">
+                <div className="w-[60rem] flex flex-col justify-center items-center before: bg-white">
                     <TitleCard
                         title="Patient Overzicht"
                         rightLogo={EyeLogo}
@@ -63,14 +63,13 @@ export const PatientOverview = ({
                     <div className="h-[26rem] w-[58rem] bg-card-background-color  text-p-text-color flex flex-col justify-start  my-0 items-center rounded-lg overflow-hidden ">
                         <div className=" w-full flex flex-row justify-center my-6 ">
                             <div className="mx-6">
-                                <PatientDataCard {...Patient} />
+                                <PatientOverviewCard {...Patient} />
                             </div>
                             <div className=" w-full mr-4 ">
                                 <TreatmentCard
                                     isCompleted={completedTreatments[0]}
                                     description="Basis Verzorging"
                                     onClick={handleClick}
-                                    className="bg-light-blue"
                                 />
                                 <TreatmentCard
                                     isCompleted={completedTreatments[1]}

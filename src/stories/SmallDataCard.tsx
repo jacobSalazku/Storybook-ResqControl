@@ -28,7 +28,7 @@ const SmallDataCard = ({
     return (
         <div
             className={` h-[9.5rem] w-[24rem] bg-card-background-color border-l-8 border-t-2
-    border-b-2   shadow-lg shadow-p-grey ${getBorderColorClass(
+    border-b-2   shadow-md shadow-p-grey ${getBorderColorClass(
         urgency
     )} flex flex-row justify-between rounded-3xl pt-4 pl-4`}
         >
@@ -43,25 +43,20 @@ const SmallDataCard = ({
                     )}`}
                 >
                     <div className="flex flex-row  gap-2 ">
-                        <div>
-                            <img src={acuteIcon} color={urgency} alt="acute" />
-                        </div>
+                        <img src={acuteIcon} />
+
                         <div>
                             <p>{time}</p>
                         </div>
                     </div>
                     <div className="flex flex-row gap-2">
-                        <div>
-                            <img src={eventIcon} alt="date" />
-                        </div>
+                        <img src={eventIcon} />
                         <div>
                             <p>{date}</p>
                         </div>
                     </div>
                     <div className="flex flex-row gap-2">
-                        <div>
-                            <img src={globeIcon} alt="globe" />
-                        </div>
+                        <img src={globeIcon} />
                         <div>
                             <p>{language}</p>
                         </div>

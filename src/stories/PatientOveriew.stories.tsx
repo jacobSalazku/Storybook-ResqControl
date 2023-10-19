@@ -20,7 +20,7 @@ export const Start: Story = {
         leftButton: (
             <IconButton
                 size="w-32"
-                backgroundColor="bg-[#B94D4D]"
+                backgroundColor="bg-[#DF2935]"
                 variant="rounded-full"
                 icon={ExitIcon}
             />
@@ -32,7 +32,7 @@ export const Completed: Story = {
         leftButton: (
             <IconButton
                 size="w-32"
-                backgroundColor="bg-[#B94D4D]"
+                backgroundColor="bg-[#DF2935]"
                 variant="rounded-full"
                 icon={ExitIcon}
             />

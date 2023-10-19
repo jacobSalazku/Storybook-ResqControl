@@ -15,7 +15,7 @@ const meta: Meta<typeof Button> = {
                 'Dark Blue': 'bg-[#1E293B] text-white ',
                 'Light Blue': 'bg-light-blue text-white border-light-blue',
                 'Primary Blue': 'bg-[#0648B3] text-white',
-                'Primary Red': 'bg-[#B94D4D] text-white',
+                'Primary Red': 'bg-[#DF2935] text-white',
                 'Primary Green': 'bg-dark-blue  text-brown-accent',
                 'Light Green': 'bg-[#6EE7B7] ',
                 'Light Grey': 'bg-[#EBEBEB] ',
@@ -128,7 +128,7 @@ export const ExitButton: Story = {
     args: {
         label: 'Exit',
         primary: false,
-        backgroundColor: 'bg-[#B94D4D] border--[#B94D4D] text-white ',
+        backgroundColor: 'bg-[#DF2935] border--[#DF2935] text-white ',
         size: 'w-32',
         icon: ExitIcon,
         variant: 'rounded-full',
@@ -138,7 +138,7 @@ export const ExitButtonWachtzaal: Story = {
     args: {
         label: 'Exit',
         primary: false,
-        backgroundColor: 'bg-[#B94D4D] border-[#B94D4D] text-white ',
+        backgroundColor: 'bg-[#DF2935] border-[#DF2935] text-white ',
         size: 'w-32',
         variant: 'rounded-full',
     },

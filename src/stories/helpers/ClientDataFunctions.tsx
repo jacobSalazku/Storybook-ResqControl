@@ -1,7 +1,6 @@
-import blueArrow from './icons/blueArrow.png'
+import greenArrow from './icons/greenArrow.png'
 import yellowArrow from './icons/yellowArrow.png'
 import redArrow from './icons/redArrow.png'
-
 import brownCheck from './icons/brownCheck.png'
 import deleteIcon from './icons/deleteIcon.png'
 import exitIcon from './icons/exit-icon.png'
@@ -29,6 +28,7 @@ import prikIcon from './icons/prikIcon.png'
 import darkBlueArrowRight from './icons/darkBlueArrowRight.png'
 import lightBlueCheck from './icons/lightBlueCheck.png'
 import plusIcon from './icons/plusIcon.png'
+import updateIcon from './icons/updateIcon.png'
 
 export const IconExit = <img src={exitIcon}></img>
 
@@ -84,12 +84,14 @@ export const PrikIcon = <img src={prikIcon} alt="Delete" width=""></img>
 
 export const ArrowUp = <img src={arrowUp} alt="Delete" width=""></img>
 
-export const ArrowDown = <img src={arrowDown} alt="Delete" width=""></img>
-export const PlusIcon = <img src={plusIcon} alt="Delete" width=""></img>
+export const ArrowDown = <img src={arrowDown} width=""></img>
+export const PlusIcon = <img src={plusIcon} width=""></img>
+
+export const UpdateIcon = <img src={updateIcon} alt="" width=""></img>
 
 export const getUrgencyIcon = (urgency: string | undefined) => {
     if (urgency === 'T1') {
-        return <img src={blueArrow} alt="minor" />
+        return <img src={greenArrow} alt="minor" />
     } else if (urgency === 'T2') {
         return <img src={yellowArrow} alt="minor" />
     } else if (urgency === 'T3') {
@@ -101,11 +103,11 @@ export const getUrgencyIcon = (urgency: string | undefined) => {
 
 export const getBorderColorClass = (urgency: string | undefined) => {
     if (urgency === 'T1') {
-        return 'border-light-blue'
+        return 'border-p-green'
     } else if (urgency === 'T2') {
         return 'border-p-yellow'
     } else if (urgency === 'T3') {
-        return 'border-[#B94D4D]'
+        return 'border-[#DF2935]'
     } else if (urgency === 'base') {
         return 'border-dark-green'
     }
@@ -113,11 +115,11 @@ export const getBorderColorClass = (urgency: string | undefined) => {
 
 export const getBorderBottomColorClass = (urgency: string | undefined) => {
     if (urgency === 'T1') {
-        return 'border-b-light-blue'
+        return 'border-b-p-green'
     } else if (urgency === 'T2') {
         return 'border-b-p-yellow'
     } else if (urgency === 'T3') {
-        return 'border-[#B94D4D]'
+        return 'border-[#DF2935]'
     } else if (urgency === 'base') {
         return 'border-b-dark-green'
     }
