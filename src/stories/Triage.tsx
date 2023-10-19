@@ -22,7 +22,7 @@ export const Triage = () => {
                     rightLogo={EyeLogo}
                     button={
                         <IconButton
-                            backgroundColor="bg-dark-green"
+                            backgroundColor="bg-dark-blue"
                             size="w-32"
                             icon={SofaIcon}
                             variant="rounded-3xl"
@@ -49,7 +49,7 @@ export const Triage = () => {
                                 icon={SendIcon}
                                 size="w-32"
                                 variant=" rounded-full"
-                                backgroundColor="bg-dark-green"
+                                backgroundColor="bg-dark-blue"
                                 selected={false}
                             />
                         </div>

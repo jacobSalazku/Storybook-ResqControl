@@ -18,8 +18,7 @@ export interface PatientProps {
     date: string | number
 }
 
-// bg-gradient-to-r from-white to-light-green
-export const PatientDataCard = ({
+const SmallDataCard = ({
     time,
     urgency,
     name,
@@ -28,18 +27,18 @@ export const PatientDataCard = ({
 }: PatientProps) => {
     return (
         <div
-            className={` h-[12.5rem] w-[24rem] bg-card-background-color border-l-8 border-t-2
-            border-b-2  border-gradient-to-r from-purple-600 to-blue-600 shadow-xl shadow-black ${getBorderColorClass(
-                urgency
-            )} flex flex-row justify-between rounded-3xl pt-4 pl-4 `}
+            className={` h-[9.5rem] w-[24rem] bg-card-background-color border-l-8 border-t-2
+    border-b-2   shadow-lg shadow-p-grey ${getBorderColorClass(
+        urgency
+    )} flex flex-row justify-between rounded-3xl pt-4 pl-4`}
         >
             <div className=" flex flex-col gap">
                 <div>
-                    <p className=" text-2xl text-black ">{name}</p>
+                    <p className="  font-sans text-2xl text-black ">{name}</p>
                 </div>
 
                 <div
-                    className={`flex flex-row justify-start gap-5 pt-2 border-b-2 pb-2 text-p-text-color ${getBorderBottomColorClass(
+                    className={`flex flex-row justify-start gap-5 pt-2 border-b-2 pb-4 text-p-text-color ${getBorderBottomColorClass(
                         urgency
                     )}`}
                 >
@@ -68,9 +67,9 @@ export const PatientDataCard = ({
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-start gap-1 pt-2  ">
+                <div className="flex flex-row items-start  justify-between before:gap-1 pt-4  text-sm ">
                     <div className="">
-                        <p>Pijn op de borst</p>
+                        <p>Hoofdpijn</p>
                     </div>
                     <div>
                         <p>Hoofdpijn</p>
@@ -86,3 +85,5 @@ export const PatientDataCard = ({
         </div>
     )
 }
+
+export default SmallDataCard

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Button } from './Button'
+
 import { PrikIcon, SearchIcon } from './helpers/ClientDataFunctions'
 
 import TreatmentDash from './TreatmentDash'

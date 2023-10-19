@@ -19,13 +19,7 @@ const Pathology = () => {
                         size="w-32"
                     />
                 </div>
-                <div className="w-full h-11 bg-dark-green  text-brown-accent font-light- flex justify-center items-center border rounded-full my-4">
-                    <div className=" w-full flex flex-row justify-between px-4 ">
-                        <div>Patholgie</div>
-                        <div>Locatie</div>
-                        <div>Zijde</div>
-                    </div>
-                </div>
+
                 <div className=" w-full flex flex-row justify-between px-4 items-center ">
                     <div className="pt-2">{DeleteLogo}</div>
                     <div>Patholgie</div>

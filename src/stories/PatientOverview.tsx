@@ -53,7 +53,7 @@ export const PatientOverview = ({
                         rightLogo={EyeLogo}
                         button={
                             <IconButton
-                                backgroundColor="bg-brown-accent border-brown-accent"
+                                backgroundColor="bg-p-yellow border-p-yellow"
                                 size="w-32"
                                 icon={NextIcon}
                                 variant="rounded-3xl"

@@ -16,14 +16,14 @@ const Menu = () => {
     }
 
     const selectedStyle =
-        ' transition ease-in-out delay-50 bg-dark-green text-white'
+        ' transition ease-in-out delay-50 bg-dark-blue text-white'
     const navTitles = ['WachtZaal PreReg', 'WachtZaal Triage', 'In Behnadeling']
     return (
-        <div className="w-full h-screen bg-[#E7EFEE] flex flex-row justify-center items-center gap-3 ">
+        <div className="w-full  flex flex-row justify-center items-center gap-3 my-4 ">
             <MenuItem
                 title={navTitles[0]}
                 icon={select == 0 ? TimeIconWhite : TimeIconGreen}
-                border={select == 0 ? 'rounded-md' : 'rounded-[1.8rem]'}
+                border={select == 0 ? 'rounded-md shadow' : 'rounded-[1.8rem] '}
                 backgroundColor={select == 0 ? selectedStyle : 'bg-white'}
                 onClick={() => handleSelection(0)}
             />

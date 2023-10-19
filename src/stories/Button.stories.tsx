@@ -16,7 +16,7 @@ const meta: Meta<typeof Button> = {
                 'Light Blue': 'bg-light-blue text-white border-light-blue',
                 'Primary Blue': 'bg-[#0648B3] text-white',
                 'Primary Red': 'bg-[#B94D4D] text-white',
-                'Primary Green': 'bg-dark-green  text-brown-accent',
+                'Primary Green': 'bg-dark-blue  text-brown-accent',
                 'Light Green': 'bg-[#6EE7B7] ',
                 'Light Grey': 'bg-[#EBEBEB] ',
                 white: 'bg-white text-p-blue border-p-blue',
@@ -59,7 +59,7 @@ export const Base: Story = {
 export const ButtonOption: Story = {
     args: {
         label: 'Kleine wondzorg',
-        backgroundColor: 'bg-white text-dark-green border-dark-green',
+        backgroundColor: 'bg-white text-dark-blue border-dark-blue',
         size: 'w-44',
         variant: 'rounded-full',
     },
@@ -70,7 +70,7 @@ export const ButtonCheck: Story = {
     args: {
         primary: true,
         label: 'Kleine wondzorg',
-        backgroundColor: 'bg-dark-green  text-brown-accent border-dark-green',
+        backgroundColor: 'bg-dark-blue  text-brown-accent border-dark-blue',
         size: 'w-44',
         variant: 'rounded-full',
     },
@@ -82,7 +82,7 @@ export const ButtonCheck2: Story = {
     args: {
         label: 'Text',
         primary: true,
-        backgroundColor: 'bg-dark-green text-brown-accent',
+        backgroundColor: 'bg-dark-blue text-brown-accent',
         size: 'w-44',
         variant: 'rounded-full',
         selected: false,
@@ -95,7 +95,7 @@ export const ButtonHover: Story = {
         label: 'Text',
         primary: true,
         backgroundColor:
-            'bg-white text-dark-green border-dark-green border  hover:text-brown-accent hover:bg-dark-green',
+            'bg-white text-dark-blue border-dark-blue border  hover:text-brown-accent hover:bg-dark-blue',
         size: 'w-44',
         variant: 'rounded-full',
         selected: true,
@@ -149,7 +149,7 @@ export const TriageLevel: Story = {
         label: 'T1',
         primary: false,
         backgroundColor:
-            'bg-white text-dark-green hover:bg-dark-green hover:text-brown-accent',
+            'bg-white text-dark-blue hover:bg-light-blue hover:text-brown-accent',
         size: 'w-14',
         variant: 'rounded',
     },

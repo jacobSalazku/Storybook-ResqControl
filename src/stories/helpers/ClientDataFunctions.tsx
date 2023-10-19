@@ -1,7 +1,7 @@
 import blueArrow from './icons/blueArrow.png'
 import yellowArrow from './icons/yellowArrow.png'
 import redArrow from './icons/redArrow.png'
-import arrowRightGreen from './icons/arrowRightGreen.png'
+
 import brownCheck from './icons/brownCheck.png'
 import deleteIcon from './icons/deleteIcon.png'
 import exitIcon from './icons/exit-icon.png'
@@ -26,6 +26,9 @@ import cycleIconWhite from './icons/cycleIconWhite.png'
 import arrowUp from './icons/arrowUp.png'
 import arrowDown from './icons/arrowDown.png'
 import prikIcon from './icons/prikIcon.png'
+import darkBlueArrowRight from './icons/darkBlueArrowRight.png'
+import lightBlueCheck from './icons/lightBlueCheck.png'
+import plusIcon from './icons/plusIcon.png'
 
 export const IconExit = <img src={exitIcon}></img>
 
@@ -80,7 +83,9 @@ export const CycleIconWhite = (
 export const PrikIcon = <img src={prikIcon} alt="Delete" width=""></img>
 
 export const ArrowUp = <img src={arrowUp} alt="Delete" width=""></img>
+
 export const ArrowDown = <img src={arrowDown} alt="Delete" width=""></img>
+export const PlusIcon = <img src={plusIcon} alt="Delete" width=""></img>
 
 export const getUrgencyIcon = (urgency: string | undefined) => {
     if (urgency === 'T1') {
@@ -123,14 +128,18 @@ export const checkIfCompleted = (isCompleted: boolean) => {
         return (
             <img
                 className="cursor-pointer"
-                src={arrowRightGreen}
+                src={darkBlueArrowRight}
                 alt="next"
             ></img>
         )
     }
 
     return (
-        <img className="cursor-pointer" src={brownCheck} alt="completed"></img>
+        <img
+            className="cursor-pointer"
+            src={lightBlueCheck}
+            alt="completed"
+        ></img>
     )
 }
 

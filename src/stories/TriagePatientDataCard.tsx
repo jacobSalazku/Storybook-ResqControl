@@ -1,4 +1,4 @@
-import './index.css'
+import '../index.css'
 import acuteIcon from './icons/acute.png'
 import eventIcon from './icons/event.png'
 import globeIcon from './icons/globe.png'
@@ -25,16 +25,16 @@ export const TriagePatientDataCard = ({
     triageLevel,
 }: TriagePatientprops) => {
     return (
-        <div className="h-[20rem] w-[22rem] bg-card-background-color flex flex-row justify-between  border-2 border-dark-green rounded-2xl pt-4  ">
+        <div className="h-[20rem] w-[22rem] bg-card-background-color flex flex-row justify-between  border-2 border-dark-blue rounded-2xl pt-4  ">
             <div className=" flex flex-col  ">
                 <div className="flex flex-col gap-2 pl-8">
                     <div>
-                        <h1 className=" text-2xl text-black  font-medium ">
+                        <p className=" text-2xl text-black  font-medium ">
                             {name}
-                        </h1>
+                        </p>
                     </div>
 
-                    <div className=" w-[17.5rem] flex flex-row justify-start gap-5 pt-2 border-b-2 border-dark-green pb-2 text-p-text-color ">
+                    <div className=" w-[17.5rem] flex flex-row justify-start gap-5 pt-2 border-b-2 border-dark-blue pb-2 text-p-text-color ">
                         <div className="flex flex-row  gap-2 ">
                             <div>
                                 <img

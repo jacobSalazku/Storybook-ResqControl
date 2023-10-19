@@ -7,15 +7,19 @@ export default {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['Open Sans', 'sans-serif'],
+            },
             colors: {
-                'dark-green': '#1B6067',
-                'light-blue': '#66CDCC',
-                'background-color': '#EDF6F5',
+                'dark-blue': '#082646',
+                'light-blue': '#45B7D5',
+                'background-color': '#F6F8FF',
                 'brown-accent': '#EAC893',
                 'p-text-color': '#152A23',
                 's-text-color': '#141414',
                 'dark-red': '#B94D4D,',
-                'p-yellow': '#F59E0B',
+                'p-yellow': '#FF9F1C',
+                'p-grey': '#808080',
             },
             borderColor: {
                 'white-green': 'linear-gradient(to right, white, #6EE7B7)',

@@ -41,7 +41,7 @@ export const Completed: Story = {
             <IconButton
                 icon={PrintIcon}
                 size="w-32"
-                backgroundColor="bg-dark-green"
+                backgroundColor="bg-dark-blue"
                 variant="rounded-full"
             />
         ),
@@ -49,7 +49,7 @@ export const Completed: Story = {
             <IconButton
                 icon={SendIcon}
                 size="w-32"
-                backgroundColor="bg-dark-green"
+                backgroundColor="bg-dark-blue"
                 variant="rounded-full"
             />
         ),

@@ -13,7 +13,7 @@ import { IconButton } from './iconButton'
 const meta: Meta<typeof TitleCard> = {
     component: TitleCard,
     tags: ['autodocs'],
-    title: 'Titlet Card',
+    title: 'Title Card',
     argTypes: {},
 }
 export default meta
@@ -46,7 +46,7 @@ export const Triage: Story = {
         button: (
             <IconButton
                 icon={SofaIcon}
-                backgroundColor="bg-dark-green"
+                backgroundColor="bg-dark-blue"
                 variant="rounded-3xl"
                 size="w-32"
             />
@@ -60,7 +60,7 @@ export const BasicTreatment: Story = {
         button: (
             <IconButton
                 icon={SendIcon}
-                backgroundColor="bg-dark-green"
+                backgroundColor="bg-dark-blue"
                 variant="rounded-3xl"
                 size="w-32"
             />
@@ -74,7 +74,7 @@ export const Treatment: Story = {
         button: (
             <IconButton
                 icon={SendIcon}
-                backgroundColor="bg-dark-green"
+                backgroundColor="bg-dark-blue"
                 variant="rounded-3xl"
                 size="w-32"
             />

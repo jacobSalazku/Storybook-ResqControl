@@ -17,7 +17,7 @@ const TriageOption = ({ triageSelection }: triageOptionProps) => {
                 label="T1"
                 backgroundColor={
                     triageSelection === 'T1'
-                        ? 'bg-dark-green text-brown-accent text'
+                        ? 'bg-light-blue text-white'
                         : 'bg-white'
                 }
                 size="w-14"
@@ -27,9 +27,7 @@ const TriageOption = ({ triageSelection }: triageOptionProps) => {
             <Button
                 label="T2"
                 backgroundColor={
-                    triageSelection === 'T2'
-                        ? 'bg-dark-green text-brown-accent text'
-                        : ''
+                    triageSelection === 'T2' ? 'bg-light-blue text-white' : ''
                 }
                 size="w-14"
                 variant="rounded"
@@ -38,9 +36,7 @@ const TriageOption = ({ triageSelection }: triageOptionProps) => {
             <Button
                 label="T3"
                 backgroundColor={
-                    selectTriage === 'T3'
-                        ? 'bg-dark-green text-brown-accent text'
-                        : ''
+                    selectTriage === 'T3' ? 'bg-light-blue text-white' : ''
                 }
                 size="w-14"
                 variant="rounded"

@@ -16,9 +16,9 @@ const TreatmentCard = ({
     return (
         <div
             onClick={onClick}
-            className={` ${className} h-14 w-[33rem] bg-white flex flex-row justify-between content-start px-4 my-0 items-center border rounded-full overflow-hidden mb-4 cursor-pointer hover:bg-background-color`}
+            className={` ${className} h-14 w-[33rem] bg-white flex flex-row justify-between content-start px-4 my-0 items-center  rounded-full overflow-hidden mb-4 cursor-pointer hover:bg-background-color`}
         >
-            <h1 className="justify-start text-xl font-medium">{description}</h1>
+            <p className="justify-start text-xl font-medium">{description}</p>
             {checkIfCompleted(isCompleted)}
         </div>
     )

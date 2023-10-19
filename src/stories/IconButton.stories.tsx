@@ -1,7 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { IconButton } from './iconButton'
-import { ExitIcon } from './helpers/ClientDataFunctions'
-import { iconDelete, NextIcon } from './helpers/ClientDataFunctions'
+import {
+    iconDelete,
+    NextIcon,
+    ExitIcon,
+    PlusIcon,
+} from './helpers/ClientDataFunctions'
 
 const meta: Meta<typeof IconButton> = {
     component: IconButton,
@@ -15,7 +19,7 @@ const meta: Meta<typeof IconButton> = {
                 'Light Blue': 'bg-light-blue text-white border-light-blue',
                 'Primary Blue': 'bg-[#0648B3] text-white',
                 'Primary Red': 'bg-[#B94D4D] text-white',
-                'Primary Green': 'bg-dark-green  text-brown-accent',
+                'Primary Green': 'bg-dark-blue  text-brown-accent',
                 'Light Green': 'bg-[#6EE7B7] ',
                 'Light Grey': 'bg-[#EBEBEB] ',
                 white: 'bg-white text-p-blue border-p-blue',
@@ -69,5 +73,15 @@ export const Next: Story = {
         size: 'w-32',
         icon: NextIcon,
         variant: 'rounded-3xl',
+    },
+}
+
+export const Plus: Story = {
+    args: {
+        backgroundColor: 'bg-light-blue border-light-blue',
+        size: 'w-12',
+        icon: PlusIcon,
+        variant: 'rounded-full',
+        hover: 'hover:bg-[#082646] hover:border-dark-blue',
     },
 }
