@@ -5,7 +5,7 @@ import Menu from './Menu'
 const meta: Meta<typeof Menu> = {
     component: Menu,
     tags: ['autodocs'],
-    title: 'Menu',
+    title: 'Molecules/Menu',
     argTypes: {},
 }
 

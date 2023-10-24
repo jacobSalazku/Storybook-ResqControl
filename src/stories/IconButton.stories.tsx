@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { IconButton } from './iconButton'
+import { IconButton } from './IconButton'
 import {
     iconDelete,
     NextIcon,
@@ -10,7 +10,7 @@ import {
 const meta: Meta<typeof IconButton> = {
     component: IconButton,
     tags: ['autodocs'],
-    title: 'Icon Buttons',
+    title: 'Atoms/Buttons/Icon Buttons',
     argTypes: {
         backgroundColor: {
             control: { type: 'select' },

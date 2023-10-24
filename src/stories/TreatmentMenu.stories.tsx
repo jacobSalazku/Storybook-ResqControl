@@ -4,7 +4,7 @@ import TreatmentMenu from './TreatmentMenu'
 const meta: Meta<typeof TreatmentMenu> = {
     component: TreatmentMenu,
     tags: ['autodocs'],
-    title: 'TreatmentMenu',
+    title: 'Organisme/TreatmentMenu',
     argTypes: {},
 }
 

@@ -7,7 +7,7 @@ import TreatmentDash from './TreatmentDash'
 const meta: Meta<typeof TreatmentDash> = {
     component: TreatmentDash,
     tags: ['autodocs'],
-    title: 'Treatment Dash',
+    title: 'Molecules/Treatment Dash',
     argTypes: {},
 }
 

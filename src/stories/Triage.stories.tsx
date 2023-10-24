@@ -4,7 +4,7 @@ import Triage from './Triage'
 const meta: Meta<typeof Triage> = {
     component: Triage,
     tags: ['autodocs'],
-    title: 'Triage',
+    title: 'Component/Triage',
     argTypes: {},
 }
 

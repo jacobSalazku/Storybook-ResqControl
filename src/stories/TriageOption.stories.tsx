@@ -4,7 +4,7 @@ import TriageOption from './TriageOption'
 const meta: Meta<typeof TriageOption> = {
     component: TriageOption,
     tags: ['autodocs'],
-    title: 'Triage Option',
+    title: 'Molecules/Triage Option',
     argTypes: {},
 }
 

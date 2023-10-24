@@ -1,5 +1,5 @@
 import { SearchIcon, DeleteLogo } from './helpers/ClientDataFunctions'
-import { IconButton } from './iconButton'
+import { IconButton } from './IconButton'
 import InputSelect from './inputSelect'
 
 const locatie = ['inwendig', 'uitwendig', 'ribben']

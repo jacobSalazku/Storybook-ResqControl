@@ -5,7 +5,7 @@ import SmallDataCard from './SmallDataCard'
 const meta: Meta<typeof SmallDataCard> = {
     component: SmallDataCard,
     tags: ['autodocs'],
-    title: 'Small Patient Data  Card',
+    title: 'Molecules/Small Patient Data  Card',
     argTypes: {},
 }
 export default meta

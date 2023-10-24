@@ -5,7 +5,7 @@ import MenuItem from './MenuItem'
 const meta: Meta<typeof MenuItem> = {
     component: MenuItem,
     tags: ['autodocs'],
-    title: 'Waiting Room Menu Item',
+    title: 'Fundaments/Waiting Room Menu Item',
     argTypes: {
         border: {
             control: { type: 'select' },

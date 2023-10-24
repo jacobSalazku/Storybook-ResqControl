@@ -8,12 +8,12 @@ import {
     SendIcon,
     StethoscopeIcon,
 } from './helpers/ClientDataFunctions'
-import { IconButton } from './iconButton'
+import { IconButton } from './IconButton'
 
 const meta: Meta<typeof TitleCard> = {
     component: TitleCard,
     tags: ['autodocs'],
-    title: 'Title Card',
+    title: 'Fundaments/Title Card',
     argTypes: {},
 }
 export default meta

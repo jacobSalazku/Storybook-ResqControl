@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { ExitIcon, PrintIcon, SendIcon } from './helpers/ClientDataFunctions'
-import { IconButton } from './iconButton'
+import { IconButton } from './IconButton'
 
 import { PatientOverview } from './PatientOverview'
 
 const meta: Meta<typeof PatientOverview> = {
     component: PatientOverview,
     tags: ['autodocs'],
-    title: 'Patient Overview',
+    title: 'Pages/Patient Overview',
     argTypes: {},
 }
 

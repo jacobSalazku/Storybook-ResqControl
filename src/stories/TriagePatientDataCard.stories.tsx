@@ -4,7 +4,7 @@ import TriagePatientDataCard from './TriagePatientDataCard'
 const meta: Meta<typeof TriagePatientDataCard> = {
     component: TriagePatientDataCard,
     tags: ['autodocs'],
-    title: 'Triage Patient Data Card',
+    title: 'Molecules/Triage Patient Data Card',
     argTypes: {},
 }
 

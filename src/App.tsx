@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import TitleCard from './stories/TitleCard'
 import { EyeLogo, SofaIcon } from './stories/helpers/ClientDataFunctions'
-import { Button } from './stories/Button'
+import { Button } from './Components/Button'
 
 function App() {
     const [count, setCount] = useState(0)

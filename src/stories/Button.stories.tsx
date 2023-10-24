@@ -7,7 +7,7 @@ import CheckIcon from './icons/checkIcon'
 const meta: Meta<typeof Button> = {
     component: Button,
     tags: ['autodocs'],
-    title: 'Button',
+    title: 'Atoms/Buttons/Button',
     argTypes: {
         backgroundColor: {
             control: { type: 'select' },

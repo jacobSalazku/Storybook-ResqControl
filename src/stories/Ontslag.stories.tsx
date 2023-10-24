@@ -5,7 +5,7 @@ import Ontslag from './Ontslag'
 const meta: Meta<typeof Ontslag> = {
     component: Ontslag,
     tags: ['autodocs'],
-    title: 'Ontslag',
+    title: 'Page/Ontslag',
     argTypes: {},
 }
 

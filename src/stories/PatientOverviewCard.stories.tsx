@@ -5,7 +5,7 @@ import PatientOverviewCard from './PatientOverviewCard'
 const meta: Meta<typeof PatientOverviewCard> = {
     component: PatientOverviewCard,
     tags: ['autodocs'],
-    title: 'Patient Overview Card',
+    title: 'Molecules/Patient Overview Card',
     argTypes: {},
 }
 

@@ -4,7 +4,7 @@ import UrgencyDashboardSmall from './UrgencyDashboardSmall'
 const meta: Meta<typeof UrgencyDashboardSmall> = {
     component: UrgencyDashboardSmall,
     tags: ['autodocs'],
-    title: 'Urgency Dashboard Small',
+    title: 'Organisme/Urgency Dashboard Small',
     argTypes: {},
 }
 

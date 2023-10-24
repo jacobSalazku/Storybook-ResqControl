@@ -5,7 +5,7 @@ import { stringTime, stringDate } from './helpers/DateTime'
 const meta: Meta<typeof PatientDataCard> = {
     component: PatientDataCard,
     tags: ['autodocs'],
-    title: 'Patient Data Card',
+    title: 'Molecules/Patient Data Card',
     argTypes: {
         language: {
             control: { type: 'select' },

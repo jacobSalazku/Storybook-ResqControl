@@ -5,7 +5,7 @@ import TreatmentCard from './TreatmentCard'
 const meta: Meta<typeof TreatmentCard> = {
     component: TreatmentCard,
     tags: ['autodocs'],
-    title: 'Treatment Card',
+    title: 'Fundaments/Treatment Card',
     argTypes: {},
 }
 

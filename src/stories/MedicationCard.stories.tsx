@@ -5,7 +5,7 @@ import MedicationDash from './MedicationCard'
 const meta: Meta<typeof MedicationDash> = {
     component: MedicationDash,
     tags: ['autodocs'],
-    title: 'Medication Card',
+    title: 'Molecules/Medication Card',
     argTypes: {},
 }
 

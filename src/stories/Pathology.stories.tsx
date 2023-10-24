@@ -4,7 +4,7 @@ import Pathology from './Pathology'
 const meta: Meta<typeof Pathology> = {
     component: Pathology,
     tags: ['autodocs'],
-    title: 'Pathology',
+    title: 'Molecules/Pathology',
     argTypes: {},
 }
 
