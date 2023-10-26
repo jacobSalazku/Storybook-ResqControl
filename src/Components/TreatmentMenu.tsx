@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
 const TreatmentMenu = () => {
-    const [select, setSelect] = useState(false) // Set the initial state to true for one item
+    const [activeItem, setActiveItem] = useState('Verzorging') // Set the initial active item to ''
 
-    const activateMenu = () => {
-        select ? setSelect(true) : setSelect(false)
+    const activateMenu = (item: string) => {
+        setActiveItem(item)
     }
 
     return (
@@ -12,33 +12,41 @@ const TreatmentMenu = () => {
             <div className="w-[60rem] bg-background-color h-11 flex flex-row justify-center items-center font-bold gap-16">
                 <div
                     className={`cursor-pointer hover:border-b-2 border-b-light-blue p-2 ${
-                        select ? 'border-b-light-blue  border-b-2' : ''
+                        activeItem === 'Verzorging'
+                            ? 'border-b-light-blue  border-b-2'
+                            : ''
                     }`}
-                    onClick={activateMenu}
+                    onClick={() => activateMenu('Verzorging')}
                 >
                     <p>Verzorging</p>
                 </div>
                 <div
                     className={`cursor-pointer hover:border-b-2 border-b-light-blue p-2 ${
-                        select ? 'border-b-light-blue  border-b-2' : ''
+                        activeItem === 'Medicatie'
+                            ? 'border-b-light-blue  border-b-2'
+                            : ''
                     }`}
-                    onClick={activateMenu}
+                    onClick={() => activateMenu('Medicatie')}
                 >
                     <p>Medicatie</p>
                 </div>
                 <div
                     className={`cursor-pointer hover:border-b-2 border-b-light-blue p-2 ${
-                        select ? 'border-b-light-blue  border-b-2' : ''
+                        activeItem === 'Materiaal'
+                            ? 'border-b-light-blue  border-b-2'
+                            : ''
                     }`}
-                    onClick={activateMenu}
+                    onClick={() => activateMenu('Materiaal')}
                 >
                     <p>Materiaal</p>
                 </div>
                 <div
                     className={`cursor-pointer hover:border-b-2 border-b-light-blue p-2 ${
-                        select ? 'border-b-light-blue  border-b-2' : ''
+                        activeItem === 'Opmerkingen'
+                            ? 'border-b-light-blue  border-b-2'
+                            : ''
                     }`}
-                    onClick={activateMenu}
+                    onClick={() => activateMenu('Opmerkingen')}
                 >
                     <p>Opmerkingen</p>
                 </div>

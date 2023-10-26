@@ -7,6 +7,9 @@ import {
     SofaIcon,
     SendIcon,
     StethoscopeIcon,
+    EarLogo,
+    Sofa,
+    SaveIcon,
 } from './helpers/ClientDataFunctions'
 import { IconButton } from '../Components/IconButton'
 
@@ -32,7 +35,7 @@ export const PatientOverview: Story = {
         button: (
             <IconButton
                 icon={NextIcon}
-                backgroundColor="bg-brown-accent border-brown-accent"
+                backgroundColor="bg-p-yellow border-white"
                 variant="rounded-3xl"
                 size="w-32"
             />
@@ -45,13 +48,13 @@ export const Triage: Story = {
         title: 'Triage',
         button: (
             <IconButton
-                icon={SofaIcon}
-                backgroundColor="bg-dark-blue"
+                icon={Sofa}
+                backgroundColor="bg-light-blue border-white"
                 variant="rounded-3xl"
                 size="w-32"
             />
         ),
-        rightLogo: EyeLogo,
+        rightLogo: EarLogo,
     },
 }
 export const BasicTreatment: Story = {
@@ -59,13 +62,13 @@ export const BasicTreatment: Story = {
         title: 'Basis verzorging',
         button: (
             <IconButton
-                icon={SendIcon}
-                backgroundColor="bg-dark-blue"
+                icon={SaveIcon}
+                backgroundColor="bg-light-blue"
                 variant="rounded-3xl"
                 size="w-32"
             />
         ),
-        rightLogo: EyeLogo,
+        rightLogo: StethoscopeIcon,
     },
 }
 export const Treatment: Story = {
@@ -73,8 +76,8 @@ export const Treatment: Story = {
         title: 'Behandeling',
         button: (
             <IconButton
-                icon={SendIcon}
-                backgroundColor="bg-dark-blue"
+                icon={SaveIcon}
+                backgroundColor="bg-light-blue"
                 variant="rounded-3xl"
                 size="w-32"
             />

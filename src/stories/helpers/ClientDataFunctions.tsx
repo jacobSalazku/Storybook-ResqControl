@@ -30,6 +30,9 @@ import lightBlueCheck from './icons/lightBlueCheck.png'
 import plusIcon from './icons/plusIcon.png'
 import updateIcon from './icons/updateIcon.png'
 import blueArrowWaiting from './icons/blueArrowWaitingroom.png'
+import sofa from './icons/sofaVec.png'
+import earLogo from './icons/earLogo.png'
+import saveIcon from './icons/saveIcon.png'
 
 export const IconExit = <img src={exitIcon}></img>
 
@@ -86,13 +89,16 @@ export const BlueArrowWaiting = (
 )
 
 export const PrikIcon = <img src={prikIcon} alt="Delete" width=""></img>
-
+export const DeleteIcon = <img src={deleteIcon} alt="Delete" width=""></img>
 export const ArrowUp = <img src={arrowUp} alt="Delete" width=""></img>
 
 export const ArrowDown = <img src={arrowDown} width=""></img>
 export const PlusIcon = <img src={plusIcon} width=""></img>
 
 export const UpdateIcon = <img src={updateIcon} alt="" width=""></img>
+export const Sofa = <img src={sofa} alt="" width=""></img>
+export const EarLogo = <img src={earLogo} alt="" width=""></img>
+export const SaveIcon = <img src={saveIcon} alt="" width=""></img>
 
 export const getUrgencyIcon = (urgency: string | undefined) => {
     if (urgency === 'T1') {

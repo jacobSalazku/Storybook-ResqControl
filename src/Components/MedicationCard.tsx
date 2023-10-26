@@ -1,53 +1,79 @@
-import { UpdateIcon } from '../stories/helpers/ClientDataFunctions'
+import {
+    DeleteIcon,
+    DeleteLogo,
+    UpdateIcon,
+} from '../stories/helpers/ClientDataFunctions'
 import Select from '../stories/Select'
+import { IconButton } from './IconButton'
 const stringtime = ['tijd', 'tijd', 'tijd']
 const dosis = ['5ml', '10ml', '15ml', '20ml']
 const toedining = ['oraal', 'Intraveneus', 'intramusculair', 'subcutaan']
 const MedicationCard = () => {
     return (
-        <div className="w-[24rem] h-[10.5rem] border-2 border-dark-blue rounded-2xl flex flex-row">
-            <div className="w-full h-full flex flex-row justify-center mx-2">
-                <div className="w-full flex flex-col justify-center items-start  text-dark-blue gap-4">
-                    <div>
-                        <p className="text-lg font-semibold">Adrenaline</p>
-                    </div>
-                    <div>Epinefrine</div>
-                    <div>&mg/1ml</div>
-                    <div>Amp</div>
+        <>
+            <div className=" relative w-[16.5rem] h-[24.5rem] border-2 border-dark-blue rounded-3xl pt-5">
+                {/** <div className=" w-[17rem] h-4 flex flex-row justify-end absolute mb-1 top-0 right-4">
+                    <IconButton
+                        icon={DeleteIcon}
+                        size="w-12"
+                        variant="rounded-full"
+                        backgroundColor="bg-[#EE7E7A] border-dark-blue"
+                    />
                 </div>
-            </div>
-
-            <div className="w-full h-full flex flex-row justify-center  ">
-                <div className="w-full flex flex-col justify-center items-start text-dark-blue gap-4">
-                    <div className="border-l-2 border-dark-blue flex flex-col   items-start gap-4 pl-1 ">
-                        <div className="flex flex-row gap-2">
-                            <input
-                                className=" w-32 border-2 rounded-2xl h-8  border-dark-blue px-2 "
-                                type="time"
-                            />
-
-                            <div>{UpdateIcon}</div>
-                        </div>
-                        <div>
-                            <Select
-                                title="Dosis"
-                                menuItems={...dosis}
-                                ringColor="ring-dark-blue"
-                                width="w-40"
-                            />
-                        </div>
-                        <div>
-                            <Select
-                                title="Dosis"
-                                menuItems={...toedining}
-                                ringColor="ring-dark-blue"
-                                width="w-40"
-                            />
+            */}
+                <div className="  flex flex-col px-4">
+                    <div className="w-full h-full flex flex-row  items-center justify-center ">
+                        <div className="w-full flex flex-col justify-center items-center  text-dark-blue gap-4 border-b-2 border-dark-blue pb-4">
+                            <div>
+                                <p className="text-lg font-semibold">
+                                    Adrenaline
+                                </p>
+                            </div>
+                            <div>
+                                <p>Epinefrine</p>
+                            </div>
+                            <div>
+                                <p className="text-[#35393C]">&mg/1ml</p>
+                            </div>
+                            <div>
+                                <p>Amp</p>
+                            </div>
                         </div>
                     </div>
+
+                    <div className="w-full h-full flex flex-row justify-center  ">
+                        <div className="w-full flex flex-col justify-center items-center text-dark-blue gap-4">
+                            <div className=" flex flex-col   items-start gap-4 pl-1 ">
+                                <div className="flex flex-row gap-2">
+                                    <input
+                                        className=" w-40 border-2 rounded-2xl h-8  border-dark-blue px-2 "
+                                        type="time"
+                                    />
+
+                                    <div>{UpdateIcon}</div>
+                                </div>
+                                <div>
+                                    <Select
+                                        title="Dosis"
+                                        menuItems={...dosis}
+                                        ringColor="ring-dark-blue"
+                                        width="w-56"
+                                    />
+                                </div>
+                                <div>
+                                    <Select
+                                        title="Dosis"
+                                        menuItems={...toedining}
+                                        ringColor="ring-dark-blue"
+                                        width="w-56"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
