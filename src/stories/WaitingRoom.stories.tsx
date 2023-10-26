@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import WaitingRoom from './WaitingRoom'
+import WaitingRoom from '../Pages/WaitingRoom'
 
 const meta: Meta<typeof WaitingRoom> = {
     component: WaitingRoom,

@@ -1,5 +1,5 @@
-import { UpdateIcon } from './helpers/ClientDataFunctions'
-import Select from './Select'
+import { UpdateIcon } from '../stories/helpers/ClientDataFunctions'
+import Select from '../stories/Select'
 const stringtime = ['tijd', 'tijd', 'tijd']
 const dosis = ['5ml', '10ml', '15ml', '20ml']
 const toedining = ['oraal', 'Intraveneus', 'intramusculair', 'subcutaan']

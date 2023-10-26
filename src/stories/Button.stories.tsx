@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Button } from './Button'
+import { Button } from '../Components/Button'
 
 import { ExitIcon } from './helpers/ClientDataFunctions'
 import CheckIcon from './icons/checkIcon'

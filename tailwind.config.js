@@ -17,7 +17,7 @@ export default {
                 'brown-accent': '#EAC893',
                 'p-text-color': '#152A23',
                 's-text-color': '#141414',
-                'p-red': '#DF2935,',
+                'p-red': '#EE7E7A,',
                 'p-yellow': '#FF9F1C',
                 'p-grey': '#808080',
                 'p-green': '#63D471',

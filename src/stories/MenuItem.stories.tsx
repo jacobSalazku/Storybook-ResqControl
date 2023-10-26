@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { TaskIconGreen, TimeIconWhite } from './helpers/ClientDataFunctions'
-import MenuItem from './MenuItem'
+import MenuItem from '../Components/MenuItem'
 
 const meta: Meta<typeof MenuItem> = {
     component: MenuItem,

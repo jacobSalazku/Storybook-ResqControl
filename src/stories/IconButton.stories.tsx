@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { IconButton } from './IconButton'
+import { IconButton } from '../Components/IconButton'
 import {
     iconDelete,
     NextIcon,

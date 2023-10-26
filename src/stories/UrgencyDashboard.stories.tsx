@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import UrgencyDashboard from './UrgencyDashboard'
+import UrgencyDashboard from '../Components/UrgencyDashboard'
 
 const meta: Meta<typeof UrgencyDashboard> = {
     component: UrgencyDashboard,

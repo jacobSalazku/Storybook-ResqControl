@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { stringDate, stringTime } from './helpers/DateTime'
-import SmallDataCard from './SmallDataCard'
+import SmallDataCard from '../Components/SmallDataCard'
 
 const meta: Meta<typeof SmallDataCard> = {
     component: SmallDataCard,

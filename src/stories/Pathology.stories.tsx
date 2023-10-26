@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import Pathology from './Pathology'
+import Pathology from '../Components/Pathology'
 
 const meta: Meta<typeof Pathology> = {
     component: Pathology,

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import TitleCard from './TitleCard'
+import TitleCard from '../Components/TitleCard'
 import {
     EyeLogo,
     NextIcon,
@@ -8,7 +8,7 @@ import {
     SendIcon,
     StethoscopeIcon,
 } from './helpers/ClientDataFunctions'
-import { IconButton } from './IconButton'
+import { IconButton } from '../Components/IconButton'
 
 const meta: Meta<typeof TitleCard> = {
     component: TitleCard,

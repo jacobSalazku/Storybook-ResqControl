@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { stringDate, stringTime } from './helpers/DateTime'
-import PatientOverviewCard from './PatientOverviewCard'
+import PatientOverviewCard from '../Components/PatientOverviewCard'
 
 const meta: Meta<typeof PatientOverviewCard> = {
     component: PatientOverviewCard,

@@ -1,4 +1,4 @@
-import { checkIfCompleted } from './helpers/ClientDataFunctions'
+import { checkIfCompleted } from '../stories/helpers/ClientDataFunctions'
 
 interface TreatmentProps {
     description: string

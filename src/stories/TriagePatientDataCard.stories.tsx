@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import TriagePatientDataCard from './TriagePatientDataCard'
+import TriagePatientDataCard from '../Components/TriagePatientDataCard'
 
 const meta: Meta<typeof TriagePatientDataCard> = {
     component: TriagePatientDataCard,

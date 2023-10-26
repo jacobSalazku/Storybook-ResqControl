@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import Ontslag from './Ontslag'
+import Ontslag from '../Pages/Ontslag'
 
 const meta: Meta<typeof Ontslag> = {
     component: Ontslag,
     tags: ['autodocs'],
-    title: 'Page/Ontslag',
+    title: 'Pages/Ontslag',
     argTypes: {},
 }
 

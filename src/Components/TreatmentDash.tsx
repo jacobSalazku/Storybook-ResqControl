@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { ArrowDown, ArrowUp } from './helpers/ClientDataFunctions'
-import { Button } from '../Components/Button'
+import { ArrowDown, ArrowUp } from '../stories/helpers/ClientDataFunctions'
+import { Button } from './Button'
 
 import { lozenges } from './patientData'
 

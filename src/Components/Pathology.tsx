@@ -1,6 +1,6 @@
-import { SearchIcon, DeleteLogo } from './helpers/ClientDataFunctions'
+import { SearchIcon, DeleteLogo } from '../stories/helpers/ClientDataFunctions'
 import { IconButton } from './IconButton'
-import InputSelect from './inputSelect'
+import InputSelect from '../stories/inputSelect'
 
 const locatie = ['inwendig', 'uitwendig', 'ribben']
 const zijde = ['Linker', 'Rechter']

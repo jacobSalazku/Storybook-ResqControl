@@ -1,9 +1,9 @@
-import { PatientOverviewCard } from './PatientOverviewCard'
-import { EyeLogo } from './helpers/ClientDataFunctions'
-import { IconButton } from './IconButton'
-import TreatmentCard from './TreatmentCard'
-import TitleCard from './TitleCard'
-import { NextIcon } from './helpers/ClientDataFunctions'
+import { PatientOverviewCard } from '../Components/PatientOverviewCard'
+import { EyeLogo } from '../stories/helpers/ClientDataFunctions'
+import { IconButton } from '../Components/IconButton'
+import TreatmentCard from '../Components/TreatmentCard'
+import TitleCard from '../Components/TitleCard'
+import { NextIcon } from '../stories/helpers/ClientDataFunctions'
 import { useState } from 'react'
 
 const Patient = {

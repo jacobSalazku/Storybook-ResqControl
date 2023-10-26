@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import Menu from './Menu'
+import Menu from '../Components/Menu'
 
 const meta: Meta<typeof Menu> = {
     component: Menu,
     tags: ['autodocs'],
-    title: 'Molecules/Menu',
+    title: 'Organisme/Menu',
     argTypes: {},
 }
 

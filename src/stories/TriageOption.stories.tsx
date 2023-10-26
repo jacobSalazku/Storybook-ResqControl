@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import TriageOption from './TriageOption'
+import TriageOption from '../Components/TriageOption'
 
 const meta: Meta<typeof TriageOption> = {
     component: TriageOption,

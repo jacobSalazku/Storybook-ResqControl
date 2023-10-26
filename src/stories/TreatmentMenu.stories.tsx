@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import TreatmentMenu from './TreatmentMenu'
+import TreatmentMenu from '../Components/TreatmentMenu'
 
 const meta: Meta<typeof TreatmentMenu> = {
     component: TreatmentMenu,

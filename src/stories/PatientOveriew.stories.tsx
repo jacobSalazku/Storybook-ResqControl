@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { ExitIcon, PrintIcon, SendIcon } from './helpers/ClientDataFunctions'
-import { IconButton } from './IconButton'
+import { IconButton } from '../Components/IconButton'
 
-import { PatientOverview } from './PatientOverview'
+import { PatientOverview } from '../Pages/PatientOverview'
 
 const meta: Meta<typeof PatientOverview> = {
     component: PatientOverview,

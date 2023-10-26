@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import TitleCard from './stories/TitleCard'
+import TitleCard from './Components/TitleCard'
 import { EyeLogo, SofaIcon } from './stories/helpers/ClientDataFunctions'
 import { Button } from './Components/Button'
 

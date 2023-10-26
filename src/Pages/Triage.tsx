@@ -1,9 +1,13 @@
-import { EyeLogo, SendIcon, SofaIcon } from './helpers/ClientDataFunctions'
-import { IconButton } from './IconButton'
-import TitleCard from './TitleCard'
-import { ExitIcon } from './helpers/ClientDataFunctions'
-import TriagePatientDataCard from './TriagePatientDataCard'
-import Pathology from './Pathology'
+import {
+    EyeLogo,
+    SendIcon,
+    SofaIcon,
+} from '../stories/helpers/ClientDataFunctions'
+import { IconButton } from '../Components/IconButton'
+import TitleCard from '../Components/TitleCard'
+import { ExitIcon } from '../stories/helpers/ClientDataFunctions'
+import TriagePatientDataCard from '../Components/TriagePatientDataCard'
+import Pathology from '../Components/Pathology'
 
 export const Triage = () => {
     const Patient = {

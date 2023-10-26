@@ -1,8 +1,8 @@
-import { SofaIcon } from './helpers/ClientDataFunctions'
-import Menu from './Menu'
-import TitleCard from './TitleCard'
+import { SofaIcon } from '../stories/helpers/ClientDataFunctions'
+import Menu from '../Components/Menu'
+import TitleCard from '../Components/TitleCard'
 
-import UrgencyDashboardSmall from './UrgencyDashboardSmall'
+import UrgencyDashboardSmall from '../Components/UrgencyDashboardSmall'
 const WaitingRoom = () => {
     return (
         <div className="w-full h-full flex flex-row justify-center">

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 
 import { PrikIcon, SearchIcon } from './helpers/ClientDataFunctions'
 
-import TreatmentDash from './TreatmentDash'
+import TreatmentDash from '../Components/TreatmentDash'
 
 const meta: Meta<typeof TreatmentDash> = {
     component: TreatmentDash,

@@ -1,5 +1,5 @@
-import { patientData } from './patientData'
-import { PatientDataCard } from './PatientDataCard'
+import { patientData } from '../Components/patientData'
+import { PatientDataCard } from '../Components/PatientDataCard'
 
 const filteredDataStandard = patientData.filter(
     (patient) => patient.urgency === 'T1'

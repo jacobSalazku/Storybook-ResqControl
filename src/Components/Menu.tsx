@@ -5,7 +5,7 @@ import {
     TimeIconGreen,
     CycleIconWhite,
     CycleIconGreen,
-} from './helpers/ClientDataFunctions'
+} from '../stories/helpers/ClientDataFunctions'
 import MenuItem from './MenuItem'
 import { useState } from 'react'
 

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import UrgencyDashboardSmall from './UrgencyDashboardSmall'
+import UrgencyDashboardSmall from '../Components/UrgencyDashboardSmall'
 const meta: Meta<typeof UrgencyDashboardSmall> = {
     component: UrgencyDashboardSmall,
     tags: ['autodocs'],

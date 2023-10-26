@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import MedicationDash from './MedicationCard'
+import MedicationDash from '../Components/MedicationCard'
 
 const meta: Meta<typeof MedicationDash> = {
     component: MedicationDash,

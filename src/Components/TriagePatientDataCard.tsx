@@ -1,10 +1,10 @@
 import '../index.css'
 import TriageOption from './TriageOption'
 
-import globeIcon from './icons/globe.png'
-import eventIcon from './icons/event.png'
-import acuteIcon from './icons/acute.png'
-import { getUrgencyIcon } from './helpers/ClientDataFunctions'
+import globeIcon from '../stories/icons/globe.png'
+import eventIcon from '../stories/icons/event.png'
+import acuteIcon from '../stories/icons/acute.png'
+import { getUrgencyIcon } from '../stories/helpers/ClientDataFunctions'
 
 /** Card with all the Patient information */
 export interface TriagePatientprops {

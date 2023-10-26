@@ -107,7 +107,7 @@ export const getBorderColorClass = (urgency: string | undefined) => {
     } else if (urgency === 'T2') {
         return 'border-p-yellow'
     } else if (urgency === 'T3') {
-        return 'border-[#DF2935]'
+        return 'border-[#EE7E7A]'
     } else if (urgency === 'base') {
         return 'border-dark-green'
     }
@@ -119,7 +119,7 @@ export const getBorderBottomColorClass = (urgency: string | undefined) => {
     } else if (urgency === 'T2') {
         return 'border-b-p-yellow'
     } else if (urgency === 'T3') {
-        return 'border-[#DF2935]'
+        return 'border-[#EE7E7A]'
     } else if (urgency === 'base') {
         return 'border-b-dark-green'
     }
