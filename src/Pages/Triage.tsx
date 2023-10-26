@@ -5,7 +5,7 @@ import {
 } from '../stories/helpers/ClientDataFunctions'
 import { IconButton } from '../Components/IconButton'
 import TitleCard from '../Components/TitleCard'
-import { ExitIcon } from '../stories/helpers/ClientDataFunctions'
+import { ExitIcon, Sofa } from '../stories/helpers/ClientDataFunctions'
 import TriagePatientDataCard from '../Components/TriagePatientDataCard'
 import Pathology from '../Components/Pathology'
 
@@ -26,9 +26,9 @@ export const Triage = () => {
                     rightLogo={EyeLogo}
                     button={
                         <IconButton
-                            backgroundColor="bg-dark-blue"
+                            backgroundColor="bg-light-blue"
                             size="w-32"
-                            icon={SofaIcon}
+                            icon={Sofa}
                             variant="rounded-3xl"
                         />
                     }
@@ -46,14 +46,14 @@ export const Triage = () => {
                                 icon={ExitIcon}
                                 size="w-32"
                                 variant=" rounded-full"
-                                backgroundColor="bg-[#DF2935]"
+                                backgroundColor="bg-[#EE7E7A] border-white"
                                 selected={false}
                             />
                             <IconButton
                                 icon={SendIcon}
                                 size="w-32"
                                 variant=" rounded-full"
-                                backgroundColor="bg-dark-blue"
+                                backgroundColor="bg-light-blue border-white"
                                 selected={false}
                             />
                         </div>
