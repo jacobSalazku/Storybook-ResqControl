@@ -18,9 +18,9 @@ export default {
                 'p-text-color': '#152A23',
                 's-text-color': '#141414',
                 'p-red': '#EE7E7A,',
-                'p-yellow': '#FF9F1C',
+                'p-yellow': '#FFC161',
                 'p-grey': '#808080',
-                'p-green': '#63D471',
+                'p-green': '#84FFB5',
             },
             borderColor: {
                 'white-green': 'linear-gradient(to right, white, #6EE7B7)',

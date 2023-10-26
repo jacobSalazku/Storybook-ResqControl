@@ -42,7 +42,6 @@ export const NormalState: Story = {
     args: {
         title: 'WachtZaal Triage',
         icon: TaskIconGreen,
-        border: 'rounded-3xl',
         backgroundColor: 'bg-white text-p-text-color border',
     },
 }
@@ -51,7 +50,6 @@ export const NormalState: Story = {
 export const SelectedState: Story = {
     args: {
         title: 'WachtzaalPreReg',
-        border: 'rounded',
         backgroundColor: 'bg-dark-blue text-white transition',
         icon: TimeIconWhite,
     },

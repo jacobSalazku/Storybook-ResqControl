@@ -29,6 +29,7 @@ import darkBlueArrowRight from './icons/darkBlueArrowRight.png'
 import lightBlueCheck from './icons/lightBlueCheck.png'
 import plusIcon from './icons/plusIcon.png'
 import updateIcon from './icons/updateIcon.png'
+import blueArrowWaiting from './icons/blueArrowWaitingroom.png'
 
 export const IconExit = <img src={exitIcon}></img>
 
@@ -78,6 +79,10 @@ export const CycleIconBrown = (
 )
 export const CycleIconWhite = (
     <img src={cycleIconWhite} alt="Delete" width=""></img>
+)
+
+export const BlueArrowWaiting = (
+    <img src={blueArrowWaiting} alt="Delete" width=""></img>
 )
 
 export const PrikIcon = <img src={prikIcon} alt="Delete" width=""></img>

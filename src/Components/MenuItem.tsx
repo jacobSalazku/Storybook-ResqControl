@@ -5,19 +5,13 @@ interface wrmiProps {
     icon: JSX.Element
     onClick?: () => void
 }
-const MenuItem = ({
-    onClick,
-    backgroundColor,
-    title,
-    icon,
-    border,
-}: wrmiProps) => {
+const MenuItem = ({ onClick, backgroundColor, title, icon }: wrmiProps) => {
     return (
         <div
-            className={`w-[11.5rem] h-[5.25rem] cursor-pointer  ${backgroundColor} ${border}`}
+            className={`w-[16.188rem] h-[3rem] cursor-pointer rounded-full  ${backgroundColor} `}
             onClick={onClick}
         >
-            <div className=" w-[11.5rem] h-[5.25rem] flex flex-col items-center justify-around">
+            <div className=" w-full h-full flex flex-row items-center justify-center gap-4">
                 <div>{icon}</div>
                 <p className="text-base font-bold">{title}</p>
             </div>

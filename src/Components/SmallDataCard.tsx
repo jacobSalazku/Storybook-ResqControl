@@ -7,6 +7,7 @@ import {
     getUrgencyIcon,
     getBorderColorClass,
     getBorderBottomColorClass,
+    BlueArrowWaiting,
 } from '../stories/helpers/ClientDataFunctions'
 
 /** Card with all the Patient information */
@@ -30,11 +31,14 @@ const SmallDataCard = ({
             className={` h-[9.5rem] w-[24rem] bg-card-background-color border-l-8 s
        shadow-md shadow-p-grey ${getBorderColorClass(
            urgency
-       )} flex flex-row justify-between rounded pt-4 pl-4`}
+       )} flex flex-row justify-between rounded pt-4 px-4`}
         >
-            <div className=" flex flex-col gap">
-                <div>
+            <div className="w-full flex flex-col gap">
+                <div className=" flex flex-row justify-between">
                     <p className="  font-sans text-2xl text-black ">{name}</p>
+                    <div className="pr-4 flex flex-col justify-center cursor-pointer">
+                        {BlueArrowWaiting}
+                    </div>
                 </div>
 
                 <div
@@ -73,9 +77,6 @@ const SmallDataCard = ({
                         <p>Braken</p>
                     </div>
                 </div>
-            </div>
-            <div className="pr-4 flex flex-col justify-center cursor-pointer">
-                {getUrgencyIcon(urgency)}
             </div>
         </div>
     )

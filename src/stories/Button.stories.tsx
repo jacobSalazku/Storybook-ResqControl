@@ -70,7 +70,7 @@ export const ButtonCheck: Story = {
     args: {
         primary: true,
         label: 'Kleine wondzorg',
-        backgroundColor: 'bg-dark-blue  text-brown-accent border-dark-blue',
+        backgroundColor: ' bg-light-blue text-white',
         size: 'w-44',
         variant: 'rounded-full',
     },
@@ -82,7 +82,7 @@ export const ButtonCheck2: Story = {
     args: {
         label: 'Text',
         primary: true,
-        backgroundColor: 'bg-dark-blue text-brown-accent',
+        backgroundColor: ' text-dark-blue',
         size: 'w-44',
         variant: 'rounded-full',
         selected: false,
@@ -95,7 +95,7 @@ export const ButtonHover: Story = {
         label: 'Text',
         primary: true,
         backgroundColor:
-            'bg-white text-dark-blue border-dark-blue border  hover:text-brown-accent hover:bg-dark-blue',
+            'bg-white text-dark-blue border-dark-blue border  hover:text-white hover:bg-light-blue hover:border-white',
         size: 'w-44',
         variant: 'rounded-full',
         selected: true,
@@ -128,7 +128,7 @@ export const ExitButton: Story = {
     args: {
         label: 'Exit',
         primary: false,
-        backgroundColor: 'bg-[#DF2935] border--[#DF2935] text-white ',
+        backgroundColor: 'bg-[#EE7E7A] border-[#EE7E7A] text-white ',
         size: 'w-32',
         icon: ExitIcon,
         variant: 'rounded-full',
@@ -138,7 +138,7 @@ export const ExitButtonWachtzaal: Story = {
     args: {
         label: 'Exit',
         primary: false,
-        backgroundColor: 'bg-[#DF2935] border-[#DF2935] text-white ',
+        backgroundColor: 'bg-[#EE7E7A] border-[#EE7E7A] text-white ',
         size: 'w-32',
         variant: 'rounded-full',
     },
