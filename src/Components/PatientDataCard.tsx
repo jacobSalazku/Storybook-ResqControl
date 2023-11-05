@@ -2,6 +2,7 @@ import '../index.css'
 import acuteIcon from '../stories/icons/acute.png'
 import eventIcon from '../stories/icons/event.png'
 import globeIcon from '../stories/icons/globe.png'
+import { getGender } from '../stories/helpers/ClientDataFunctions'
 
 import {
     getUrgencyIcon,
@@ -15,7 +16,8 @@ export interface PatientProps {
     language: string
     urgency?: string | undefined
     time: string
-    date: string | number
+    date: string
+    gender: string
 }
 
 // bg-gradient-to-r from-white to-light-green
@@ -25,6 +27,7 @@ export const PatientDataCard = ({
     name,
     language,
     date,
+    gender,
 }: PatientProps) => {
     return (
         <div
@@ -44,6 +47,7 @@ export const PatientDataCard = ({
                     )}`}
                 >
                     <div className="flex flex-row  gap-2 ">
+                        {getGender(gender)}
                         <img src={acuteIcon} />
                         <div>
                             <p>{time}</p>

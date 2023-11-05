@@ -33,6 +33,7 @@ import blueArrowWaiting from './icons/blueArrowWaitingroom.png'
 import sofa from './icons/sofaVec.png'
 import earLogo from './icons/earLogo.png'
 import saveIcon from './icons/saveIcon.png'
+import maleIcon from './icons/maleIcon.png'
 
 export const IconExit = <img src={exitIcon}></img>
 
@@ -99,7 +100,12 @@ export const UpdateIcon = <img src={updateIcon} alt="" width=""></img>
 export const Sofa = <img src={sofa} alt="" width=""></img>
 export const EarLogo = <img src={earLogo} alt="" width=""></img>
 export const SaveIcon = <img src={saveIcon} alt="" width=""></img>
+export const MaleIcon = <img src={maleIcon} alt="" width=""></img>
 
+export const getGender = (gender: string | JSX.Element) => {
+    // Use a ternary expression to conditionally return JSX
+    return gender === 'male' ? <img src={maleIcon} alt="male" /> : '' // Return null if the condition is not met
+}
 export const getUrgencyIcon = (urgency: string | undefined) => {
     if (urgency === 'T1') {
         return <img src={greenArrow} alt="minor" />

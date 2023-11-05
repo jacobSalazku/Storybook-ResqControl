@@ -1,11 +1,6 @@
-import {
-    DeleteIcon,
-    DeleteLogo,
-    UpdateIcon,
-} from '../stories/helpers/ClientDataFunctions'
+import { UpdateIcon } from '../stories/helpers/ClientDataFunctions'
 import Select from '../stories/Select'
-import { IconButton } from './IconButton'
-const stringtime = ['tijd', 'tijd', 'tijd']
+
 const dosis = ['5ml', '10ml', '15ml', '20ml']
 const toedining = ['oraal', 'Intraveneus', 'intramusculair', 'subcutaan']
 const MedicationCard = () => {

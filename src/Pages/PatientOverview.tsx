@@ -12,6 +12,7 @@ const Patient = {
     name: 'John Doe',
     language: 'DE',
     date: '20',
+    gender: 'male',
 }
 interface PatientOverviewProp {
     leftButton: JSX.Element

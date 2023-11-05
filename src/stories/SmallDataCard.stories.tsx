@@ -18,6 +18,7 @@ export const Base: Story = {
         urgency: 'base',
         time: stringTime,
         date: stringDate,
+        language: 'ENG',
     },
 }
 export const Immediate: Story = {
@@ -27,6 +28,7 @@ export const Immediate: Story = {
         time: stringTime,
         language: 'NL',
         date: stringDate,
+        gender: 'male',
     },
 }
 
@@ -37,6 +39,7 @@ export const Urgent: Story = {
         time: stringTime,
         language: 'BE',
         date: stringDate,
+        gender: 'male',
     },
 }
 export const Standerd: Story = {
@@ -46,5 +49,6 @@ export const Standerd: Story = {
         time: stringTime,
         language: 'BE',
         date: stringDate,
+        gender: 'male',
     },
 }
