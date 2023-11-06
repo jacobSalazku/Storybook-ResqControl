@@ -36,7 +36,7 @@ const MedicationCard = () => {
                         </div>
                     </div>
 
-                    <div className="w-full h-full flex flex-row justify-center  ">
+                    <div className="w-full h-full flex flex-row justify-center pt-4  ">
                         <div className="w-full flex flex-col justify-center items-center text-dark-blue gap-4">
                             <div className=" flex flex-col   items-start gap-4 pl-1 ">
                                 <div className="flex flex-row gap-2">
@@ -56,8 +56,15 @@ const MedicationCard = () => {
                                     />
                                 </div>
                                 <div>
+                                    <input
+                                        className=" w-56 border-2 rounded-2xl h-8  border-dark-blue px-2 "
+                                        type="text"
+                                        placeholder="Dosis"
+                                    />
+                                </div>
+                                <div>
                                     <Select
-                                        title="Dosis"
+                                        title="Toedening"
                                         menuItems={...toedining}
                                         ringColor="ring-dark-blue"
                                         width="w-56"

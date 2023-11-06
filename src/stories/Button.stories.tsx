@@ -126,7 +126,7 @@ export const Next: Story = {
 
 export const ExitButton: Story = {
     args: {
-        label: 'Exit',
+        label: '',
         primary: false,
         backgroundColor: 'bg-[#EE7E7A] border-[#EE7E7A] text-white ',
         size: 'w-32',
