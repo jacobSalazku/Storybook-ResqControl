@@ -31,13 +31,16 @@ export const TriagePatientDataCard = ({
     allergies,
 }: TriagePatientprops) => {
     return (
-        <div className="h-[400px] w-[391px] bg-card-background-color shadow-xl border flex flex-row justify-between border-l-[6px] border-[#EE7E7A] pt-5 rounded-md ">
-            <div className="flex flex-col ">
+        <div className="h-[400px] w-[391px] bg-card-background-color shadow-xl  flex flex-row justify-between border-l-[6px] border-[#EE7E7A] pt-4 rounded-md ">
+            <div className="flex flex-col w-full h-full ">
                 <div className="pl-4">
-                    <p className=" text-2xl text-black font-medium ">{name}</p>
+                    <p className="text-2xl text-black font-medium ">{name}</p>
                 </div>
-                <div className="flex flex-row gap-2 pl-5">
-                    <div className=" w-1/2 flex flex-col justify-start gap-2 pt-2 pr-2 text-p-text-color font-light ">
+                <div
+                    className="flex flex-row gap-1 pl-4
+            "
+                >
+                    <div className=" w-[200px] flex flex-col justify-start gap-2 pt-2 pr-2 pl-2 text-p-text-color font-light ">
                         <div>
                             <p className="font-semibold text">
                                 Gegevens Patient
@@ -204,7 +207,8 @@ export const TriagePatientDataCard = ({
                         </div>
                     </div>
                 </div>
-                <div className="  w-[22rem] h-full flex flex-row justify-center  items-center  ">
+                <div className="w-[17rem] h-full flex flex-col items-start justify-center gap-2">
+                    <p className="pl-4 font-medium">Triage codes</p>
                     <TriageOption triageSelection={triageLevel} />
                 </div>
             </div>

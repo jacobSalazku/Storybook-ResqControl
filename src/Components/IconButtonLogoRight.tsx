@@ -1,17 +1,8 @@
 import '../index.css';
-
-export interface IconButtonProps {
-    label?: string;
-    variant: string;
-    backgroundColor: string;
-    size: string;
-    icon: any | JSX.ElementClass;
-    selected?: boolean;
-    hover?: string;
-}
+import { IconButtonProps } from './IconButton';
 
 /** Primary button for our user interface  without text only Icons */
-const IconButton = ({
+const IconButtonLogoRight = ({
     label,
     selected,
     icon,
@@ -26,8 +17,8 @@ const IconButton = ({
                 selected ? 'border-p-blue' : ''
             }`}
         >
-            {icon} {label}
+            {label} {icon}
         </button>
     );
 };
-export default IconButton;
+export default IconButtonLogoRight;
