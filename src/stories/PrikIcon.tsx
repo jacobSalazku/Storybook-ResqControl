@@ -1,7 +1,7 @@
-import prikIcon from './icons/prikIcon.png'
+import prikIcon from "./icons/prikIcon.png";
 
 const PrikIcon = () => {
-    return <img>{prikIcon}</img>
-}
+  return <img>{prikIcon}</img>;
+};
 
-export default PrikIcon
+export default PrikIcon;

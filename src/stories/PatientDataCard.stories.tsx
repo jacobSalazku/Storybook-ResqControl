@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react'
-import { PatientDataCard } from '../Components/PatientDataCard'
-import { stringTime, stringDate } from './helpers/DateTime'
+import { Meta, StoryObj } from '@storybook/react';
+import { PatientDataCard } from '../Components/PatientDataCard';
+import { stringTime, stringDate } from './helpers/DateTime';
 
 const meta: Meta<typeof PatientDataCard> = {
     component: PatientDataCard,
@@ -21,11 +21,11 @@ const meta: Meta<typeof PatientDataCard> = {
             },
         },
     },
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Base: Story = {
     args: {
@@ -34,7 +34,7 @@ export const Base: Story = {
         time: stringTime,
         date: stringDate,
     },
-}
+};
 
 export const Immediate: Story = {
     args: {
@@ -44,7 +44,7 @@ export const Immediate: Story = {
         language: 'NL',
         date: stringDate,
     },
-}
+};
 
 export const Urgent: Story = {
     args: {
@@ -54,7 +54,7 @@ export const Urgent: Story = {
         language: 'BE',
         date: stringDate,
     },
-}
+};
 export const Standerd: Story = {
     args: {
         name: 'John Doe',
@@ -63,4 +63,4 @@ export const Standerd: Story = {
         language: 'BE',
         date: stringDate,
     },
-}
+};

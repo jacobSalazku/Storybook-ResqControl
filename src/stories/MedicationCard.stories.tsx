@@ -1,18 +1,18 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from "@storybook/react";
 
-import MedicationDash from '../Components/MedicationCard'
+import MedicationDash from "../Components/MedicationCard";
 
 const meta: Meta<typeof MedicationDash> = {
-    component: MedicationDash,
-    tags: ['autodocs'],
-    title: 'Molecules/Medication Card',
-    argTypes: {},
-}
+  component: MedicationDash,
+  tags: ["autodocs"],
+  title: "Molecules/Medication Card",
+  argTypes: {},
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const BasisTreament: Story = {
-    args: {},
-}
+  args: {},
+};

@@ -1,16 +1,16 @@
-import { Meta, StoryObj } from '@storybook/react'
-import { stringDate, stringTime } from './helpers/DateTime'
-import SmallDataCard from '../Components/SmallDataCard'
+import { Meta, StoryObj } from '@storybook/react';
+import { stringDate, stringTime } from './helpers/DateTime';
+import SmallDataCard from '../Components/SmallDataCard';
 
 const meta: Meta<typeof SmallDataCard> = {
     component: SmallDataCard,
     tags: ['autodocs'],
     title: 'Molecules/Small Patient Data  Card',
     argTypes: {},
-}
-export default meta
+};
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Base: Story = {
     args: {
@@ -20,7 +20,7 @@ export const Base: Story = {
         date: stringDate,
         language: 'ENG',
     },
-}
+};
 export const Immediate: Story = {
     args: {
         name: 'John Doe',
@@ -28,9 +28,8 @@ export const Immediate: Story = {
         time: stringTime,
         language: 'NL',
         date: stringDate,
-        gender: 'male',
     },
-}
+};
 
 export const Urgent: Story = {
     args: {
@@ -41,7 +40,7 @@ export const Urgent: Story = {
         date: stringDate,
         gender: 'male',
     },
-}
+};
 export const Standerd: Story = {
     args: {
         name: 'John Doe',
@@ -51,4 +50,4 @@ export const Standerd: Story = {
         date: stringDate,
         gender: 'male',
     },
-}
+};

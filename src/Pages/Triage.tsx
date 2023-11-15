@@ -1,13 +1,9 @@
-import {
-    EyeLogo,
-    SendIcon,
-    SofaIcon,
-} from '../stories/helpers/ClientDataFunctions'
-import { IconButton } from '../Components/IconButton'
-import TitleCard from '../Components/TitleCard'
-import { ExitIcon, Sofa } from '../stories/helpers/ClientDataFunctions'
-import TriagePatientDataCard from '../Components/TriagePatientDataCard'
-import Pathology from '../Components/Pathology'
+import { EyeLogo, SendIcon } from '../stories/helpers/ClientDataFunctions';
+import { IconButton } from '../Components/IconButton';
+import TitleCard from '../Components/TitleCard';
+import { ExitIcon, Sofa } from '../stories/helpers/ClientDataFunctions';
+import TriagePatientDataCard from '../Components/TriagePatientDataCard';
+import Pathology from '../Components/Pathology';
 
 export const Triage = () => {
     const Patient = {
@@ -17,9 +13,10 @@ export const Triage = () => {
         language: 'DE',
         date: '20-03',
         triageLevel: 'T2',
-    }
+        gender: 'male',
+    };
     return (
-        <div className="w-full h-screen  flex flex-col  items-center">
+        <div className="w-full h-screen flex flex-col  items-center">
             <div className="w-[60rem] flex flex-col justify-center items-center before: bg-background-color py-7 gap-2">
                 <TitleCard
                     title="Triage"
@@ -61,6 +58,6 @@ export const Triage = () => {
                 </div>
             </div>
         </div>
-    )
-}
-export default Triage
+    );
+};
+export default Triage;

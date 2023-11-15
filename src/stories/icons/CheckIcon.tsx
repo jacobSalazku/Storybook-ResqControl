@@ -1,7 +1,7 @@
-import checkIcons from './check-icon.png'
+import checkIcons from "./check-icon.png";
 
 const CheckIcon = () => {
-    return <img src={checkIcons} width="20" height="30"></img>
-}
+  return <img src={checkIcons} width="20" height="30"></img>;
+};
 
-export default CheckIcon
+export default CheckIcon;
