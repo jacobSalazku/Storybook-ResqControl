@@ -28,7 +28,7 @@ const InputSelect = ({
             <Menu as="div" className="relative inline-block text-left">
                 <div>
                     <Menu.Button
-                        className={`inline-flex w-full justify-centert ${textColor} gap-x-1.5 rounded-full ${backgroundColor}  px-4 py-2 text-sm font-semibold text-gray-900 ring-2 ring-inset ring-light-blue hover:bg-gray-50`}
+                        className={`inline-flex w-full justify-centert ${textColor} gap-x-1.5 rounded-full ${backgroundColor}  px-4 py-2 text-sm font-semibold text-gray-900 ring-2 ring-inset ring-light-blue`}
                     >
                         {selectedItem ? selectedItem : title}
                         <ChevronDownIcon

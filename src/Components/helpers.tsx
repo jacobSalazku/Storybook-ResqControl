@@ -78,3 +78,32 @@ export const checkIfCompleted = (isCompleted: boolean) => {
         ></img>
     );
 };
+
+export const pointArrow = (show: boolean) => {
+    if (show == false) {
+        return (
+            <Icon
+                icon="icon-tabler-chevron-down"
+                color="#497DAE"
+                path={
+                    <>
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M6 9l6 6l6 -6" />
+                    </>
+                }
+            />
+        );
+    }
+    return (
+        <Icon
+            icon="icon-tabler-chevron-up"
+            color="#497DAE"
+            path={
+                <>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M6 15l6 -6l6 6" />
+                </>
+            }
+        />
+    );
+};

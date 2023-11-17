@@ -9,7 +9,7 @@ const Header = () => {
             <div className="flex flex-row items-center gap-4">
                 <InputSelect
                     menuItems={...languages}
-                    backgroundColor="bg-dark-blue"
+                    backgroundColor="bg-dark-blue "
                     textColor="text-white"
                     arrowColor="bg-white"
                 />

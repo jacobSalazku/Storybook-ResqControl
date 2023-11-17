@@ -6,19 +6,19 @@ import TriagePatientDataCard from '../Components/TriagePatientDataCard';
 import Pathology from '../Components/Pathology';
 import Icon from '../Components/icon';
 import Header from '../Components/Header';
+const Patient = {
+    time: '12:50',
+    urgency: 'base',
+    name: 'John Doe',
+    language: 'DE',
+    date: '20-03',
+    triageLevel: 'T2',
+    gender: 'male',
+    nationality: 'Belgie',
+    dateOfBirth: '20/02/1997',
+    allergies: false,
+};
 export const Triage = () => {
-    const Patient = {
-        time: '12:50',
-        urgency: 'base',
-        name: 'John Doe',
-        language: 'DE',
-        date: '20-03',
-        triageLevel: 'T2',
-        gender: 'male',
-        nationality: 'Belgie',
-        dateOfBirth: '20/02/1997',
-        allergies: false,
-    };
     return (
         <div className="w-full h-screen flex flex-col  items-center">
             <Header />
@@ -88,11 +88,41 @@ export const Triage = () => {
                         />
                     }
                 />
-                <div className=" flex flex-col px-10 gap-6">
+                <div className=" w-[58rem] flex flex-col px-10 gap-6">
                     <div className=" w-full flex flex-row justify-center ">
                         <div className="w-full flex flex-row justify-between gap-4 ">
                             <TriagePatientDataCard {...Patient} />
-                            <Pathology />
+                            <div className="w-1/2 flex flex-col justify-start items-start gap-4">
+                                <div>
+                                    <p className="font-semibold">Pathologiën</p>
+                                </div>
+
+                                <IconButton
+                                    label="Voeg pathologie toe"
+                                    icon={
+                                        <Icon
+                                            icon="icon-tabler-plus"
+                                            color="#ffffFf"
+                                            path={
+                                                <>
+                                                    <path
+                                                        stroke="none"
+                                                        d="M0 0h24v24H0z"
+                                                        fill="none"
+                                                    />
+                                                    <path d="M12 5l0 14" />
+                                                    <path d="M5 12l14 0" />
+                                                </>
+                                            }
+                                        />
+                                    }
+                                    size="h-[40px] w-[200px]"
+                                    variant="rounded"
+                                    backgroundColor="border-[#497DAE] bg-[#497DAE] text-white shadow-lg "
+                                />
+                            </div>
+
+                            {/* <Pathology /> */}
                         </div>
                     </div>
                     <div className=" w-full flex flex-row justify-end ">
