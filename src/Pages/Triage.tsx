@@ -3,9 +3,9 @@ import IconButton from '../Components/IconButton';
 import TitleCard from '../Components/TitleCard';
 import IconButtonLogoRight from '../Components/IconButtonLogoRight';
 import TriagePatientDataCard from '../Components/TriagePatientDataCard';
-import Pathology from '../Components/Pathology';
 import Icon from '../Components/icon';
 import Header from '../Components/Header';
+import { IconPlus, IconReport } from '@tabler/icons-react';
 const Patient = {
     time: '12:50',
     urgency: 'base',
@@ -61,28 +61,7 @@ export const Triage = () => {
                         <IconButton
                             label="Naar Triage Wachtzaal"
                             size="h-[40px] w-[px]"
-                            icon={
-                                <Icon
-                                    icon="icon-tabler-report"
-                                    color="#263B54"
-                                    path={
-                                        <>
-                                            <path
-                                                stroke="none"
-                                                d="M0 0h24v24H0z"
-                                                fill="none"
-                                            />
-                                            <path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697" />
-                                            <path d="M18 14v4h4" />
-                                            <path d="M18 11v-4a2 2 0 0 0 -2 -2h-2" />
-                                            <path d="M8 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
-                                            <path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                                            <path d="M8 11h4" />
-                                            <path d="M8 15h3" />
-                                        </>
-                                    }
-                                />
-                            }
+                            icon={<IconReport color="#263B54" stroke={1.5} />}
                             backgroundColor=" bg-white border-white hover:border-[#497DAE] hover:bg-[#497DAE] hover:text-white shadow-md"
                             variant="rounded-sm"
                         />
@@ -100,20 +79,9 @@ export const Triage = () => {
                                 <IconButton
                                     label="Voeg pathologie toe"
                                     icon={
-                                        <Icon
-                                            icon="icon-tabler-plus"
+                                        <IconPlus
                                             color="#ffffFf"
-                                            path={
-                                                <>
-                                                    <path
-                                                        stroke="none"
-                                                        d="M0 0h24v24H0z"
-                                                        fill="none"
-                                                    />
-                                                    <path d="M12 5l0 14" />
-                                                    <path d="M5 12l14 0" />
-                                                </>
-                                            }
+                                            stroke={1.5}
                                         />
                                     }
                                     size="h-[40px] w-[200px]"

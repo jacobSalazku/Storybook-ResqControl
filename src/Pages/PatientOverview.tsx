@@ -1,9 +1,8 @@
 import { PatientOverviewCard } from '../Components/PatientOverviewCard';
-import { EyeLogo } from '../stories/helpers/ClientDataFunctions';
 import IconButton from '../Components/IconButton';
 import TreatmentCard from '../Components/TreatmentCard';
 import TitleCard from '../Components/TitleCard';
-import { NextIcon } from '../stories/helpers/ClientDataFunctions';
+import { IconRun, IconEye } from '@tabler/icons-react';
 import { useState } from 'react';
 import Header from '../Components/Header';
 
@@ -19,6 +18,7 @@ const Patient = {
     triageLevel: 'T2',
     allergies: false,
 };
+
 export const PatientOverview = () => {
     const [completedTreatments, setCompletedTreatments] = useState([
         false,
@@ -47,13 +47,15 @@ export const PatientOverview = () => {
                 <div className="w-[58rem] flex flex-col justify-center items-center before: bg-white">
                     <TitleCard
                         title="Patient Overzicht"
-                        icon={EyeLogo}
+                        icon={
+                            <IconEye color="#497DAE" size="44" stroke="1.5" />
+                        }
                         rightButton={
                             <IconButton
                                 label="Patient weg"
                                 backgroundColor=" text-white bg-p-yellow border-p-yellow shadow-md"
                                 size="h-[40px] w-[143px]"
-                                icon={NextIcon}
+                                icon={<IconRun />}
                                 variant="rounded-sm"
                             />
                         }

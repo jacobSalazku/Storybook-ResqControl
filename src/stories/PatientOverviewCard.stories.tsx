@@ -22,5 +22,6 @@ export const Start: Story = {
         urgency: 'T2',
         nationality: 'België',
         dateOfBirth: '02/10/1983',
+        allergies: false,
     },
 };

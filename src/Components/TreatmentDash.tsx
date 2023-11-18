@@ -1,4 +1,4 @@
-import { icon } from '@fortawesome/fontawesome-svg-core';
+import { IconCheck } from '@tabler/icons-react';
 import { useState } from 'react';
 import { Button } from './Button';
 import { pointArrow } from './helpers';
@@ -57,7 +57,7 @@ export const TreatmentDash = ({
                                 size="w-44"
                                 height="h-10"
                                 variant="rounded-full"
-                                backgroundColor=""
+                                icon={<IconCheck color="#ffffff" />}
                             />
                         ))}
                     </div>

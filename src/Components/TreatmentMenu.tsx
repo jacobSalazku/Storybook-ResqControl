@@ -21,7 +21,7 @@ const TreatmentMenu = () => {
                     <p>Verzorging</p>
                 </div>
                 <div
-                    className={`cursor-pointer hover:border-b-4 border-b-light-blue  px-5 py-2 ${
+                    className={`cursor-pointer hover:border-b-4 border-b-light-blue px-5 py-2 ${
                         activeItem === 'Medicatie'
                             ? 'border-b-light-blue border-b-4'
                             : ''
@@ -31,7 +31,7 @@ const TreatmentMenu = () => {
                     <p>Medicatie</p>
                 </div>
                 <div
-                    className={`cursor-pointer hover:border-b-4 border-b-light-blue  px-5 py-2 ${
+                    className={`cursor-pointer hover:border-b-4 border-b-light-blue px-5 py-2 ${
                         activeItem === 'Materiaal'
                             ? 'border-b-light-blue border-b-4'
                             : ''
@@ -41,7 +41,7 @@ const TreatmentMenu = () => {
                     <p>Materiaal</p>
                 </div>
                 <div
-                    className={`cursor-pointer hover:border-b-4 border-b-light-blue  px-5 py-2 ${
+                    className={`cursor-pointer hover:border-b-4 border-b-light-blue px-5 py-2 ${
                         activeItem === 'Opmerkingen'
                             ? 'border-b-light-blue border-b-4'
                             : ''

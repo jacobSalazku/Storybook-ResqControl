@@ -1,11 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
+import { IconLogout } from '@tabler/icons-react';
 import IconButton from '../Components/IconButton';
-import {
-    iconDelete,
-    NextIcon,
-    ExitIcon,
-    PlusIcon,
-} from './helpers/ClientDataFunctions';
+import { iconDelete, PlusIcon } from './helpers/ClientDataFunctions';
 
 const meta: Meta<typeof IconButton> = {
     component: IconButton,
@@ -49,12 +45,12 @@ const meta: Meta<typeof IconButton> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Cancel: Story = {
+export const Logout: Story = {
     args: {
-        backgroundColor: 'bg-[#DF2935]  border-[#DF2935] ',
-        size: 'w-32',
-        icon: ExitIcon,
-        variant: 'rounded-full',
+        backgroundColor: 'bg-p-red text-white border-p-red',
+        size: 'w-[125px] h-[35px]',
+        icon: <IconLogout color="#FFFFFF" />,
+        variant: 'rounded',
     },
 };
 /** Button to stop the actions in Treatment */
@@ -67,14 +63,6 @@ export const Delete: Story = {
     },
 };
 /** Button to go to the next Treatment */
-export const Next: Story = {
-    args: {
-        backgroundColor: 'bg-brown-accent border-brown-accent',
-        size: 'w-32',
-        icon: NextIcon,
-        variant: 'rounded-3xl',
-    },
-};
 
 export const Plus: Story = {
     args: {

@@ -1,5 +1,4 @@
 import '../index.css';
-
 import { useState } from 'react';
 
 // define object
@@ -27,14 +26,16 @@ export const Button = ({
     height = 'h-12',
 }: ButtonProps) => {
     const [isSelected, setIsSelected] = useState(false);
+
     const handleButtonClick = () => {
         setIsSelected(!isSelected);
     };
+
     return (
         <button
             className={`${size} ${height} py-2 px-2 flex justify-center items-center border ${variant} cursor-pointer 
             ${isSelected ? 'bg-light-blue text-white' : backgroundColor} 
-            text-sm transition duration-350 ease-in-out  font-normal gap-2  
+            text-sm transition duration-350 ease-in-out font-normal gap-2  
             ${selected ? '' : 'selectedStyle '}`}
             onClick={handleButtonClick}
         >

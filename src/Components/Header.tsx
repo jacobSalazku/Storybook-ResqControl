@@ -1,6 +1,7 @@
 import InputSelect from '../stories/inputSelect';
 import IconButton from './IconButton';
-import Icon from './icon';
+import { IconLogout } from '@tabler/icons-react';
+
 const Header = () => {
     const languages = ['NL', 'ENG'];
     return (
@@ -18,24 +19,7 @@ const Header = () => {
                     size="w-[125px] h-[35px]"
                     backgroundColor="bg-p-red text-white border-p-red"
                     variant="rounded"
-                    icon={
-                        <Icon
-                            icon="icon-tabler-logout"
-                            color="#FFFFFF"
-                            path={
-                                <>
-                                    <path
-                                        stroke="none"
-                                        d="M0 0h24v24H0z"
-                                        fill="none"
-                                    />
-                                    <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
-                                    <path d="M9 12h12l-3 -3" />
-                                    <path d="M18 15l3 -3" />
-                                </>
-                            }
-                        />
-                    }
+                    icon={<IconLogout color="#FFFFFF" />}
                 />
             </div>
         </div>

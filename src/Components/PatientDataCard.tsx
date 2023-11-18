@@ -30,22 +30,20 @@ export const PatientDataCard = ({
 }: PatientProps) => {
     return (
         <div
-            className={` h-[12.5rem] w-[24rem] bg-card-background-color border-l-8 border-t-2
-            border-b-2   shadow-xl shadow-black ${getBorderColorClass(
-                urgency,
-            )} flex flex-row justify-between rounded-3xl pt-4 pl-4 `}
+            className={`h-[12.5rem] w-[24rem] bg-card-background-color border-l-8 border-t-2border-b-2 shadow-xl
+         shadow-black ${getBorderColorClass(
+             urgency,
+         )} flex flex-row justify-between rounded-3xl pt-4 pl-4`}
         >
-            <div className=" flex flex-col gap">
+            <div className="flex flex-col gap">
                 <div>
-                    <p className=" text-2xl text-black ">{name}</p>
+                    <p className="text-2xl text-black">{name}</p>
                 </div>
-
                 <div
-                    className={`flex flex-row justify-start gap-5 pt-2 border-b-2 pb-2 text-p-text-color ${getBorderBottomColorClass(
-                        urgency,
-                    )}`}
+                    className={`flex flex-row justify-start gap-5 pt-2 border-b-2 pb-2 text-p-text-color 
+                    ${getBorderBottomColorClass(urgency)}`}
                 >
-                    <div className="flex flex-row  gap-2 ">
+                    <div className="flex flex-row gap-2">
                         {getGender(gender)}
                         <img src={acuteIcon} />
                         <div>
@@ -65,8 +63,8 @@ export const PatientDataCard = ({
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-start gap-1 pt-2  ">
-                    <div className="">
+                <div className="flex flex-col items-start gap-1 pt-2">
+                    <div>
                         <p>Pijn op de borst</p>
                     </div>
                     <div>
