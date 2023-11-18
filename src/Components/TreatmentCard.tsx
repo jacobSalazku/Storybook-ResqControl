@@ -1,11 +1,5 @@
 import { checkIfCompleted } from './helpers';
-
-interface TreatmentProps {
-    description: string;
-    isCompleted: boolean;
-    onClick: () => void;
-    className?: string;
-}
+import { TreatmentProps } from '../interfaces';
 
 const TreatmentCard = ({
     onClick,

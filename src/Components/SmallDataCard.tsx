@@ -12,16 +12,7 @@ import {
 } from '@tabler/icons-react';
 import { stringDate } from '../stories/helpers/DateTime';
 
-/** Card with all the Patient information */
-export interface PatientProps {
-    name: string;
-    language: string;
-    urgency: string;
-    time: string;
-    date: string;
-    gender: string;
-    dateOfBirth: string;
-}
+import { PatientProps } from '../interfaces';
 
 const SmallDataCard = ({
     time,

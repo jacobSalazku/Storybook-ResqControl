@@ -3,12 +3,7 @@ import { useState } from 'react';
 import { Button } from './Button';
 import { pointArrow } from './helpers';
 import { lozenges } from './patientData';
-
-interface TreatmentDashProps {
-    title: string;
-    topLeftLogo: JSX.Element;
-    searchIcon: JSX.Element;
-}
+import { TreatmentDashProps } from '../interfaces';
 
 export const TreatmentDash = ({
     title,

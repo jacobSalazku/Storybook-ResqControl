@@ -8,19 +8,7 @@ import {
     IconPointFilled,
     IconWorld,
 } from '@tabler/icons-react';
-/** Card with all the Patient information */
-export interface PatientOverviewCardrops {
-    name: string;
-    language: string;
-    urgency?: string | undefined;
-    time: string;
-    gender: string;
-    triageLevel: string;
-    nationality: string;
-    dateOfBirth: string;
-    allergies: boolean;
-}
-
+import { PatientOverviewCardrops } from '../interfaces';
 // bg-gradient-to-r from-white to-light-green
 export const PatientOverviewCard = ({
     time,

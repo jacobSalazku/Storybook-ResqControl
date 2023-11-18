@@ -1,5 +1,5 @@
 import '../index.css';
-import { IconButtonProps } from './IconButton';
+import { IconButtonProps } from '../interfaces';
 
 /** Primary button for our user interface  without text only Icons */
 const IconButtonLogoRight = ({

@@ -1,10 +1,5 @@
-interface wrmiProps {
-    title: string;
-    backgroundColor?: string;
-    icon: JSX.Element;
-    onClick?: () => void;
-}
-const MenuItem = ({ onClick, backgroundColor, title, icon }: wrmiProps) => {
+import { MenuItemProps } from '../interfaces';
+const MenuItem = ({ onClick, backgroundColor, title, icon }: MenuItemProps) => {
     return (
         <div
             className={`w-auto h-[3rem] px-2 cursor-pointer rounded shadow-lg ${backgroundColor} `}

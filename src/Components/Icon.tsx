@@ -1,11 +1,4 @@
-interface iconProps {
-    width?: string;
-    height?: string;
-    color: string;
-    icon: string;
-    path: JSX.Element;
-}
-
+import { iconProps } from '../interfaces';
 const Icon = ({
     width = '22',
     height = '22',

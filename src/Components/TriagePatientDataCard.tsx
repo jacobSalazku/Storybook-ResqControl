@@ -2,7 +2,7 @@ import '../index.css';
 import TriageOption from './TriageOption';
 
 import { getGender } from './helpers';
-
+import { PatientOverviewCardrops } from '../interfaces';
 import { getUrgencyIcon } from '../stories/helpers/ClientDataFunctions';
 import {
     IconCalendarEvent,
@@ -11,19 +11,6 @@ import {
     IconPointFilled,
     IconWorld,
 } from '@tabler/icons-react';
-
-/** Card with all the Patient information */
-export interface TriagePatientprops {
-    name: string;
-    language: string;
-    urgency?: string | undefined;
-    time: string;
-    gender: string;
-    triageLevel: string;
-    nationality: string;
-    dateOfBirth: string;
-    allergies: boolean;
-}
 
 // bg-gradient-to-r from-white to-light-green
 export const TriagePatientDataCard = ({
@@ -36,7 +23,7 @@ export const TriagePatientDataCard = ({
     gender,
     nationality,
     allergies,
-}: TriagePatientprops) => {
+}: PatientOverviewCardrops) => {
     return (
         <div className="h-[400px] w-[391px] bg-card-background-color shadow-xl  flex flex-row justify-between border-l-[6px] border-[#EE7E7A] pt-4 rounded-md ">
             <div className="flex flex-col w-full h-full ">

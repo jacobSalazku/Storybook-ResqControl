@@ -1,4 +1,5 @@
 import '../index.css';
+import { PatientProps } from '../interfaces';
 import acuteIcon from '../stories/icons/acute.png';
 import eventIcon from '../stories/icons/event.png';
 import globeIcon from '../stories/icons/globe.png';
@@ -8,16 +9,6 @@ import {
     getBorderColorClass,
     getBorderBottomColorClass,
 } from '../stories/helpers/ClientDataFunctions';
-
-/** Card with all the Patient information */
-export interface PatientProps {
-    name: string;
-    language: string;
-    urgency?: string | undefined;
-    time: string;
-    date: string;
-    gender: string;
-}
 
 // bg-gradient-to-r from-white to-light-green
 export const PatientDataCard = ({

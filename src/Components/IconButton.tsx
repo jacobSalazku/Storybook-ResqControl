@@ -1,15 +1,5 @@
 import '../index.css';
-
-export interface IconButtonProps {
-    label?: string;
-    variant: string;
-    backgroundColor: string;
-    size: string;
-    icon: any | JSX.ElementClass;
-    selected?: boolean;
-    hover?: string;
-    onClick?: () => void;
-}
+import { IconButtonProps } from '../interfaces';
 
 /** Primary button for our user interface  without text only Icons */
 const IconButton = ({

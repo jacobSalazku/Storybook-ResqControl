@@ -1,9 +1,5 @@
-interface TitelCardProps {
-    title: string;
-    rightButton?: JSX.Element;
-    leftButton?: JSX.Element;
-    icon: JSX.Element;
-}
+import { TitelCardProps } from '../interfaces';
+
 const TitleCard = ({
     rightButton,
     leftButton,
