@@ -19,7 +19,7 @@ export const TreatmentDash = ({
             <div
                 className={`w-[55rem] ${
                     show
-                        ? 'h-[22rem] transition-max-h transition-opacity duration-300 ease-in-out'
+                        ? 'h-auto transition-max-h transition-opacity duration-300 ease-in-out'
                         : 'h-[4rem]'
                 } rounded-b-xl rounded-t-xl border-4 border-background-color`}
             >
@@ -44,15 +44,16 @@ export const TreatmentDash = ({
                         show ? '-h-[17.rem] opacity-100' : 'max-h-0 opacity-0'
                     } w-full border-8 border-white rounded-md mb-2 flex flex-row justify-center mt-4`}
                 >
-                    <div className="w-full h-full flex flex-row flex-wrap justify-between items-center mx-5 gap-5">
+                    <div className="w-full h-full flex flex-row flex-wrap justify-between items-center px-6 gap-x-1 gap-y-4">
                         {lozenges.map((lozenge, index) => (
                             <Button
                                 key={index}
                                 label={lozenge.name}
-                                size="w-44"
+                                size="px-8"
                                 height="h-10"
                                 variant="rounded-full"
                                 icon={<IconCheck color="#ffffff" />}
+                                backgroundColor=" border-2 border-dark-blue"
                             />
                         ))}
                     </div>

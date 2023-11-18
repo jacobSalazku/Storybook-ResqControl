@@ -1,14 +1,17 @@
 import '../index.css';
 import { PatientProps } from '../interfaces';
-import acuteIcon from '../stories/icons/acute.png';
-import eventIcon from '../stories/icons/event.png';
-import globeIcon from '../stories/icons/globe.png';
 import { getGender } from './helpers';
 
 import {
     getBorderColorClass,
     getBorderBottomColorClass,
 } from '../stories/helpers/ClientDataFunctions';
+import { stringDate } from '../stories/helpers/DateTime';
+import {
+    IconCalendarEvent,
+    IconClockHour4,
+    IconWorld,
+} from '@tabler/icons-react';
 
 // bg-gradient-to-r from-white to-light-green
 export const PatientDataCard = ({
@@ -16,7 +19,6 @@ export const PatientDataCard = ({
     urgency,
     name,
     language,
-    date,
     gender,
 }: PatientProps) => {
     return (
@@ -36,19 +38,27 @@ export const PatientDataCard = ({
                 >
                     <div className="flex flex-row gap-2">
                         {getGender(gender)}
-                        <img src={acuteIcon} />
+                        <IconClockHour4
+                            color="#294564"
+                            stroke="1.3"
+                            size={24}
+                        />
                         <div>
                             <p>{time}</p>
                         </div>
                     </div>
                     <div className="flex flex-row gap-2">
-                        <img src={eventIcon} />
+                        <IconCalendarEvent
+                            color="#294564"
+                            stroke="1.3"
+                            size={24}
+                        />
                         <div>
-                            <p>{date}</p>
+                            <p>{stringDate}</p>
                         </div>
                     </div>
                     <div className="flex flex-row gap-2">
-                        <img src={globeIcon} />
+                        <IconWorld color="#294564" stroke="1.3" size={24} />
                         <div>
                             <p>{language}</p>
                         </div>

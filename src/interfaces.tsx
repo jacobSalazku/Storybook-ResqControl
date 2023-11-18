@@ -43,9 +43,11 @@ export interface PatientProps {
     language: string;
     urgency?: string | undefined;
     time: string;
-    date: string;
     gender: string;
+    triageLevel: string;
+    nationality: string;
     dateOfBirth: string;
+    allergies: boolean;
 }
 
 /** Card with all the Patient information */

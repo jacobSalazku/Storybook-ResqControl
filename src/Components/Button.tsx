@@ -1,18 +1,7 @@
 import '../index.css';
 import { useState } from 'react';
+import { ButtonProps } from '../interfaces';
 
-// define object
-export interface ButtonProps {
-    primary?: boolean;
-    variant: string;
-    backgroundColor?: string | void;
-    size: string;
-    label: string;
-    icon?: JSX.Element;
-    selected?: boolean;
-    onClick?: () => void;
-    height?: string;
-}
 
 /**  this our the buttons we use for our userInterface with all hte props it takes */
 

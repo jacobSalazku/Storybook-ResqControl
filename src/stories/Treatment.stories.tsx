@@ -1,11 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
+import Treatment from '../Pages/Treatment';
 
-import BasicTreatment from '../pages/BasicTreatment';
-
-const meta: Meta<typeof BasicTreatment> = {
-    component: BasicTreatment,
+const meta: Meta<typeof Treatment> = {
+    component: Treatment,
     tags: ['autodocs'],
-    title: 'Pages/BasicTreatment',
+    title: 'Pages/BasicTreatment/Verzorging',
     argTypes: {},
 };
 export default meta;

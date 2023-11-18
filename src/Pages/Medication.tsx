@@ -1,23 +1,22 @@
-import TitleCard from '../Components/TitleCard';
-import Header from '../Components/Header';
-import IconButton from '../Components/IconButton';
-import TreatmentMenu from '../Components/TreatmentMenu';
-
-import TreatmentDash from '../Components/TreatmentDash';
-import { useState } from 'react';
 import {
     IconDeviceFloppy,
-    IconVaccine,
     IconSearch,
     IconStethoscope,
+    IconVaccine,
 } from '@tabler/icons-react';
+import Header from '../Components/Header';
+import IconButton from '../Components/IconButton';
+import TitleCard from '../Components/TitleCard';
+import TreatmentDash from '../Components/TreatmentDash';
+import TreatmentMenu from '../Components/TreatmentMenu';
+import { useState } from 'react';
 
-const BasicTreatment = () => {
+const Medication = () => {
     const [isSearchInputVisible, setSearchInputVisible] = useState(false);
-
     const toggleSearchInput = () => {
         setSearchInputVisible(!isSearchInputVisible);
     };
+
     return (
         <div className="w-full h-screen flex flex-col items-center">
             <Header />
@@ -69,4 +68,4 @@ const BasicTreatment = () => {
     );
 };
 
-export default BasicTreatment;
+export default Medication;
