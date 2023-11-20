@@ -1,22 +1,15 @@
 import {
     IconDeviceFloppy,
-    IconSearch,
+    IconNote,
     IconStethoscope,
-    IconVaccine,
 } from '@tabler/icons-react';
 import Header from '../Components/Header';
 import IconButton from '../Components/IconButton';
+import ObservationDash from '../Components/ObservationDash';
 import TitleCard from '../Components/TitleCard';
-import LargeTreatmentDash from '../Components/LargeTreatmentDash';
 import TreatmentMenu from '../Components/TreatmentMenu';
-import { useState } from 'react';
 
-const Medication = () => {
-    const [isSearchInputVisible, setSearchInputVisible] = useState(false);
-    const toggleSearchInput = () => {
-        setSearchInputVisible(!isSearchInputVisible);
-    };
-
+const Observation = () => {
     return (
         <div className="w-full h-screen flex flex-col items-center">
             <Header />
@@ -35,22 +28,13 @@ const Medication = () => {
                     }
                 />
             </div>
-            <TreatmentMenu menu="Medicatie" />
-            <LargeTreatmentDash
-                title="Buikpijn"
-                topLeftLogo={<IconVaccine color="#497DAE" />}
-                searchIcon={
-                    <IconButton
-                        icon={<IconSearch color="#497DAE" />}
-                        variant="rounded-full"
-                        size="w-[130px] h-[40px]"
-                        backgroundColor="border-light-blue"
-                        onClick={toggleSearchInput}
-                    />
-                }
+            <TreatmentMenu menu="Opmerkingen" />
+            <ObservationDash
+                topLeftLogo={<IconNote color="#294564" stroke={1.5} />}
+                title="Buikepijn"
             />
         </div>
     );
 };
 
-export default Medication;
+export default Observation;

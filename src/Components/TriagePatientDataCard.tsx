@@ -2,7 +2,7 @@ import '../index.css';
 import TriageOption from './TriageOption';
 
 import { getGender } from './helpers';
-import { PatientOverviewCardrops } from '../interfaces';
+import { PatientProps } from '../interfaces';
 import { getUrgencyIcon } from '../stories/helpers/ClientDataFunctions';
 import {
     IconCalendarEvent,
@@ -19,11 +19,10 @@ export const TriagePatientDataCard = ({
     name,
     language,
     dateOfBirth,
-    triageLevel,
     gender,
     nationality,
     allergies,
-}: PatientOverviewCardrops) => {
+}: PatientProps) => {
     return (
         <div className="h-[400px] w-[391px] bg-card-background-color shadow-xl  flex flex-row justify-between border-l-[6px] border-[#EE7E7A] pt-4 rounded-md ">
             <div className="flex flex-col w-full h-full ">
@@ -114,7 +113,7 @@ export const TriagePatientDataCard = ({
                 </div>
                 <div className="w-[17rem] h-full flex flex-col items-start justify-center gap-2">
                     <p className="pl-4 font-medium">Triage codes</p>
-                    <TriageOption triageSelection={triageLevel} />
+                    <TriageOption />
                 </div>
             </div>
             <div className="pr-4 flex flex-col justify-center cursor-pointer">

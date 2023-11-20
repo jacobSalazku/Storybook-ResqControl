@@ -145,26 +145,41 @@ export const patientData = [
     },
 ];
 
-export const lozenges = [
-    { id: 1, name: 'Operatie' },
-    { id: 2, name: 'Oogspoeling' },
-    { id: 3, name: 'Consultaite' },
-    { id: 4, name: 'Operatie' },
-    { id: 5, name: 'Consultaite' },
-    { id: 6, name: 'Oogspoeling' },
-    { id: 7, name: 'Operatie' },
-    { id: 8, name: 'Grote Wondzorg' },
-    { id: 9, name: 'Kleine Brnadwonden' },
-    { id: 10, name: 'Operatie' },
-    { id: 11, name: 'Operatie' },
-    { id: 12, name: 'Consultaite' },
-    { id: 13, name: 'Oogspoeling' },
-    { id: 14, name: 'YOGI' },
-    { id: 15, name: 'Operatie' },
-    { id: 16, name: 'Oogspoeling' },
-    { id: 17, name: 'Operatie' },
-    { id: 18, name: 'Consultaite' },
-    { id: 19, name: 'Oogspoeling' },
-    { id: 20, name: 'YOGI' },
-    { id: 21, name: 'Oogspoeling' },
+export interface Lozenge {
+    id: number;
+    name: string;
+    selected: boolean;
+}
+
+export const lozenges: Lozenge[] = [
+    { id: 1, name: 'Operatie', selected: false },
+    { id: 2, name: 'Oogspoeling', selected: false },
+    { id: 3, name: 'Consultaite', selected: false },
+    { id: 4, name: 'Operatie', selected: false },
+    { id: 5, name: 'Consultaite', selected: false },
+    { id: 6, name: 'Oogspoeling', selected: false },
+    { id: 7, name: 'Operatie', selected: false },
+    { id: 8, name: 'Grote Wondzorg', selected: false },
+    { id: 9, name: 'Kleine Brnadwonden', selected: false },
+    { id: 10, name: 'Operatie', selected: false },
+    { id: 11, name: 'Operatie', selected: false },
+    { id: 12, name: 'Consultaite', selected: false },
+    { id: 13, name: 'Oogspoeling', selected: false },
+    { id: 14, name: 'YOGI', selected: false },
+    { id: 15, name: 'Operatie', selected: false },
+    { id: 16, name: 'Oogspoeling', selected: false },
+    { id: 17, name: 'Operatie', selected: false },
+    { id: 18, name: 'Consultaite', selected: false },
+    { id: 19, name: 'Oogspoeling', selected: false },
+    { id: 20, name: 'YOGI', selected: false },
+    { id: 21, name: 'Oogspoeling', selected: false },
+];
+
+export const arrayOfParacetamol = [
+    'Paracetamol 500mg',
+    'Paracetamol 500mg',
+    'Paracetamol 500mg',
+    'Paracetamol 500mg',
+    'Paracetamol 500mg',
+    'Paracetamol 500mg',
 ];

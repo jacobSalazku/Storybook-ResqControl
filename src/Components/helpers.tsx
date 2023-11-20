@@ -59,7 +59,7 @@ export const checkIfCompleted = (isCompleted: boolean) => {
 
 export const pointArrow = (show: boolean) => {
     if (show == false) {
-        return <IconChevronDown color="#497DAE" />;
+        return <IconChevronDown color="#497DAE" stroke={2.5} />;
     }
     return <IconChevronUp color="#497DAE" />;
 };

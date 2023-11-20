@@ -1,11 +1,7 @@
 import { Button } from './Button';
 import { useState } from 'react';
 
-interface TriageOptionProps {
-    triageSelection: string;
-}
-
-const TriageOption = ({ triageSelection }: TriageOptionProps) => {
+const TriageOption = () => {
     const [selectedTriage, setSelectedTriage] = useState<string | null>(null);
 
     const handleButtonClick = (triageSelection: string) => {

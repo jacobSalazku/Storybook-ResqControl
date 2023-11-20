@@ -41,23 +41,9 @@ export interface MenuItemProps {
 export interface PatientProps {
     name: string;
     language: string;
-    urgency?: string | undefined;
+    urgency?: string;
     time: string;
     gender: string;
-    triageLevel: string;
-    nationality: string;
-    dateOfBirth: string;
-    allergies: boolean;
-}
-
-/** Card with all the Patient information */
-export interface PatientOverviewCardrops {
-    name: string;
-    language: string;
-    urgency?: string | undefined;
-    time: string;
-    gender: string;
-    triageLevel: string;
     nationality: string;
     dateOfBirth: string;
     allergies: boolean;
@@ -80,5 +66,9 @@ export interface TreatmentProps {
 export interface TreatmentDashProps {
     title: string;
     topLeftLogo: JSX.Element;
-    searchIcon: JSX.Element;
+    searchIcon?: JSX.Element;
+}
+
+export interface menuState {
+    menu?: string;
 }

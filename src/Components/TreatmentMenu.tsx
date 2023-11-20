@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { menuState } from '../interfaces';
 
-const TreatmentMenu = () => {
-    const [activeItem, setActiveItem] = useState('Verzorging');
+const TreatmentMenu = ({ menu = 'Verzorging' }: menuState) => {
+    const [activeItem, setActiveItem] = useState(menu);
 
     const activateMenu = (item: string) => {
         setActiveItem(item);
