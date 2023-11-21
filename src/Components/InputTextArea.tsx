@@ -6,14 +6,20 @@ const InputTextArea = ({
     height,
     placeholder,
     border,
+    icon,
 }: TextAreaProps) => {
     return (
-        <div className="w-full flex flex-col gap-6">
-            <h2 className="font-semibold">{title} </h2>
-            <textarea
-                placeholder={placeholder}
-                className={`${height} ${width} ${border} flex flex-col justify-start items-start border-dark-blue border-2  px-5 py-5 text-left`}
-            />
+        <div className="w-full flex flex-col justify-center">
+            <div className="flex flex-col gap-8 pt-4">
+                <div className="flex flex-row gap-4 items-center">
+                    <div> {icon}</div>
+                    <h2 className="text-[24px]">{title} </h2>
+                </div>
+                <textarea
+                    placeholder={placeholder}
+                    className={`${height} ${width} ${border} flex flex-col justify-start items-start border-dark-blue border-2  px-5 py-5 text-left`}
+                />
+            </div>
         </div>
     );
 };

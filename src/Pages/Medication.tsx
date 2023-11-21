@@ -10,6 +10,7 @@ import TitleCard from '../Components/TitleCard';
 import LargeTreatmentDash from '../Components/LargeTreatmentDash';
 import TreatmentMenu from '../Components/TreatmentMenu';
 import { useState } from 'react';
+
 export const menuItems = [
     'Verzorging',
     'Medicatie',
@@ -23,7 +24,7 @@ const Medication = () => {
     };
 
     return (
-        <div className="w-full h-screen flex flex-col items-center">
+        <div className="w-full h-auto flex flex-col items-center">
             <Header />
             <div className="w-[58rem] flex flex-col justify-center items-center before: bg-white">
                 <TitleCard

@@ -86,6 +86,7 @@ export interface TextAreaProps {
     height?: string;
     value?: string;
     onChange?: (value: string) => void;
-    placeholder?: string;
+    placeholder: string;
     border?: string;
+    icon?: JSX.Element;
 }

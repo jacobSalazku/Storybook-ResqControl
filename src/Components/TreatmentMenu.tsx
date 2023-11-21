@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { menuProps } from '../interfaces';
 
 const TreatmentMenu = ({ menuItems, activeTitle }: menuProps) => {
+    //active title enkel voor storybook
     const [activeItem, setActiveItem] = useState(menuItems[activeTitle]) || '';
 
     const activateMenu = (item: string) => {
