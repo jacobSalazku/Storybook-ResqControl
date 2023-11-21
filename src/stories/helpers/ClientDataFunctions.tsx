@@ -8,7 +8,6 @@ import sendIcon from './icons/sendIcon.png';
 import eyeLogo from './icons/eyeLogo.png';
 import nextIcon from './icons/nextIcon.png';
 import sofaIcon from './icons/sofaIcon.png';
-import allergiesIcon from './icons/allergiesIcon.png';
 import searchIcon from './icons/searchIcon.png';
 import stethoscopeIcon from './icons/stethoscopeIcon.png';
 import taskIconGreen from './icons/taskIconGreen.png';
@@ -25,7 +24,6 @@ import cycleIconWhite from './icons/cycleIconWhite.png';
 import arrowUp from './icons/arrowUp.png';
 import arrowDown from './icons/arrowDown.png';
 import prikIcon from './icons/prikIcon.png';
-
 
 import plusIcon from './icons/plusIcon.png';
 import updateIcon from './icons/updateIcon.png';
@@ -44,8 +42,6 @@ export const EyeLogo = <img src={eyeLogo} alt="next"></img>;
 export const NextIcon = <img src={nextIcon} alt="next"></img>;
 
 export const SofaIcon = <img src={sofaIcon} alt=""></img>;
-
-export const AllergiesIcon = <img src={allergiesIcon} alt=""></img>;
 
 export const SearchIcon = <img src={searchIcon} alt="searcj"></img>;
 

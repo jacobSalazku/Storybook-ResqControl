@@ -12,24 +12,20 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Verzorging: Story = {
+export const BasicTreatment: Story = {
     args: {
-        menu: 'Verzorging',
-    },
-};
-export const Medicatie: Story = {
-    args: {
-        menu: 'Medicatie',
-    },
-};
-export const Materiaal: Story = {
-    args: {
-        menu: 'Materiaal',
+        menuItems: ['Verzorging', 'Medicatie', 'Materiaal', 'Opmerkingen'],
     },
 };
 
-export const Opmerkingen: Story = {
+export const Treatement: Story = {
     args: {
-        menu: 'Opmerkingen',
+        menuItems: [
+            'Parameters',
+            'Handelingen',
+            'Medicatie',
+            'Sample',
+            'Opmerkingen',
+        ],
     },
 };

@@ -35,9 +35,9 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                         show ? '-h-[17.rem] opacity-100' : 'max-h-0 opacity-0'
                     } w-full  mb-2 flex flex-col  my-4 px-8`}
                 >
-                    <input
+                    <textarea
                         placeholder="Opmerkingen"
-                        className="w-full h-[205px] flex flex-col justify-start items-start border-dark-blue border-2 rounded-lg px-2 text-left"
+                        className="w-full h-[205px]  flex flex-col justify-start items-start border-dark-blue border-2 rounded-lg px-5 py-5 text-left"
                     />
                 </div>
             </div>

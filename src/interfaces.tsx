@@ -6,7 +6,7 @@ export interface ButtonProps {
     size: string;
     label: string;
     icon?: JSX.Element;
-    selected?: boolean;
+    selected?: boolean | null;
     onClick?: () => void;
     height?: string;
 }
@@ -24,7 +24,7 @@ export interface IconButtonProps {
     variant: string;
     backgroundColor: string;
     size: string;
-    icon: any | JSX.ElementClass;
+    icon: JSX.Element;
     selected?: boolean;
     hover?: string;
     onClick?: () => void;
@@ -69,6 +69,7 @@ export interface TreatmentDashProps {
     searchIcon?: JSX.Element;
 }
 
-export interface menuState {
-    menu?: string;
+export interface menuProps {
+    activeTitle: number;
+    menuItems: string[];
 }

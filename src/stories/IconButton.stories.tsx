@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { IconLogout } from '@tabler/icons-react';
+import { IconLogout, IconPlus } from '@tabler/icons-react';
 import IconButton from '../Components/IconButton';
-import { iconDelete, PlusIcon } from './helpers/ClientDataFunctions';
+import { iconDelete } from './helpers/ClientDataFunctions';
 
 const meta: Meta<typeof IconButton> = {
     component: IconButton,
@@ -68,7 +68,7 @@ export const Plus: Story = {
     args: {
         backgroundColor: 'bg-light-blue border-light-blue',
         size: 'w-12',
-        icon: PlusIcon,
+        icon: <IconPlus color="#ffff" size={40} />,
         variant: 'rounded-full',
         hover: 'hover:bg-[#082646] hover:border-dark-blue',
     },

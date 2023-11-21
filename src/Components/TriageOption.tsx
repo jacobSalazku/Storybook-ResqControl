@@ -1,11 +1,13 @@
-import { Button } from './Button';
 import { useState } from 'react';
+import { Button } from './Button';
 
 const TriageOption = () => {
     const [selectedTriage, setSelectedTriage] = useState<string | null>(null);
 
     const handleButtonClick = (triageSelection: string) => {
-        setSelectedTriage(triageSelection);
+        setSelectedTriage((prevSelection) =>
+            prevSelection === triageSelection ? null : triageSelection,
+        );
     };
 
     return (

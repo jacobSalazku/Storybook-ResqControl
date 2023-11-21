@@ -1,6 +1,7 @@
-import { SearchIcon, DeleteLogo } from '../stories/helpers/ClientDataFunctions';
+import { DeleteLogo } from '../stories/helpers/ClientDataFunctions';
 import IconButton from './IconButton';
 import InputSelect from '../stories/inputSelect';
+import { IconSearch } from '@tabler/icons-react';
 
 const locatie = ['inwendig', 'uitwendig', 'ribben'];
 const zijde = ['Linker', 'Rechter'];
@@ -13,7 +14,7 @@ const Pathology = () => {
                         Pathologiën
                     </p>
                     <IconButton
-                        icon={SearchIcon}
+                        icon={<IconSearch />}
                         backgroundColor="bg-background-color"
                         variant="rounded-full"
                         size="w-32"

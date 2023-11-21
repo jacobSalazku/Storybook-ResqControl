@@ -183,3 +183,62 @@ export const arrayOfParacetamol = [
     'Paracetamol 500mg',
     'Paracetamol 500mg',
 ];
+
+export const OgenArray: { id: number; name: string; selected: boolean }[] = [
+    { id: 1, name: 'Spontaan', selected: false },
+    { id: 2, name: 'Op Afspraken', selected: false },
+    { id: 3, name: 'Op Pijn', selected: false },
+    { id: 4, name: 'Op Geen', selected: false },
+];
+
+export const verbalResponse: { id: number; name: string; selected: boolean }[] =
+    [
+        { id: 1, name: 'Gerichy', selected: false },
+        { id: 2, name: 'Verwand', selected: false },
+        { id: 3, name: 'Onaangepast', selected: false },
+        { id: 4, name: 'Onverstaanbaar', selected: false },
+        { id: 5, name: 'Geen', selected: false },
+    ];
+export const motoricResponse: {
+    id: number;
+    name: string;
+    selected: boolean;
+}[] = [
+    { id: 1, name: 'Gehoorzamen', selected: false },
+    { id: 2, name: 'Gericht', selected: false },
+    { id: 3, name: 'Afwerend', selected: false },
+    { id: 4, name: 'Flexie', selected: false },
+    { id: 4, name: 'Extensie', selected: false },
+    { id: 4, name: 'Geen', selected: false },
+];
+
+export const wapaArr: {
+    id: number;
+    name: string;
+    selected: boolean;
+}[] = [
+    { id: 1, name: 'Wakker', selected: false },
+    { id: 2, name: 'Aanspreekbaar', selected: false },
+    { id: 3, name: 'PijnGevoelog', selected: false },
+    { id: 4, name: 'A-Reactief', selected: false },
+];
+
+export const FAST: {
+    id: number;
+    name: string;
+    selected: boolean;
+}[] = [
+    { id: 1, name: 'Positief', selected: false },
+    { id: 2, name: 'Negetief', selected: false },
+];
+
+export const Pupillen: {
+    id: number;
+    name: string;
+    selected: boolean;
+}[] = [
+    { id: 1, name: 'Normaal', selected: false },
+    { id: 2, name: 'Verkleind (myose)', selected: false },
+    { id: 3, name: 'Vergroot (mydriase)', selected: false },
+    { id: 4, name: 'Ongelijk', selected: false },
+];

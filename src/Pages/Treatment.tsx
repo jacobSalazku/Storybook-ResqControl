@@ -4,6 +4,7 @@ import IconButton from '../Components/IconButton';
 import TreatmentMenu from '../Components/TreatmentMenu';
 import TreatmentDash from '../Components/TreatmentDash';
 import { useState } from 'react';
+import { menuItems } from './Medication';
 import {
     IconDeviceFloppy,
     IconVaccine,
@@ -35,7 +36,8 @@ const Treatment = () => {
                     }
                 />
             </div>
-            <TreatmentMenu />
+            {/** active title prop only for storybook  */}
+            <TreatmentMenu menuItems={menuItems} activeTitle={0} />
             <div className="pt-5">
                 <TreatmentDash
                     title="Buikpijn"
