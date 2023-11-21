@@ -1,3 +1,5 @@
+//data
+/* eslint-disable */
 export const patientData = [
     {
         id: 1,
@@ -144,14 +146,11 @@ export const patientData = [
         allergies: true,
     },
 ];
+/* eslint-disable */
 
-export interface Lozenge {
-    id: number;
-    name: string;
-    selected: boolean;
-}
+//array van medicijnen
 
-export const lozenges: Lozenge[] = [
+export const lozenges: { id: number; name: string; selected: boolean }[] = [
     { id: 1, name: 'Operatie', selected: false },
     { id: 2, name: 'Oogspoeling', selected: false },
     { id: 3, name: 'Consultaite', selected: false },
@@ -183,6 +182,8 @@ export const arrayOfParacetamol = [
     'Paracetamol 500mg',
     'Paracetamol 500mg',
 ];
+
+//parameter arrays
 
 export const OgenArray: { id: number; name: string; selected: boolean }[] = [
     { id: 1, name: 'Spontaan', selected: false },
@@ -241,4 +242,47 @@ export const Pupillen: {
     { id: 2, name: 'Verkleind (myose)', selected: false },
     { id: 3, name: 'Vergroot (mydriase)', selected: false },
     { id: 4, name: 'Ongelijk', selected: false },
+];
+
+export const crt: {
+    id: number;
+    name: string;
+    selected: boolean;
+}[] = [
+    { id: 1, name: '< 2 sec', selected: false },
+    { id: 2, name: '> 2 sec', selected: false },
+];
+
+export const proceedsArr = [
+    'Perifeer infuus',
+    'intro Osseus',
+    'Hechting',
+    'ETT',
+    'Wiekzorg',
+    'Perifeer infuus',
+    'intro Osseus',
+    'Hechting',
+    'ETT',
+    'Wiekzorg',
+];
+// Card Data
+export const MedCards = [
+    {
+        date: '2023-11-21',
+        time: '08:00 AM',
+        dosage: '10mg',
+        feeding: 'Before meal',
+    },
+    {
+        date: '2023-11-21',
+        time: '12:00 PM',
+        dosage: '5mg',
+        feeding: 'After meal',
+    },
+    {
+        date: '2023-11-21',
+        time: '06:00 PM',
+        dosage: '15mg',
+        feeding: 'With meal',
+    },
 ];

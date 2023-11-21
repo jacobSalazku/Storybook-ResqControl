@@ -8,7 +8,7 @@ import {
     IconPointFilled,
     IconWorld,
 } from '@tabler/icons-react';
-import { PatientOverviewCardrops } from '../interfaces';
+import { PatientProps } from '../interfaces';
 // bg-gradient-to-r from-white to-light-green
 export const PatientOverviewCard = ({
     time,
@@ -19,7 +19,7 @@ export const PatientOverviewCard = ({
     urgency,
     nationality,
     allergies,
-}: PatientOverviewCardrops) => {
+}: PatientProps) => {
     return (
         <div
             className={`h-[309px] w-[391px] bg-transparant shadow-xl border flex flex-row justify-between border-l-[6px] ${getBorderColorClass(

@@ -24,7 +24,7 @@ export interface IconButtonProps {
     variant: string;
     backgroundColor: string;
     size: string;
-    icon: JSX.Element;
+    icon: JSX.Element | any;
     selected?: boolean;
     hover?: string;
     onClick?: () => void;
@@ -67,9 +67,25 @@ export interface TreatmentDashProps {
     title: string;
     topLeftLogo: JSX.Element;
     searchIcon?: JSX.Element;
+    Itemsarr?: string[];
 }
 
 export interface menuProps {
     activeTitle: number;
     menuItems: string[];
+}
+export interface Lozenge {
+    id: number;
+    name: string;
+    selected: boolean;
+}
+
+export interface TextAreaProps {
+    title: string;
+    width?: string;
+    height?: string;
+    value?: string;
+    onChange?: (value: string) => void;
+    placeholder?: string;
+    border?: string;
 }

@@ -1,32 +1,16 @@
 import {
     IconDeviceFloppy,
-    IconSearch,
     IconStethoscope,
     IconVaccine,
 } from '@tabler/icons-react';
-import { useState } from 'react';
 import Header from '../Components/Header';
 import IconButton from '../Components/IconButton';
-import ParametersDash from '../Components/ParametersDash';
-import { proceedsArr } from '../Components/patientData';
+import MedicationDash from '../Components/MedicationDash';
 import TitleCard from '../Components/TitleCard';
 import TreatmentMenu from '../Components/TreatmentMenu';
-import { stringTime } from '../stories/helpers/DateTime';
+import { menuItems } from './Medication';
 
-const menuItems = [
-    'Parameters',
-    'Handelingen',
-    'Medicatie',
-    'Sample',
-    'Opmerkingen',
-];
-
-const Parameters = () => {
-    const [isSearchInputVisible, setSearchInputVisible] = useState(false);
-    const toggleSearchInput = () => {
-        setSearchInputVisible(!isSearchInputVisible);
-    };
-
+const TreatmentMedication = () => {
     return (
         <div className="w-full h-screen flex flex-col items-center">
             <Header />
@@ -45,23 +29,13 @@ const Parameters = () => {
                     }
                 />
             </div>
-            <TreatmentMenu menuItems={menuItems} activeTitle={0} />
-            <ParametersDash
-                title={stringTime}
+            <TreatmentMenu menuItems={menuItems} activeTitle={2} />
+            <MedicationDash
+                title="Medicatie"
                 topLeftLogo={<IconVaccine color="#497DAE" />}
-                Itemsarr={proceedsArr}
-                searchIcon={
-                    <IconButton
-                        icon={<IconSearch color="#497DAE" />}
-                        variant="rounded-full"
-                        size="w-[130px] h-[40px]"
-                        backgroundColor="border-light-blue"
-                        onClick={toggleSearchInput}
-                    />
-                }
             />
         </div>
     );
 };
 
-export default Parameters;
+export default TreatmentMedication;

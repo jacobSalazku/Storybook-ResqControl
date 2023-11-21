@@ -1,17 +1,16 @@
-import { IconCheck } from '@tabler/icons-react';
 import { useState } from 'react';
-import { Button } from './Button';
-import { pointArrow } from './helpers';
-
 import { TreatmentDashProps } from '../interfaces';
-import { lozenges } from './patientData';
+import MedicationCard from './MedicationCard';
+import { pointArrow } from './helpers';
+import { MedCards } from './patientData';
 
-export const TreatmentDash = ({
+const MedicationDash = ({
     title,
     topLeftLogo,
     searchIcon,
+    open,
 }: TreatmentDashProps) => {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(open);
 
     const toggleShow = () => setShow(!show);
 
@@ -46,16 +45,8 @@ export const TreatmentDash = ({
                     } w-full border-8 border-white rounded-md mb-2 flex flex-row justify-center mt-4`}
                 >
                     <div className="w-full h-full flex flex-row flex-wrap justify-between items-center px-6 gap-x-1 gap-y-4">
-                        {lozenges.map((item, index) => (
-                            <Button
-                                key={index}
-                                label={item.name}
-                                size="px-8"
-                                height="h-10"
-                                variant="rounded-full"
-                                icon={<IconCheck color="#ffffff" />}
-                                backgroundColor=" border-2 border-dark-blue"
-                            />
+                        {MedCards.map(() => (
+                            <MedicationCard />
                         ))}
                     </div>
                 </div>
@@ -63,4 +54,5 @@ export const TreatmentDash = ({
         </div>
     );
 };
-export default TreatmentDash;
+
+export default MedicationDash;

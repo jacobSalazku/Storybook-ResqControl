@@ -1,38 +1,29 @@
 import {
     IconDeviceFloppy,
+    IconDna2,
     IconSearch,
     IconStethoscope,
-    IconVaccine,
 } from '@tabler/icons-react';
 import { useState } from 'react';
 import Header from '../Components/Header';
 import IconButton from '../Components/IconButton';
-import ParametersDash from '../Components/ParametersDash';
-import { proceedsArr } from '../Components/patientData';
+import SampleDash from '../Components/SampleDash';
 import TitleCard from '../Components/TitleCard';
 import TreatmentMenu from '../Components/TreatmentMenu';
-import { stringTime } from '../stories/helpers/DateTime';
+import { menuItems } from './Medication';
 
-const menuItems = [
-    'Parameters',
-    'Handelingen',
-    'Medicatie',
-    'Sample',
-    'Opmerkingen',
-];
+const Sample = () => {
+    const [isSearchInputVisible, setSearchInputVisible] = useState(true);
 
-const Parameters = () => {
-    const [isSearchInputVisible, setSearchInputVisible] = useState(false);
     const toggleSearchInput = () => {
         setSearchInputVisible(!isSearchInputVisible);
     };
-
     return (
         <div className="w-full h-screen flex flex-col items-center">
             <Header />
             <div className="w-[58rem] flex flex-col justify-center items-center before: bg-white">
                 <TitleCard
-                    title="Behandeling"
+                    title="Basis Verzorging"
                     icon={<IconStethoscope color="#497DAE" />}
                     rightButton={
                         <IconButton
@@ -45,23 +36,25 @@ const Parameters = () => {
                     }
                 />
             </div>
-            <TreatmentMenu menuItems={menuItems} activeTitle={0} />
-            <ParametersDash
-                title={stringTime}
-                topLeftLogo={<IconVaccine color="#497DAE" />}
-                Itemsarr={proceedsArr}
-                searchIcon={
-                    <IconButton
-                        icon={<IconSearch color="#497DAE" />}
-                        variant="rounded-full"
-                        size="w-[130px] h-[40px]"
-                        backgroundColor="border-light-blue"
-                        onClick={toggleSearchInput}
-                    />
-                }
-            />
+            {/** active title prop only for storybook  */}
+            <TreatmentMenu menuItems={menuItems} activeTitle={3} />
+            <div className="pt-5">
+                <SampleDash
+                    title="Sample"
+                    topLeftLogo={<IconDna2 color="#497DAE" />}
+                    searchIcon={
+                        <IconButton
+                            icon={<IconSearch color="#497DAE" />}
+                            variant="rounded-full"
+                            size="w-[130px] h-[40px]"
+                            backgroundColor="border-light-blue"
+                            onClick={toggleSearchInput}
+                        />
+                    }
+                />
+            </div>
         </div>
     );
 };
 
-export default Parameters;
+export default Sample;

@@ -2,6 +2,7 @@ import { TreatmentDashProps } from '../interfaces';
 import { useState } from 'react';
 import { pointArrow } from './helpers';
 import {
+    crt,
     FAST,
     motoricResponse,
     OgenArray,
@@ -10,6 +11,8 @@ import {
     wapaArr,
 } from './patientData';
 import InputDefaultVal from './inputDefaultVal';
+import IconButton from './IconButton';
+import { DeleteIcon } from '../stories/helpers/ClientDataFunctions';
 
 const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
     const [show, setShow] = useState(true);
@@ -68,15 +71,15 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                         <h2>Openen van ogen</h2>
                                     </div>
                                     <div className="flex flex-col gap-2 ">
-                                        {OgenArray.map((item) => (
-                                            <div key={item.id}>
+                                        {OgenArray.map((ogen) => (
+                                            <div key={ogen.id}>
                                                 <button
                                                     className="px-4 h-[40px] rounded-full border-2 g"
                                                     onClick={() =>
-                                                        handleItemClick(item)
+                                                        handleItemClick(ogen)
                                                     }
                                                 >
-                                                    {item.name}
+                                                    {ogen.name}
                                                 </button>
                                             </div>
                                         ))}
@@ -95,15 +98,17 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                         <h2> Verbaal Antwoord</h2>
                                     </div>
                                     <div className="flex flex-col gap-2">
-                                        {verbalResponse.map((item) => (
-                                            <div key={item.id}>
+                                        {verbalResponse.map((response) => (
+                                            <div key={response.id}>
                                                 <button
                                                     className="px-4 h-[40px] rounded-full border-2"
                                                     onClick={() =>
-                                                        handleItemClick(item)
+                                                        handleItemClick(
+                                                            response,
+                                                        )
                                                     }
                                                 >
-                                                    {item.name}
+                                                    {response.name}
                                                 </button>
                                             </div>
                                         ))}
@@ -122,18 +127,22 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                         <h2>Motorisch Antwoord</h2>
                                     </div>
                                     <div className="flex flex-col gap-2">
-                                        {motoricResponse.map((item) => (
-                                            <div key={item.id}>
-                                                <button
-                                                    className="px-4 h-[40px] rounded-full border-2"
-                                                    onClick={() =>
-                                                        handleItemClick(item)
-                                                    }
-                                                >
-                                                    {item.name}
-                                                </button>
-                                            </div>
-                                        ))}
+                                        {motoricResponse.map(
+                                            (motoricResponse) => (
+                                                <div key={motoricResponse.id}>
+                                                    <button
+                                                        className="px-4 h-[40px] rounded-full border-2"
+                                                        onClick={() =>
+                                                            handleItemClick(
+                                                                motoricResponse,
+                                                            )
+                                                        }
+                                                    >
+                                                        {motoricResponse.name}
+                                                    </button>
+                                                </div>
+                                            ),
+                                        )}
                                     </div>
                                     <div>
                                         <h3>Selected Item:</h3>
@@ -153,15 +162,15 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                             </div>
                             <div>
                                 <div className="flex flex-row justify-start gap-16">
-                                    {wapaArr.map((item) => (
-                                        <div key={item.id}>
+                                    {wapaArr.map((wapaItem) => (
+                                        <div key={wapaItem.id}>
                                             <button
                                                 className="px-4 h-[40px] rounded-full border-2"
                                                 onClick={() =>
-                                                    handleItemClick(item)
+                                                    handleItemClick(wapaItem)
                                                 }
                                             >
-                                                {item.name}
+                                                {wapaItem.name}
                                             </button>
                                         </div>
                                     ))}
@@ -228,6 +237,91 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                 size="h-[40px] w-full"
                                 placeholder="BPM"
                             />
+                        </div>
+                        <div>
+                            <div className="py-4 pl-2">
+                                {' '}
+                                <h2>Pupillen</h2>
+                            </div>
+                            <div>
+                                <div className="flex flex-row justify-start gap-16">
+                                    {crt.map((crtItem) => (
+                                        <div key={crtItem.id}>
+                                            <button
+                                                className="px-4 h-[40px] rounded-full border-2"
+                                                onClick={() =>
+                                                    handleItemClick(crtItem)
+                                                }
+                                            >
+                                                {crtItem.name}
+                                            </button>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="pt-8 pl-2">
+                                {' '}
+                                <InputDefaultVal
+                                    label="spO2"
+                                    size="h-[40px] w-full"
+                                    placeholder="%"
+                                />
+                            </div>
+                            <div className="pt-8 pl-2">
+                                {' '}
+                                <InputDefaultVal
+                                    label="Temperatuur"
+                                    size="h-[40px] w-full"
+                                    placeholder="°C"
+                                />
+                            </div>
+                            <div className="pt-8 pl-2">
+                                {' '}
+                                <InputDefaultVal
+                                    label="Glycemie"
+                                    size="h-[40px] w-full"
+                                    placeholder="mg/dl"
+                                />
+                            </div>
+                            <div className="pt-8 pl-2">
+                                <label htmlFor="timeInput">Bloeddruk</label>{' '}
+                                <div>
+                                    <input
+                                        type="text"
+                                        className="w-1/2 px-4 border-2 mt-4"
+                                        placeholder="Hoog( mm Hg)"
+                                    />
+                                    <input
+                                        type="text"
+                                        className="w-1/2 px-4 border-2 mt-4"
+                                        placeholder="Laag( mm Hg)"
+                                    />
+                                </div>
+                            </div>
+                            <div className="pt-8 pl-2">
+                                {' '}
+                                <InputDefaultVal
+                                    label="Pijnscore"
+                                    size="h-[40px] w-full"
+                                    placeholder="Vas(1-10)"
+                                />
+                            </div>
+                            <div className="w-full flex flex-row pt-8 pl-2 justify-between">
+                                {' '}
+                                <InputDefaultVal
+                                    label="Tijdstip van Afname"
+                                    size="h-[40px] w-[270px]"
+                                    placeholder="Vas(1-10)"
+                                />
+                                <div className="flex flex-row items-end justify-end">
+                                    <IconButton
+                                        icon={DeleteIcon}
+                                        variant="rounded"
+                                        size="w-[132px] h-[44px]"
+                                        backgroundColor="bg-p-red text-white border-p-red"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
