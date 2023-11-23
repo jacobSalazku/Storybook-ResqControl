@@ -1,7 +1,7 @@
 import { IconDeviceFloppy, IconDoorExit } from '@tabler/icons-react';
 import Header from '../Components/Header';
 import IconButton from '../Components/IconButton';
-import Select from '../Components/Select';
+import InputSelect from '../Components/InputSelect';
 import TitleCard from '../Components/TitleCard';
 import TreatmentMenu from '../Components/TreatmentMenu';
 import { menuItems } from './Festival';
@@ -37,7 +37,7 @@ const Ambulance = () => {
                                             ZiekenWages/andere
                                         </p>
                                     </div>
-                                    <Select
+                                    <InputSelect
                                         placeholder="Selecteer ZiekenWagen"
                                         menuItems={...ambulances}
                                         width="w-[275px]"
@@ -49,7 +49,7 @@ const Ambulance = () => {
                                     <div>
                                         <p className="font-semibold">MUG</p>
                                     </div>
-                                    <Select
+                                    <InputSelect
                                         placeholder="Selecteer MUG"
                                         menuItems={...ambulances}
                                         width="w-[275px]"
@@ -63,7 +63,7 @@ const Ambulance = () => {
                                             Ziekenhuis
                                         </p>
                                     </div>
-                                    <Select
+                                    <InputSelect
                                         placeholder="Selecteer Ziekenhuis"
                                         menuItems={...ambulances}
                                         width="w-[275px]"

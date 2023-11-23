@@ -1,42 +1,48 @@
 import { Menu, Transition } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { useState, Fragment } from 'react';
-import { ArrowDown } from '../stories/helpers/ClientDataFunctions';
+
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ');
 }
 
-interface SelectProps {
+interface InputSelectProps {
     title?: string;
     menuItems: string[];
-    width: string;
-    ringColor: string;
-    height: string;
+    backgroundColor?: string;
+    arrowColor?: string;
+    textColor?: string;
+    height?: string;
+    borderColor?: string;
     placeholder?: string;
+    width?: string;
 }
 
-const Select = ({
+const InputSelect = ({
     title,
     menuItems,
-    width,
-    ringColor,
-    height = 'h-8',
+    backgroundColor = 'bg-white',
+    arrowColor = 'dark-blue',
+    textColor,
+    height,
+    borderColor = 'ring-2 ring-inset ring-light-blue',
     placeholder,
-}: SelectProps) => {
-    const [selectedItem, setSelectedItem] = useState('');
+    width = 'w-full',
+}: InputSelectProps) => {
+    const [selectedItem, setSelectedItem] = useState(menuItems[0]);
 
     return (
         <>
-            <Menu
-                as="div"
-                className={` ${width} relative inline-block text-left`}
-            >
+            <Menu as="div" className="relative inline-block text-left">
                 <div>
                     <Menu.Button
-                        className={`flex flex-row w-full justify-between ${height} items-center rounded-full bg-white px-3 py-2 text-base font-medium text-dark-blue ring-2 ring-inset ${ringColor} hover:bg-gray-50`}
+                        className={`inline-flex items-center ${width} justify-between ${height} ${borderColor} ${textColor} gap-x-1.5 rounded-full ${backgroundColor} px-4 py-2 text-sm font-semibold text-gray-900 `}
                     >
-                        <div> {selectedItem ? selectedItem : title}</div>
-
-                        <div>{ArrowDown}</div>
+                        {selectedItem ? selectedItem : title}
+                        <ChevronDownIcon
+                            className={`mr-1 h-5 w-5 text-${arrowColor}`}
+                            aria-hidden="true"
+                        />
                     </Menu.Button>
                 </div>
 
@@ -51,8 +57,10 @@ const Select = ({
                 >
                     <Menu.Items
                         placeholder={placeholder}
-                        className="absolute right-0 z-10  w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                        className="absolute right-0 z-10 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none max-h-40 overflow-y-auto"
                     >
+                        {/* max-h-40 sets the maximum height, adjust as needed */}
+
                         <div className="py-1">
                             {menuItems.map((item) => (
                                 <Menu.Item key={item}>
@@ -81,4 +89,4 @@ const Select = ({
     );
 };
 
-export default Select;
+export default InputSelect;

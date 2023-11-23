@@ -1,4 +1,4 @@
-import InputSelect from '../stories/inputSelect';
+import InputSelect from '../Components/inputSelect';
 import IconButton from './IconButton';
 import { IconLogout } from '@tabler/icons-react';
 

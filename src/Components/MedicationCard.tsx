@@ -1,6 +1,6 @@
 import { IconCalendarEvent, IconClockHour4 } from '@tabler/icons-react';
 import { ChangeEvent, useState } from 'react';
-import Select from './Select';
+import InputSelect from './InputSelect';
 const toedining = ['oraal', 'Intraveneus', 'intramusculair', 'subcutaan'];
 
 interface MedicationData {
@@ -118,12 +118,10 @@ const MedicationCard = () => {
                                     />
                                 </div>
                                 <div>
-                                    <Select
+                                    <InputSelect
                                         title="Toedening"
                                         menuItems={...toedining}
-                                        ringColor="ring-dark-blue"
-                                        height="h-[55px]"
-                                        width="w-[210px]"
+                                        height="h-[55px] w-full"
                                         /* value={medicationData.toedining}
                                         onChange={(value: string) =>
                                             handleInputChange(

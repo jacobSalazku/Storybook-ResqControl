@@ -8,9 +8,8 @@ const MedicationDash = ({
     title,
     topLeftLogo,
     searchIcon,
-    open,
 }: TreatmentDashProps) => {
-    const [show, setShow] = useState(open);
+    const [show, setShow] = useState(true);
 
     const toggleShow = () => setShow(!show);
 

@@ -1,6 +1,6 @@
 import { DeleteLogo } from '../stories/helpers/ClientDataFunctions';
 import IconButton from './IconButton';
-import InputSelect from '../stories/inputSelect';
+import InputSelect from '../Components/inputSelect';
 import { IconSearch } from '@tabler/icons-react';
 
 const locatie = ['inwendig', 'uitwendig', 'ribben'];

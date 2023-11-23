@@ -10,7 +10,7 @@ import {
     verbalResponse,
     wapaArr,
 } from './patientData';
-import InputDefaultVal from './inputDefaultVal';
+import Input from './input';
 import IconButton from './IconButton';
 import { DeleteIcon } from '../stories/helpers/ClientDataFunctions';
 
@@ -65,7 +65,7 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                             GlasCow Coma Schaal
                         </h2>
                         <div className="flex flex-col items-center ">
-                            <div className=" w-full flex flex-row justify-between">
+                            <div className="w-full flex flex-row justify-between pl-2">
                                 <div>
                                     <div className="py-4 pl-2">
                                         <h2>Openen van ogen</h2>
@@ -123,7 +123,7 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="py-4">
+                                    <div className="py-4 pl-2">
                                         <h2>Motorisch Antwoord</h2>
                                     </div>
                                     <div className="flex flex-col gap-2">
@@ -224,18 +224,20 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
 
                         <div className="pt-8 pl-2">
                             {' '}
-                            <InputDefaultVal
+                            <Input
                                 label="Ademhaling"
                                 size="h-[40px] w-full"
                                 placeholder="/min"
+                                type="tex"
                             />
                         </div>
                         <div className="pt-8 pl-2">
                             {' '}
-                            <InputDefaultVal
+                            <Input
                                 label="Hartslag"
                                 size="h-[40px] w-full"
                                 placeholder="BPM"
+                                type="tex"
                             />
                         </div>
                         <div>
@@ -261,26 +263,29 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                             </div>
                             <div className="pt-8 pl-2">
                                 {' '}
-                                <InputDefaultVal
+                                <Input
                                     label="spO2"
                                     size="h-[40px] w-full"
                                     placeholder="%"
+                                    type="tex"
                                 />
                             </div>
                             <div className="pt-8 pl-2">
                                 {' '}
-                                <InputDefaultVal
+                                <Input
                                     label="Temperatuur"
                                     size="h-[40px] w-full"
                                     placeholder="°C"
+                                    type="tex"
                                 />
                             </div>
                             <div className="pt-8 pl-2">
                                 {' '}
-                                <InputDefaultVal
+                                <Input
                                     label="Glycemie"
                                     size="h-[40px] w-full"
                                     placeholder="mg/dl"
+                                    type="tex"
                                 />
                             </div>
                             <div className="pt-8 pl-2">
@@ -300,18 +305,20 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                             </div>
                             <div className="pt-8 pl-2">
                                 {' '}
-                                <InputDefaultVal
+                                <Input
                                     label="Pijnscore"
                                     size="h-[40px] w-full"
-                                    placeholder="Vas(1-10)"
+                                    placeholder="sVas(1-10)"
+                                    type="tex"
                                 />
                             </div>
                             <div className="w-full flex flex-row pt-8 pl-2 justify-between">
                                 {' '}
-                                <InputDefaultVal
+                                <Input
                                     label="Tijdstip van Afname"
                                     size="h-[40px] w-[270px]"
                                     placeholder="Vas(1-10)"
+                                    type="tex"
                                 />
                                 <div className="flex flex-row items-end justify-end">
                                     <IconButton

@@ -11,7 +11,6 @@ import {
     IconWorld,
 } from '@tabler/icons-react';
 import { stringDate } from '../stories/helpers/DateTime';
-
 import { PatientProps } from '../interfaces';
 
 const SmallDataCard = ({

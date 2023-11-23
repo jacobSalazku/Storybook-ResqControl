@@ -4,10 +4,10 @@ import { Button } from './Button';
 import { pointArrow } from './helpers';
 import { TreatmentDashProps } from '../interfaces';
 import { proceedsArr } from './patientData';
-import InputDefaultVal from './inputDefaultVal';
 import IconButton from './IconButton';
 import { DeleteIcon } from '../stories/helpers/ClientDataFunctions';
 import { stringTime } from '../stories/helpers/DateTime';
+import Input from './Input';
 
 const ProceedsDash = ({
     title,
@@ -63,10 +63,11 @@ const ProceedsDash = ({
                     </div>
                     <div className="w-full flex flex-row pt-8 pl-2 justify-between">
                         {' '}
-                        <InputDefaultVal
+                        <Input
                             label="Tijdstip van Afname"
                             size="h-[40px] w-[270px]"
                             placeholder={stringTime}
+                            type="time"
                         />
                         <div className="flex flex-row items-end justify-end">
                             <IconButton
