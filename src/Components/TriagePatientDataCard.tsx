@@ -1,6 +1,5 @@
 import '../index.css';
 import TriageOption from './TriageOption';
-
 import { getGender } from './helpers';
 import { PatientProps } from '../interfaces';
 import { getUrgencyIcon } from '../stories/helpers/ClientDataFunctions';
@@ -24,7 +23,7 @@ export const TriagePatientDataCard = ({
     allergies,
 }: PatientProps) => {
     return (
-        <div className="h-[400px] w-[391px] bg-card-background-color shadow-xl  flex flex-row justify-between border-l-[6px] border-[#EE7E7A] pt-4 rounded-md ">
+        <div className="h-[400px] w-[391px] bg-card-background-color shadow-xl flex flex-row justify-between border-l-[6px] border-[#EE7E7A] pt-4 rounded-md ">
             <div className="flex flex-col w-full h-full ">
                 <div className="pl-4">
                     <p className="text-2xl text-black font-medium ">{name}</p>
@@ -33,7 +32,7 @@ export const TriagePatientDataCard = ({
                     className="flex flex-row gap-1 pl-4
             "
                 >
-                    <div className=" w-[200px] flex flex-col justify-start gap-2 pt-2 pr-2 pl-2 text-p-text-color font-light ">
+                    <div className="w-[200px] flex flex-col justify-start gap-2 pt-2 pr-2 pl-2 text-p-text-color font-light ">
                         <div>
                             <p className="font-semibold text">
                                 Gegevens Patient
@@ -81,7 +80,7 @@ export const TriagePatientDataCard = ({
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col items-start justify-start gap-2 pt-2 pl-2 border-l  border-black font-light">
+                    <div className="flex flex-col items-start justify-start gap-2 pt-2 pl-2 border-l border-black font-light">
                         <div>
                             <p className="font-semibold">Klachten Patient</p>
                         </div>

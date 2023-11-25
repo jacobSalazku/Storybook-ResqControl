@@ -7,6 +7,7 @@ interface InputProps {
     type: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     border?: string;
+    required?: boolean;
 }
 const Input = ({
     label,
@@ -16,6 +17,7 @@ const Input = ({
     type = 'text',
     onChange,
     border,
+    required,
 }: InputProps) => {
     return (
         <div className="flex flex-col gap-2">
@@ -27,6 +29,9 @@ const Input = ({
                 placeholder={placeholder}
                 value={value}
                 onChange={onChange}
+                aria-label={label}
+                aria-required="true"
+                required={required}
             />
         </div>
     );

@@ -2,7 +2,6 @@ import { IconCheck } from '@tabler/icons-react';
 import { useState } from 'react';
 import { Button } from './Button';
 import { pointArrow } from './helpers';
-
 import { TreatmentDashProps } from '../interfaces';
 import { lozenges } from './patientData';
 

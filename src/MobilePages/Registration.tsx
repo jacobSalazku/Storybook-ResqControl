@@ -1,11 +1,18 @@
+import { useState } from 'react';
 import Input from '../Components/Input';
 import InputSelect from '../Components/inputSelect';
 import { languages, nationalities } from '../Components/patientData';
+import { useInput } from '../Hooks/useInput';
 
 const languagesAbbrivaition = ['NL', 'ENG'];
-const gender = ['Man', 'Vrouw'];
+const genderArr = ['Man', 'Vrouw'];
 
 const Registration = () => {
+    const [date, setDate] = useState(new Date());
+    const firstName = useInput();
+    const lastName = useInput();
+    const emergencyContact = useInput();
+
     return (
         <div className="w-full flex flex-col items-center justify-start gap-7 ">
             <div className="w-full h-[78px] bg-dark-blue px-4 py-5 flex flex-row justify-between items-center">
@@ -25,19 +32,26 @@ const Registration = () => {
                     placeholder="Voornaam"
                     type="text"
                     border="rounded-full border-light-blue"
+                    value={firstName.value}
+                    onChange={firstName.onChange}
+                    required
                 />
+                <div>{firstName.value}</div>
                 <Input
                     label="Achternaam"
                     size="w-full h-[48px]"
                     placeholder="Achternaam"
                     type="text"
                     border="rounded-full border-light-blue"
+                    value={lastName.value}
+                    onChange={lastName.onChange}
                 />
+                <div>{lastName.value}</div>
                 <div className="flex flex-col gap-3">
                     <p>Geslacht</p>
                     <InputSelect
                         title="Selecteer je geslacht"
-                        menuItems={...gender}
+                        menuItems={...genderArr}
                         backgroundColor="bg-white"
                         height="h-[48px]"
                         borderColor="border-light-blue border-2"
@@ -47,7 +61,7 @@ const Registration = () => {
                     <p>Nationaliteit</p>
                     <InputSelect
                         title="Selecteer je geslacht"
-                        menuItems={...nationalities}
+                        menuItems={nationalities}
                         backgroundColor="bg-white"
                         height="h-[48px]"
                         borderColor="border-light-blue border-2"
@@ -57,12 +71,13 @@ const Registration = () => {
                     <p>Taal</p>
                     <InputSelect
                         title="Selecteer je geslacht"
-                        menuItems={...languages}
+                        menuItems={languages}
                         backgroundColor="bg-white"
                         height="h-[48px]"
                         borderColor="border-light-blue border-2"
                     />
                 </div>
+
                 <Input
                     label="Geboorte datum"
                     size="w-full h-[48px]"
@@ -76,6 +91,8 @@ const Registration = () => {
                     placeholder="Nummer ICE"
                     type="text"
                     border="rounded-full border-light-blue"
+                    value={emergencyContact.value}
+                    onChange={emergencyContact.onChange}
                 />
             </div>
         </div>

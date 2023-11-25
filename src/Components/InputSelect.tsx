@@ -16,10 +16,14 @@ interface InputSelectProps {
     borderColor?: string;
     placeholder?: string;
     width?: string;
+    value?: string | number;
+    onChange?: (selectedItem: string) => void;
+    onClick?: (selectedItem: string) => void;
 }
 
 const InputSelect = ({
     title,
+    onChange,
     menuItems,
     backgroundColor = 'bg-white',
     arrowColor = 'dark-blue',
@@ -30,6 +34,13 @@ const InputSelect = ({
     width = 'w-full',
 }: InputSelectProps) => {
     const [selectedItem, setSelectedItem] = useState(menuItems[0]);
+
+    const handleItemClick = (item: string) => {
+        setSelectedItem(item);
+        if (onChange) {
+            onChange(item);
+        }
+    };
 
     return (
         <>
@@ -67,7 +78,7 @@ const InputSelect = ({
                                     {({ active }) => (
                                         <a
                                             onClick={() => {
-                                                setSelectedItem(item);
+                                                handleItemClick(item);
                                             }}
                                             className={classNames(
                                                 active
