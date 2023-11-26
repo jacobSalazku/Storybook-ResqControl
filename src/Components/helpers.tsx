@@ -63,3 +63,22 @@ export const pointArrow = (show: boolean) => {
     }
     return <IconChevronUp color="#497DAE" />;
 };
+
+export const editButton = (editMode: boolean) => {
+    {
+        editMode ? (
+            <div className=" w-1/5 flex flex-row justify-end">
+                <IconX onClick={handleCancelEdit} className="cursor-pointer" />
+
+                <IconDownload
+                    onClick={() => handleSaveEdit()}
+                    className="cursor-pointer"
+                />
+            </div>
+        ) : (
+            <div className="w-1/5 flex flex-row  justify-end ">
+                <IconEdit onClick={ClickEditMode} className="cursor-pointer" />
+            </div>
+        );
+    }
+};

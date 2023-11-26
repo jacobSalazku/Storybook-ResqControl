@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Input from '../Components/Input';
 import InputSelect from '../Components/inputSelect';
 import { languages, nationalities } from '../Components/patientData';
@@ -8,7 +7,6 @@ const languagesAbbrivaition = ['NL', 'ENG'];
 const genderArr = ['Man', 'Vrouw'];
 
 const Registration = () => {
-    const [date, setDate] = useState(new Date());
     const firstName = useInput();
     const lastName = useInput();
     const emergencyContact = useInput();

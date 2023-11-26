@@ -8,6 +8,7 @@ export interface ButtonProps {
     icon?: JSX.Element;
     selected?: boolean | null;
     onClick?: () => void;
+    HandleOptions: () => void;
     height?: string;
 }
 

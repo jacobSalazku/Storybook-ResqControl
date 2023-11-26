@@ -10,27 +10,47 @@ import {
     verbalResponse,
     wapaArr,
 } from './patientData';
-import Input from './input';
 import IconButton from './IconButton';
 import { DeleteIcon } from '../stories/helpers/ClientDataFunctions';
+import Input from './Input';
 
-const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
+type ButtonData = {
+    id: number;
+    name: string;
+    selected: boolean;
+};
+const  ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
+
     const [show, setShow] = useState(true);
-    const [selectedItem, setSelectedItem] = useState<{
-        id: number;
-        name: string;
-        selected: boolean;
-    } | null>(null);
+    const [selectedItem, setSelectedItems] = useState<ButtonData | null>(null);
+    const [eyesOptions, setEyesOptions] = useState<ButtonData | null>(null);
+    const [verbalResponseOptions, setVerbalResponseOptions] =
+        useState<ButtonData | null>(null);
+
+    const [isSelected, setIsSelected] = useState(false);
+
+
+    
     const toggleShow = () => setShow(!show);
 
-    const handleItemClick = (item: {
-        id: number;
-        name: string;
-        selected: boolean;
-    }) => {
+    const HandleEyesOptions = (item: ButtonData) => {
         // Update the state to the selected item
-        setSelectedItem(item);
+        setEyesOptions(item);
+        setIsSelected(!isSelected);
     };
+
+    const HandleVerbalOptions = (item: ButtonData) => {
+        // Update the state to the selected item
+        setVerbalResponseOptions(item);
+    };
+
+    const handleItemClick = (item: ButtonData) => {
+        // Update the state to the selected item
+        setSelectedItems(item);
+    };
+
+    
+    
     return (
         <div className="w-full flex flex-row justify-center py-2">
             <div
@@ -76,7 +96,7 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                                 <button
                                                     className="px-4 h-[40px] rounded-full border-2 g"
                                                     onClick={() =>
-                                                        handleItemClick(ogen)
+                                                        HandleEyesOptions(ogen)
                                                     }
                                                 >
                                                     {ogen.name}
@@ -86,8 +106,8 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                     </div>
                                     <div>
                                         <h3>Selected Item:</h3>
-                                        {selectedItem ? (
-                                            <p>{selectedItem.name}</p>
+                                        {eyesOptions ? (
+                                            <p>{eyesOptions.name}</p>
                                         ) : (
                                             <p>No item selected</p>
                                         )}
@@ -98,12 +118,16 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                         <h2> Verbaal Antwoord</h2>
                                     </div>
                                     <div className="flex flex-col gap-2">
+                                       
+                                       
                                         {verbalResponse.map((response) => (
                                             <div key={response.id}>
+                                                 <label >  {response.name} </label>
+                                                    <input type="option" value={response.name} />
                                                 <button
-                                                    className="px-4 h-[40px] rounded-full border-2"
+                                                    className={"px-4 h-[40px] rounded-full border-2"}
                                                     onClick={() =>
-                                                        handleItemClick(
+                                                        HandleVerbalOptions(
                                                             response,
                                                         )
                                                     }
@@ -115,8 +139,8 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                     </div>
                                     <div>
                                         <h3>Selected Item:</h3>
-                                        {selectedItem ? (
-                                            <p>{selectedItem.name}</p>
+                                        {verbalResponseOptions ? (
+                                            <p>{verbalResponseOptions.name}</p>
                                         ) : (
                                             <p>No item selected</p>
                                         )}
@@ -220,7 +244,7 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                     ))}
                                 </div>
                             </div>
-                        </div>
+                        </div>}
 
                         <div className="pt-8 pl-2">
                             {' '}
@@ -337,4 +361,4 @@ const ObservationDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
     );
 };
 
-export default ObservationDash;
+export default ParametersDash;
