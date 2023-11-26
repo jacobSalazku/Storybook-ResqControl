@@ -19,8 +19,7 @@ type ButtonData = {
     name: string;
     selected: boolean;
 };
-const  ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
-
+const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
     const [show, setShow] = useState(true);
     const [selectedItem, setSelectedItems] = useState<ButtonData | null>(null);
     const [eyesOptions, setEyesOptions] = useState<ButtonData | null>(null);
@@ -29,8 +28,6 @@ const  ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
 
     const [isSelected, setIsSelected] = useState(false);
 
-
-    
     const toggleShow = () => setShow(!show);
 
     const HandleEyesOptions = (item: ButtonData) => {
@@ -49,8 +46,6 @@ const  ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
         setSelectedItems(item);
     };
 
-    
-    
     return (
         <div className="w-full flex flex-row justify-center py-2">
             <div
@@ -118,14 +113,12 @@ const  ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                         <h2> Verbaal Antwoord</h2>
                                     </div>
                                     <div className="flex flex-col gap-2">
-                                       
-                                       
                                         {verbalResponse.map((response) => (
                                             <div key={response.id}>
-                                                 <label >  {response.name} </label>
-                                                    <input type="option" value={response.name} />
                                                 <button
-                                                    className={"px-4 h-[40px] rounded-full border-2"}
+                                                    className={
+                                                        'px-4 h-[40px] rounded-full border-2'
+                                                    }
                                                     onClick={() =>
                                                         HandleVerbalOptions(
                                                             response,
@@ -244,7 +237,7 @@ const  ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                     ))}
                                 </div>
                             </div>
-                        </div>}
+                        </div>
 
                         <div className="pt-8 pl-2">
                             {' '}

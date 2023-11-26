@@ -13,14 +13,6 @@ import {
 } from '@tabler/icons-react';
 import { PatientProps } from '../interfaces';
 import { useState } from 'react';
-// bg-gradient-to-r from-white to-light-green
-
-type InputFieldTypes =
-    | 'gender'
-    | 'language'
-    | 'nationality'
-    | 'dateOfBirth'
-    | 'allergies';
 
 export const PatientOverviewCard = ({
     time,
@@ -58,9 +50,7 @@ export const PatientOverviewCard = ({
         setEditData((prevState) => {
             return {
                 ...prevState,
-                editData: {
-                    InputFieldTypes: e.target.value,
-                },
+                editData,
             };
         });
         setEditMode(false);
@@ -156,7 +146,7 @@ export const PatientOverviewCard = ({
                                         value={`Allergieën: ${
                                             allergies.toString() == 'false'
                                                 ? 'No'
-                                                : 'Yes'
+                                                : 'es'
                                         }`}
                                         type="text"
                                     />

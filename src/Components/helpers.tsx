@@ -1,5 +1,5 @@
-import Icon from './icon';
 import lightBlueCheck from '../stories/helpers/icons/lightBlueCheck.png';
+import Icon from './Icon';
 import IconButton from './IconButton';
 import {
     IconChevronDown,
@@ -62,23 +62,4 @@ export const pointArrow = (show: boolean) => {
         return <IconChevronDown color="#497DAE" stroke={2.5} />;
     }
     return <IconChevronUp color="#497DAE" />;
-};
-
-export const editButton = (editMode: boolean) => {
-    {
-        editMode ? (
-            <div className=" w-1/5 flex flex-row justify-end">
-                <IconX onClick={handleCancelEdit} className="cursor-pointer" />
-
-                <IconDownload
-                    onClick={() => handleSaveEdit()}
-                    className="cursor-pointer"
-                />
-            </div>
-        ) : (
-            <div className="w-1/5 flex flex-row  justify-end ">
-                <IconEdit onClick={ClickEditMode} className="cursor-pointer" />
-            </div>
-        );
-    }
 };
