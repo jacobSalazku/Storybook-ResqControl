@@ -19,9 +19,9 @@ const Treatment = () => {
         setSearchInputVisible(!isSearchInputVisible);
     };
     return (
-        <div className="w-full h-screen flex flex-col items-center">
+        <div className="flex h-screen w-full flex-col items-center">
             <Header />
-            <div className="w-[58rem] flex flex-col justify-center items-center before: bg-white">
+            <div className="before: flex w-[58rem] flex-col items-center justify-center bg-white">
                 <TitleCard
                     title="Basis Verzorging"
                     icon={<IconStethoscope color="#497DAE" />}

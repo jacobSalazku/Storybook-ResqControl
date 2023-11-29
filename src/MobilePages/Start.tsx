@@ -2,9 +2,9 @@ import { Button } from '../Components/Button';
 
 const Start = () => {
     return (
-        <div className="w-[414px] h-[665px] bg-dark-blue flex flex-col items-center justify-center gap-7">
-            <div className="w-[285px] h-[285px] flex flex-row  border-2 bg-background-color shadow-lg shadow-black">
-                <div className="w-full h-full flex flex-col justify-center items-center gap-2">
+        <div className="flex h-[665px] w-[414px] flex-col items-center justify-center gap-7 bg-dark-blue">
+            <div className="flex h-[285px] w-[285px] flex-row  border-2 bg-background-color shadow-lg shadow-black">
+                <div className="flex h-full w-full flex-col items-center justify-center gap-2">
                     <h1 className="text-[24px] text-[#35393C]">
                         Wat is Patiënt Care
                     </h1>

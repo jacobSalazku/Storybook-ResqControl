@@ -5,9 +5,9 @@ import UrgencyDashboardSmall from '../Components/UrgencyDashboardSmall';
 import { IconArmchair } from '@tabler/icons-react';
 const WaitingRoom = () => {
     return (
-        <div className="w-full h-full flex flex-row justify-center">
-            <div className=" max-w-[58rem]  w-[58rem]  bg-white h-fullflex flex-col items-center ">
-                <div className="w-full flex flex-col">
+        <div className="flex h-full w-full flex-row justify-center">
+            <div className=" h-fullflex  w-[58rem]  max-w-[58rem] flex-col items-center bg-white ">
+                <div className="flex w-full flex-col">
                     <Header />
                     <TitleCard
                         title="Wacthzaal Inschrijvingen"

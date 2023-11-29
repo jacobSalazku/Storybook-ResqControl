@@ -1,14 +1,4 @@
-interface InputProps {
-    label: string;
-    templateStr?: string;
-    size: string;
-    placeholder: string;
-    value?: string;
-    type: string;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    border?: string;
-    required?: boolean;
-}
+import { InputProps } from '../interfaces';
 const Input = ({
     label,
     size,

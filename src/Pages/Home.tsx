@@ -7,9 +7,9 @@ import TreatmentMenu from '../Components/TreatmentMenu';
 import { menuItems } from './Festival';
 const Home = () => {
     return (
-        <div className="w-full h-auto flex flex-col items-center">
+        <div className="flex h-auto w-full flex-col items-center">
             <Header />
-            <div className="w-[58rem] flex flex-col justify-center items-center before: bg-white">
+            <div className="before: flex w-[58rem] flex-col items-center justify-center bg-white">
                 <TitleCard
                     title="Ontslag"
                     icon={<IconDoorExit color="#497DAE" />}
@@ -25,8 +25,8 @@ const Home = () => {
                 />
             </div>
             <TreatmentMenu menuItems={menuItems} activeTitle={1} />
-            <div className="w-[58rem] h-[17.rem]  border-8 border-white rounded-md mb-2 flex flex-row justify-center mt-4">
-                <div className="w-full flex flex-row flex-wrap justify-between items-center px-6 gap-x-1 gap-y-4">
+            <div className="mb-2 mt-4  flex h-[17.rem] w-[58rem] flex-row justify-center rounded-md border-8 border-white">
+                <div className="flex w-full flex-row flex-wrap items-center justify-between gap-x-1 gap-y-4 px-6">
                     <InputTextArea
                         title="Opmerkingen"
                         icon={<IconNote color="#497DAE" size={40} stroke={1} />}

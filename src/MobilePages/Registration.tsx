@@ -1,19 +1,21 @@
+import { useState } from 'react';
 import Input from '../Components/Input';
-import InputSelect from '../Components/inputSelect';
 import { languages, nationalities } from '../Components/patientData';
 import { useInput } from '../Hooks/useInput';
+import InputSelect from '../Components/InputSelect';
 
 const languagesAbbrivaition = ['NL', 'ENG'];
 const genderArr = ['Man', 'Vrouw'];
 
 const Registration = () => {
+    const [optionSelect, setOptionSelect] = useState('');
     const firstName = useInput();
     const lastName = useInput();
     const emergencyContact = useInput();
 
     return (
-        <div className="w-full flex flex-col items-center justify-start gap-7 ">
-            <div className="w-full h-[78px] bg-dark-blue px-4 py-5 flex flex-row justify-between items-center">
+        <div className="flex w-full flex-col items-center justify-start gap-7 ">
+            <div className="flex h-[78px] w-full flex-row items-center justify-between bg-dark-blue px-4 py-5">
                 <h1 className="text-white">Inschrijving</h1>
                 <InputSelect
                     menuItems={...languagesAbbrivaition}
@@ -23,7 +25,7 @@ const Registration = () => {
                     text-color="text-#497DAE]"
                 />
             </div>
-            <div className="w-full flex flex-col gap-4 px-4">
+            <div className="flex w-full flex-col gap-4 px-4">
                 <Input
                     label="Voornaam*"
                     size="w-full h-[48px]"
@@ -57,13 +59,17 @@ const Registration = () => {
                 </div>
                 <div className="flex flex-col gap-3">
                     <p>Nationaliteit</p>
-                    <InputSelect
+                    <select
+                        value={optionSelect}
                         title="Selecteer je geslacht"
-                        menuItems={nationalities}
-                        backgroundColor="bg-white"
-                        height="h-[48px]"
-                        borderColor="border-light-blue border-2"
-                    />
+                        defaultValue={nationalities}
+                    >
+                        {nationalities.map((nationality) => (
+                            <option value={optionSelect}>{nationality}</option>
+                        ))}
+                    </select>
+
+                    <div>{optionSelect}</div>
                 </div>
                 <div className="flex flex-col gap-3">
                     <p>Taal</p>

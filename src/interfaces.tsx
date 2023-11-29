@@ -8,7 +8,7 @@ export interface ButtonProps {
     icon?: JSX.Element;
     selected?: boolean | null;
     onClick?: () => void;
-    HandleOptions: () => void;
+    HandleOptions?: () => void;
     height?: string;
 }
 
@@ -19,7 +19,7 @@ export interface iconProps {
     icon: string;
     path: JSX.Element;
 }
-
+/* eslint-disable */
 export interface IconButtonProps {
     label?: string;
     variant: string;
@@ -90,4 +90,18 @@ export interface TextAreaProps {
     placeholder: string;
     border?: string;
     icon?: JSX.Element;
+}
+
+export interface InputProps {
+    label: string;
+    templateStr?: string;
+    size: string;
+    placeholder: string;
+    value?: string;
+    type: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    border?: string;
+    required?: boolean;
+    spanString?: string;
+    onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
 }

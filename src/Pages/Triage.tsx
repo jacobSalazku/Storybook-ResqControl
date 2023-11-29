@@ -1,11 +1,16 @@
-import { EarLogo, SendIcon } from '../stories/helpers/ClientDataFunctions';
+import { EarLogo } from '../stories/helpers/ClientDataFunctions';
 import IconButton from '../Components/IconButton';
 import TitleCard from '../Components/TitleCard';
 import IconButtonLogoRight from '../Components/IconButtonLogoRight';
 import TriagePatientDataCard from '../Components/TriagePatientDataCard';
-import Icon from '../Components/icon';
+
 import Header from '../Components/Header';
-import { IconPlus, IconReport } from '@tabler/icons-react';
+import {
+    IconArrowBarLeft,
+    IconArrowBarRight,
+    IconPlus,
+    IconReport,
+} from '@tabler/icons-react';
 const Patient = {
     time: '12:50',
     urgency: 'base',
@@ -20,9 +25,9 @@ const Patient = {
 };
 export const Triage = () => {
     return (
-        <div className="w-full h-screen flex flex-col  items-center">
+        <div className="flex h-screen w-full flex-col items-center">
             <Header />
-            <div className="w-[58rem] flex flex-col justify-center items-center before: gap-2">
+            <div className="before: flex w-[58rem] flex-col items-center justify-center gap-2">
                 <TitleCard
                     title="Triage"
                     icon={EarLogo}
@@ -31,26 +36,10 @@ export const Triage = () => {
                             label="Triage Annuleren"
                             size="h-[40px] w-[171px]"
                             icon={
-                                <Icon
-                                    icon="icon-tabler-send"
+                                <IconArrowBarLeft
                                     color="#FFFFFF"
                                     height="20"
                                     width="20"
-                                    path={
-                                        <>
-                                            <path
-                                                stroke="none"
-                                                d="M0 0h24v24H0z"
-                                                fill="none"
-                                                x="10"
-                                                y="10"
-                                                width="30"
-                                                height="20"
-                                            />
-                                            <path d="M14 10l-11 11" />
-                                            <path d="M3 21l6.5 -18a.55 .55 0 0 1 1 0l3.5 7l7 3.5a.55 .55 0 0 1 0 1l-18 6.5" />
-                                        </>
-                                    }
                                 />
                             }
                             backgroundColor="bg-p-red border-p-red hover:bg-[#f7554f] shadow-md text-white"
@@ -67,11 +56,11 @@ export const Triage = () => {
                         />
                     }
                 />
-                <div className=" w-[58rem] flex flex-col px-10 gap-6">
-                    <div className=" w-full flex flex-row justify-center ">
-                        <div className="w-full flex flex-row justify-between gap-4 ">
+                <div className=" flex w-[58rem] flex-col gap-6 px-10">
+                    <div className=" flex w-full flex-row justify-center ">
+                        <div className="flex w-full flex-row justify-between gap-4 ">
                             <TriagePatientDataCard {...Patient} />
-                            <div className="w-1/2 flex flex-col justify-start items-start gap-4">
+                            <div className="flex w-1/2 flex-col items-start justify-start gap-4">
                                 <div>
                                     <p className="font-semibold">Pathologiën</p>
                                 </div>
@@ -93,10 +82,10 @@ export const Triage = () => {
                             {/* <Pathology /> */}
                         </div>
                     </div>
-                    <div className=" w-full flex flex-row justify-end ">
+                    <div className=" flex w-full flex-row justify-end ">
                         <IconButtonLogoRight
                             label="Patient Behandelen"
-                            icon={SendIcon}
+                            icon={<IconArrowBarRight />}
                             size="h-[40px] w-[193px]"
                             variant="rounded"
                             backgroundColor="border-[#497DAE] bg-[#497DAE] text-white shadow-lg "

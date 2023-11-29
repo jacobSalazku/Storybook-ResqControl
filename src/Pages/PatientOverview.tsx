@@ -42,9 +42,9 @@ export const PatientOverview = () => {
 
     return (
         <>
-            <div className="w-full h-screen flex flex-col items-center">
+            <div className="flex h-screen w-full flex-col items-center">
                 <Header />
-                <div className="w-[58rem] flex flex-col justify-center items-center before: bg-white">
+                <div className="before: flex w-[58rem] flex-col items-center justify-center bg-white">
                     <TitleCard
                         title="Patient Overzicht"
                         icon={
@@ -60,12 +60,12 @@ export const PatientOverview = () => {
                             />
                         }
                     />
-                    <div className="h-[26rem] w-[58rem] bg-card-background-color  text-p-text-color flex flex-col justify-start  my-0 items-center rounded-lg overflow-hidden ">
-                        <div className=" w-full flex flex-row justify-center my-6 ">
+                    <div className="bg-card-background-color my-0 flex  h-[26rem] w-[58rem] flex-col items-center  justify-start overflow-hidden rounded-lg text-p-text-color ">
+                        <div className=" my-6 flex w-full flex-row justify-center ">
                             <div className="mx-6">
                                 <PatientOverviewCard {...Patient} />
                             </div>
-                            <div className=" w-full mr-4 ">
+                            <div className=" mr-4 w-full ">
                                 <TreatmentCard
                                     isCompleted={completedTreatments[0]}
                                     description="Basis Verzorging"

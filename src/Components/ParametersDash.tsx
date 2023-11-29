@@ -12,7 +12,8 @@ import {
 } from './patientData';
 import IconButton from './IconButton';
 import { DeleteIcon } from '../stories/helpers/ClientDataFunctions';
-import Input from './Input';
+import { useInput } from '../Hooks/useInput';
+import InputSpan from './InputSpan';
 
 type ButtonData = {
     id: number;
@@ -20,6 +21,9 @@ type ButtonData = {
     selected: boolean;
 };
 const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
+    const ademhaling = useInput();
+    const hartslag = useInput();
+    const saturatie = useInput();
     const [show, setShow] = useState(true);
     const [selectedItem, setSelectedItems] = useState<ButtonData | null>(null);
     const [eyesOptions, setEyesOptions] = useState<ButtonData | null>(null);
@@ -47,24 +51,24 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
     };
 
     return (
-        <div className="w-full flex flex-row justify-center py-2">
+        <div className="flex w-full flex-row justify-center py-2">
             <div
                 className={`w-[55rem] ${
                     show
-                        ? 'h-auto transition-max-h transition-opacity duration-300 ease-in-out'
+                        ? 'transition-max-h h-auto transition-opacity duration-300 ease-in-out'
                         : 'h-[4rem]'
                 } rounded-b-xl rounded-t-xl border-4 border-background-color`}
             >
-                <div className="w-[54.6rem] h-[3.7rem] flex flex-row justify justify-between border-background-color px-5 items-center rounded">
-                    <div className="flex flex-row justify-start items-center gap-4 ml-2">
+                <div className="justify flex h-[3.7rem] w-[54.6rem] flex-row items-center justify-between rounded border-background-color px-5">
+                    <div className="ml-2 flex flex-row items-center justify-start gap-4">
                         {topLeftLogo}
                         <div>
-                            <p className="text-lg text-p-text-color flex flex-row items-center font-medium">
+                            <p className="flex flex-row items-center text-lg font-medium text-p-text-color">
                                 {title}
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-row justify-between items-center gap-7">
+                    <div className="flex flex-row items-center justify-between gap-7">
                         <div className="cursor-pointer" onClick={toggleShow}>
                             {pointArrow(show)}
                         </div>
@@ -73,14 +77,14 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                 <div
                     className={`transition-max-h transition-opacity duration-300 ease-in-out ${
                         show ? '-h-[17.rem] opacity-100' : 'max-h-0 opacity-0'
-                    } w-full  mb-2 flex flex-col  my-4 px-8 gap-8`}
+                    } my-4  mb-2 flex w-full  flex-col gap-8 px-8`}
                 >
                     <div>
-                        <h2 className="font-semibold text">
+                        <h2 className="text font-semibold">
                             GlasCow Coma Schaal
                         </h2>
                         <div className="flex flex-col items-center ">
-                            <div className="w-full flex flex-row justify-between pl-2">
+                            <div className="flex w-full flex-row justify-between pl-2">
                                 <div>
                                     <div className="py-4 pl-2">
                                         <h2>Openen van ogen</h2>
@@ -89,7 +93,7 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                         {OgenArray.map((ogen) => (
                                             <div key={ogen.id}>
                                                 <button
-                                                    className="px-4 h-[40px] rounded-full border-2 g"
+                                                    className="g h-[40px] rounded-full border-2 px-4"
                                                     onClick={() =>
                                                         HandleEyesOptions(ogen)
                                                     }
@@ -117,7 +121,7 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                             <div key={response.id}>
                                                 <button
                                                     className={
-                                                        'px-4 h-[40px] rounded-full border-2'
+                                                        'h-[40px] rounded-full border-2 px-4'
                                                     }
                                                     onClick={() =>
                                                         HandleVerbalOptions(
@@ -148,7 +152,7 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                             (motoricResponse) => (
                                                 <div key={motoricResponse.id}>
                                                     <button
-                                                        className="px-4 h-[40px] rounded-full border-2"
+                                                        className={`h-[40px] rounded-full border-2 px-4`}
                                                         onClick={() =>
                                                             handleItemClick(
                                                                 motoricResponse,
@@ -182,7 +186,7 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                     {wapaArr.map((wapaItem) => (
                                         <div key={wapaItem.id}>
                                             <button
-                                                className="px-4 h-[40px] rounded-full border-2"
+                                                className="h-[40px] rounded-full border-2 px-4"
                                                 onClick={() =>
                                                     handleItemClick(wapaItem)
                                                 }
@@ -204,7 +208,7 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                     {FAST.map((item) => (
                                         <div key={item.id}>
                                             <button
-                                                className="px-4 h-[40px] rounded-full border-2"
+                                                className="h-[40px] rounded-full border-2 px-4"
                                                 onClick={() =>
                                                     handleItemClick(item)
                                                 }
@@ -226,7 +230,7 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                     {Pupillen.map((item) => (
                                         <div key={item.id}>
                                             <button
-                                                className="px-4 h-[40px] rounded-full border-2"
+                                                className="h-[40px] rounded-full border-2 px-4"
                                                 onClick={() =>
                                                     handleItemClick(item)
                                                 }
@@ -239,25 +243,28 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                             </div>
                         </div>
 
-                        <div className="pt-8 pl-2">
+                        <div className="pl-2 pt-8">
                             {' '}
-                            <Input
+                            <InputSpan
                                 label="Ademhaling"
                                 size="h-[40px] w-full"
                                 placeholder="/min"
-                                type="tex"
+                                type="number"
+                                value={ademhaling.value}
+                                onChange={ademhaling.onChange}
+                                spanString="/min"
                             />
-                        </div>
-                        <div className="pt-8 pl-2">
-                            {' '}
-                            <Input
+                            <InputSpan
                                 label="Hartslag"
                                 size="h-[40px] w-full"
                                 placeholder="BPM"
-                                type="tex"
+                                type="number"
+                                value={hartslag.value}
+                                onChange={hartslag.onChange}
+                                spanString="BPM"
                             />
                         </div>
-                        <div>
+                        <div className="mt-6 ">
                             <div className="py-4 pl-2">
                                 {' '}
                                 <h2>Pupillen</h2>
@@ -267,7 +274,7 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                     {crt.map((crtItem) => (
                                         <div key={crtItem.id}>
                                             <button
-                                                className="px-4 h-[40px] rounded-full border-2"
+                                                className="h-[40px] rounded-full border-2 px-4"
                                                 onClick={() =>
                                                     handleItemClick(crtItem)
                                                 }
@@ -278,64 +285,70 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                     ))}
                                 </div>
                             </div>
-                            <div className="pt-8 pl-2">
+                            <div className="pl-2 pt-8">
                                 {' '}
-                                <Input
+                                <InputSpan
                                     label="spO2"
                                     size="h-[40px] w-full"
                                     placeholder="%"
-                                    type="tex"
+                                    type="number"
+                                    value={saturatie.value}
+                                    onChange={saturatie.onChange}
+                                    spanString="%"
                                 />
                             </div>
-                            <div className="pt-8 pl-2">
+                            <div className="pl-2 pt-8">
                                 {' '}
-                                <Input
+                                <InputSpan
                                     label="Temperatuur"
                                     size="h-[40px] w-full"
                                     placeholder="°C"
-                                    type="tex"
+                                    type="number"
+                                    spanString="°C"
                                 />
                             </div>
-                            <div className="pt-8 pl-2">
+                            <div className="pl-2 pt-8">
                                 {' '}
-                                <Input
+                                <InputSpan
                                     label="Glycemie"
                                     size="h-[40px] w-full"
                                     placeholder="mg/dl"
-                                    type="tex"
+                                    type="number"
+                                    spanString="mg/dl"
                                 />
                             </div>
-                            <div className="pt-8 pl-2">
+                            <div className="pl-2 pt-8">
                                 <label htmlFor="timeInput">Bloeddruk</label>{' '}
                                 <div>
                                     <input
-                                        type="text"
-                                        className="w-1/2 px-4 border-2 mt-4"
+                                        type="number"
+                                        className="mt-4 w-1/2 border-2 px-4"
                                         placeholder="Hoog( mm Hg)"
                                     />
                                     <input
-                                        type="text"
-                                        className="w-1/2 px-4 border-2 mt-4"
+                                        type="number"
+                                        className="mt-4 w-1/2 border-2 px-4"
                                         placeholder="Laag( mm Hg)"
                                     />
                                 </div>
                             </div>
-                            <div className="pt-8 pl-2">
+                            <div className="pl-2 pt-8">
                                 {' '}
-                                <Input
+                                <InputSpan
                                     label="Pijnscore"
                                     size="h-[40px] w-full"
                                     placeholder="sVas(1-10)"
-                                    type="tex"
+                                    type="number"
+                                    spanString="sVas(1-10)"
                                 />
                             </div>
-                            <div className="w-full flex flex-row pt-8 pl-2 justify-between">
+                            <div className="flex w-full flex-row justify-between pl-2 pt-8">
                                 {' '}
-                                <Input
+                                <InputSpan
                                     label="Tijdstip van Afname"
                                     size="h-[40px] w-[270px]"
                                     placeholder="Vas(1-10)"
-                                    type="tex"
+                                    type="time"
                                 />
                                 <div className="flex flex-row items-end justify-end">
                                     <IconButton

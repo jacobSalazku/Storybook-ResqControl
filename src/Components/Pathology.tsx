@@ -1,16 +1,16 @@
 import { DeleteLogo } from '../stories/helpers/ClientDataFunctions';
 import IconButton from './IconButton';
-import InputSelect from '../Components/inputSelect';
 import { IconSearch } from '@tabler/icons-react';
+import InputSelect from './InputSelect';
 
 const locatie = ['inwendig', 'uitwendig', 'ribben'];
 const zijde = ['Linker', 'Rechter'];
 const Pathology = () => {
     return (
-        <div className="h-[20rem] w-[30rem] bg-white flex flex-col items-center border rounded-3xl pt-4">
-            <div className="h-[19rem] w-[29rem] flex flex-col items-center  px-1 ">
-                <div className="w-full flex flex-row justify-between items-center ">
-                    <p className="text-lg text-black font-medium ">
+        <div className="flex h-[20rem] w-[30rem] flex-col items-center rounded-3xl border bg-white pt-4">
+            <div className="flex h-[19rem] w-[29rem] flex-col items-center  px-1 ">
+                <div className="flex w-full flex-row items-center justify-between ">
+                    <p className="text-lg font-medium text-black ">
                         Pathologiën
                     </p>
                     <IconButton
@@ -21,7 +21,7 @@ const Pathology = () => {
                     />
                 </div>
 
-                <div className="w-full flex flex-row justify-between px-4 items-center ">
+                <div className="flex w-full flex-row items-center justify-between px-4 ">
                     <div className="pt-2">{DeleteLogo}</div>
                     <div>Patholgie</div>
                     <div>

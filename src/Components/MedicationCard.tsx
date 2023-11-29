@@ -27,7 +27,7 @@ const MedicationCard = () => {
 
     return (
         <>
-            <div className=" relative w-[245px] h-[450px] border-2 border-dark-blue rounded-3xl pt-5">
+            <div className=" relative h-[450px] w-[245px] rounded-3xl border-2 border-dark-blue pt-5">
                 {/** <div className=" w-[17rem] h-4 flex flex-row justify-end absolute mb-1 top-0 right-4">
                     <IconButton
                         icon={DeleteIcon}
@@ -38,8 +38,8 @@ const MedicationCard = () => {
                 </div>
             */}
                 <div className="flex flex-col px-4">
-                    <div className="w-full h-full flex flex-row items-center justify-center ">
-                        <div className="w-full flex flex-col justify-center items-center text-dark-blue gap-2 border-b-2 border-dark-blue pb-4">
+                    <div className="flex h-full w-full flex-row items-center justify-center ">
+                        <div className="flex w-full flex-col items-center justify-center gap-2 border-b-2 border-dark-blue pb-4 text-dark-blue">
                             <div>
                                 <p className="text-lg font-semibold">
                                     Adrenaline
@@ -57,17 +57,17 @@ const MedicationCard = () => {
                         </div>
                     </div>
 
-                    <div className="w-full h-full flex flex-row justify-center pt-4">
-                        <div className="w-full flex flex-col justify-center items-center text-dark-blue gap-4">
+                    <div className="flex h-full w-full flex-row justify-center pt-4">
+                        <div className="flex w-full flex-col items-center justify-center gap-4 text-dark-blue">
                             <div className="flex flex-col items-start gap-2 pl-1">
-                                <div className="flex flex-row gap-2 justify-start items-center relative">
+                                <div className="relative flex flex-row items-center justify-start gap-2">
                                     <IconClockHour4
                                         color="#497DAE"
                                         className="absolute flex items-center pl-4"
                                         size={40}
                                     />
                                     <input
-                                        className="w-[210px] h-[55px] border-2 rounded-full border-dark-blue flex flex-row justify-center px-10"
+                                        className="flex h-[55px] w-[210px] flex-row justify-center rounded-full border-2 border-dark-blue px-10"
                                         type="time"
                                         value={medicationData.time}
                                         onChange={(
@@ -80,7 +80,7 @@ const MedicationCard = () => {
                                         }
                                     />
                                 </div>
-                                <div className="flex flex-row gap-2 justify-start items-center relative">
+                                <div className="relative flex flex-row items-center justify-start gap-2">
                                     <IconCalendarEvent
                                         color="#497DAE"
                                         className="absolute flex items-center pl-4"
@@ -89,7 +89,7 @@ const MedicationCard = () => {
                                     <input
                                         title="Dosis"
                                         type="date"
-                                        className="w-[210px] h-[55px] border-2 rounded-full border-dark-blue flex flex-row justify-center px-10"
+                                        className="flex h-[55px] w-[210px] flex-row justify-center rounded-full border-2 border-dark-blue px-10"
                                         value={medicationData.date}
                                         onChange={(
                                             e: ChangeEvent<HTMLInputElement>,
@@ -103,7 +103,7 @@ const MedicationCard = () => {
                                 </div>
                                 <div>
                                     <input
-                                        className="border-2 h-[55px] w-[210px] rounded-full border-dark-blue px-2"
+                                        className="h-[55px] w-[210px] rounded-full border-2 border-dark-blue px-2"
                                         type="text"
                                         placeholder="Dosis"
                                         value={medicationData.dosis}

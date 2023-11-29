@@ -25,6 +25,9 @@ export const PatientOverviewCard = ({
     allergies,
 }: PatientProps) => {
     const [editMode, setEditMode] = useState(false);
+    const [nationalities, setNationalities] = useState(nationality);
+    const [languages, setLanguages] = useState(language);
+
     const [editData, setEditData] = useState({
         gender: { gender },
         language: { language },
@@ -46,7 +49,7 @@ export const PatientOverviewCard = ({
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const handleSaveEdit = (e?: any) => {
+    const handleSaveEdit = () => {
         setEditData((prevState) => {
             return {
                 ...prevState,
@@ -104,8 +107,16 @@ export const PatientOverviewCard = ({
                             {editMode ? (
                                 <>
                                     <input
-                                        value={`${nationality} - ${language}`}
+                                        value={`${nationalities} - ${languages}`}
                                         type="text"
+                                        onChange={(e) => {
+                                            const [
+                                                newNationality,
+                                                newLanguage,
+                                            ] = e.target.value.split(' - ');
+                                            setNationalities(newNationality);
+                                            setLanguages(newLanguage);
+                                        }}
                                     />
                                 </>
                             ) : (

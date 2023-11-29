@@ -21,9 +21,9 @@ export const Button = ({
 
     return (
         <button
-            className={`${size} ${height} py-2 px-2 flex justify-center items-center border ${variant} cursor-pointer 
+            className={`${size} ${height} flex items-center justify-center border px-2 py-2 ${variant} cursor-pointer 
             ${isSelected ? 'bg-light-blue text-white' : backgroundColor} 
-            text-sm transition duration-350 ease-in-out font-normal gap-1  
+            duration-350 gap-1 text-sm font-normal transition ease-in-out  
             ${selected ? '' : 'selectedStyle '}`}
             onClick={handleButtonClick}
         >

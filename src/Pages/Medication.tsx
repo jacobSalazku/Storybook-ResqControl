@@ -24,9 +24,9 @@ const Medication = () => {
     };
 
     return (
-        <div className="w-full h-auto flex flex-col items-center">
+        <div className="flex h-auto w-full flex-col items-center">
             <Header />
-            <div className="w-[58rem] flex flex-col justify-center items-center before: bg-white">
+            <div className="before: flex w-[58rem] flex-col items-center justify-center bg-white">
                 <TitleCard
                     title="Basis Verzorging"
                     icon={<IconStethoscope color="#497DAE" />}
