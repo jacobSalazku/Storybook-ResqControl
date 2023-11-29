@@ -1,13 +1,17 @@
 import { MenuItemProps } from '../interfaces';
+
 const MenuItem = ({ onClick, backgroundColor, title, icon }: MenuItemProps) => {
     return (
         <div
-            className={`w-auto h-[3rem] px-2 cursor-pointer rounded shadow-lg ${backgroundColor} `}
+            className={`h-[6rem] w-full cursor-pointer rounded px-2 shadow-lg md:h-[3rem] ${backgroundColor} `}
             onClick={onClick}
         >
-            <div className="w-full h-full flex flex-row items-center justify-center gap-2">
+            <div className="flex h-full w-full flex-col items-center justify-center gap-2 sm:flex-row sm:gap-2">
                 <div>{icon}</div>
-                <p className="text-base font-ligt">{title}</p>
+                <h1 className="hidden text-base font-light md:flex">{title}</h1>
+                <h1 className="text-base font-light md:hidden">
+                    {title.split(' ')[1]}
+                </h1>
             </div>
         </div>
     );

@@ -29,7 +29,7 @@ const Menu = () => {
     ];
 
     return (
-        <div className="w-full flex flex-row justify-center items-center gap-3 my-1 ">
+        <div className="my-1 flex w-full flex-row items-center justify-center gap-3 ">
             <MenuItem
                 title={navTitles[0]}
                 icon={<IconArmchair color={activeNavIcon(0)} />}

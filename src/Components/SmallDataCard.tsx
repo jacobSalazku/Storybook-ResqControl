@@ -12,6 +12,7 @@ import {
 } from '@tabler/icons-react';
 import { stringDate } from '../stories/helpers/DateTime';
 import { PatientProps } from '../interfaces';
+import { IconArrowBarRight } from '@tabler/icons-react';
 
 const SmallDataCard = ({
     time,
@@ -23,20 +24,20 @@ const SmallDataCard = ({
 }: PatientProps) => {
     return (
         <div
-            className={`h-[7.125rem] w-[17.625rem] bg-card-background-color border-l-8 shadow-md shadow-p-grey ${getBorderColorClass(
+            className={`bg-card-background-color h-[7.125rem] w-[17.625rem] border-l-8 shadow-md shadow-p-grey ${getBorderColorClass(
                 urgency,
-            )} flex flex-row justify-between rounded pt-2 px-2`}
+            )} flex flex-row justify-between rounded px-2 pt-2`}
         >
-            <div className="w-full flex flex-col gap">
-                <div className="flex flex-row gap-1 items-center">
+            <div className="gap flex w-full flex-col">
+                <div className="flex flex-row items-center gap-1">
                     <p className="font-sans text-[18px] text-black ">{name}</p>
-                    <p className="text-[#D3D3D3] font-extralight text-[14px]">
+                    <p className="text-[14px] font-extralight text-[#D3D3D3]">
                         {dateOfBirth}
                     </p>
                 </div>
 
-                <div className="flex flex-row justify-start gap-6 pt-2 pb-2 text-p-text-color text-[14px]">
-                    <div className="flex flex-row border-b-2 items-center gap-2">
+                <div className="flex flex-row justify-start gap-6 pb-2 pt-2 text-[14px] text-p-text-color">
+                    <div className="flex flex-row items-center gap-2 border-b-2">
                         <div className="">
                             <p>Botstpijn</p>
                         </div>
@@ -58,35 +59,35 @@ const SmallDataCard = ({
                         </div>
                     </div>
 
-                    <div className="flex flex-col justify-center cursor-pointer ">
-                        {BlueArrowWaiting}
+                    <div className="flex cursor-pointer flex-col justify-center ">
+                        <IconArrowBarRight color="#497DAE" />
                     </div>
                 </div>
-                <div className="flex flex-row items-start justify-between pt-1 text-sm pr-14 ">
-                    <div className="flex flex-row justify-center items-center">
+                <div className="flex flex-row items-start justify-between pr-14 pt-1 text-sm ">
+                    <div className="flex flex-row items-center justify-center">
                         {getGender(gender)}
 
-                        <div className="flex flex-row justify-center items-center pl-1">
+                        <div className="flex flex-row items-center justify-center gap-1 pl-2">
                             <IconClockHour4
                                 color="#294564"
                                 stroke="1.3"
-                                size={24}
+                                size={20}
                             />
                             <p>{time}</p>
                         </div>
                     </div>
-                    <div className="flex flex-row justify-center items-center">
+                    <div className="flex flex-row items-center justify-center gap-1">
                         <IconCalendarEvent
                             color="#294564"
                             stroke="1.3"
-                            size={24}
+                            size={20}
                         />
                         <div>
                             <p>{stringDate}</p>
                         </div>
                     </div>
-                    <div className="flex flex-row gap justify-center items-center">
-                        <IconWorld color="#294564" stroke="1.3" size={24} />
+                    <div className="flex flex-row items-center justify-center gap-1">
+                        <IconWorld color="#294564" stroke="1.3" size={20} />
                         <div>
                             <p>{language}</p>
                         </div>
