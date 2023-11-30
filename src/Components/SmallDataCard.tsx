@@ -1,9 +1,6 @@
 import '../index.css';
 import { getGender } from './helpers';
-import {
-    getBorderColorClass,
-    BlueArrowWaiting,
-} from '../stories/helpers/ClientDataFunctions';
+import { getBorderColorClass } from '../stories/helpers/ClientDataFunctions';
 import {
     IconCalendarEvent,
     IconClockHour4,
