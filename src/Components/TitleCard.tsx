@@ -2,7 +2,7 @@ import { TitelCardProps } from "../interfaces";
 
 const TitleCard = ({ rightButton, leftButton, icon, title }: TitelCardProps) => {
     return (
-        <div className="mb-4 flex h-16 w-[58rem] flex-row items-center justify-center overflow-hidden bg-background-color px-10 shadow-md">
+        <div className="mb-4 flex h-16 w-full flex-row items-center justify-center overflow-hidden bg-background-color px-10 shadow-md">
             <div className="flex w-full flex-row items-center justify-between ">
                 <div>{leftButton}</div>
                 <div className="flex flex-row items-center gap-2">

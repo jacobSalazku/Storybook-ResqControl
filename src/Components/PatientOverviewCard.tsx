@@ -57,9 +57,9 @@ const PatientOverviewCard = ({ time, name, language, gender, dateOfBirth, urgenc
 
     return (
         <div
-            className={`bg-transparant flex h-[309px] w-[391px] flex-row justify-between border border-l-[6px] shadow-xl ${getBorderColorClass(
+            className={`bg-transparant flex h-[309px] w-[391px] flex-row justify-between border border-l-[6px] shadow-lg shadow-[#808080] ${getBorderColorClass(
                 urgency,
-            )} rounded-md pt-3`}
+            )} rounded pt-3`}
         >
             <div className="flex h-full w-full flex-col">
                 <div className="pl-4">

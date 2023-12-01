@@ -9,9 +9,9 @@ import InputSelect from "../Components/InputSelect";
 const ambulances = ["SpoedAmbulance", "Solo Ambulance", "Planbaar Vervoer"];
 const Ambulance = () => {
     return (
-        <div className="flex h-auto w-full flex-col items-center">
-            <Header />
-            <div className="before: flex w-[58rem] flex-col items-center justify-center bg-white">
+        <div className="flex h-auto max-w-[58rem] flex-col items-center">
+            <div className="flex w-full flex-col items-center justify-center bg-white ">
+                <Header />
                 <TitleCard
                     title="Ontslag"
                     icon={<IconDoorExit color="#497DAE" />}

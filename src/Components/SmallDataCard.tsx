@@ -9,7 +9,7 @@ import { IconArrowBarRight } from "@tabler/icons-react";
 const SmallDataCard = ({ time, urgency, name, language, gender, dateOfBirth }: PatientProps) => {
     return (
         <div
-            className={`bg-card-background-color h-[7.125rem] w-[17.625rem] border-l-8 shadow-md shadow-p-grey ${getBorderColorClass(
+            className={`bg-card-background-color h-[7.125rem] w-[272px] border-l-8 shadow-md shadow-p-grey ${getBorderColorClass(
                 urgency,
             )} flex flex-row justify-between rounded px-2 pt-2`}
         >

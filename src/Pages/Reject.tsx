@@ -8,9 +8,9 @@ import { menuItems } from "./Festival";
 
 const Reject = () => {
     return (
-        <div className="flex h-auto w-full flex-col items-center justify-center">
-            <Header />
-            <div className="before: flex flex-col items-center justify-center bg-white">
+        <div className="flex h-auto max-w-[58rem] flex-col items-center justify-center">
+            <div className="before: flex w-full flex-col items-center justify-center bg-white">
+                <Header />
                 <TitleCard
                     title="Ontslag"
                     icon={<IconDoorExit color="#497DAE" />}

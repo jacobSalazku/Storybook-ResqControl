@@ -12,7 +12,7 @@ const Pathology = ({ location, side, onDelete }: PathologyData) => {
     const [selectedSide, setSelectedSide] = useState<string>(side);
 
     return (
-        <div className="flex h-[60px] w-[29rem] flex-col items-center gap-4 border-b-2 px-1">
+        <div className="flex h-[60px] w-full flex-col items-center gap-4 border-b-2 px-1">
             <div className="flex w-full flex-row items-center justify-between gap-2">
                 <Searchbar borderColor="light-blue" placeholder="Search" width={130} height={30} borderRadius="rounded-full" />
                 <div>

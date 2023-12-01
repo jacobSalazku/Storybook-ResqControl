@@ -3,8 +3,9 @@ import { TreatmentDashProps } from "../interfaces";
 import MedicationCard from "./MedicationCard";
 import { MedCards } from "./patientData";
 import { IconChevronDown } from "@tabler/icons-react";
+import Searchbar from "./Searchbar";
 
-const MedicationDash = ({ title, topLeftLogo, searchIcon }: TreatmentDashProps) => {
+const MedicationDash = ({ title, topLeftLogo }: TreatmentDashProps) => {
     const [show, setShow] = useState(true);
 
     const toggleShow = () => setShow(!show);
@@ -24,7 +25,7 @@ const MedicationDash = ({ title, topLeftLogo, searchIcon }: TreatmentDashProps) 
                         </div>
                     </div>
                     <div className="flex flex-row items-center justify-between gap-7">
-                        <div>{searchIcon}</div>
+                        <Searchbar borderColor="light-blue" placeholder="Search" width={130} height={30} borderRadius="rounded-full" />
                         <div className="cursor-pointer" onClick={toggleShow}>
                             <IconChevronDown className={`transform transition-all ${show ? "-rotate-180" : "rotate-0"}`} />
                         </div>

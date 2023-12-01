@@ -1,18 +1,9 @@
-import '../index.css';
-import { useState } from 'react';
-import { ButtonProps } from '../interfaces';
+import "../index.css";
+import { useState } from "react";
+import { ButtonProps } from "../interfaces";
 
 /**  this our the buttons we use for our userInterface with all hte props it takes */
-
-export const Button = ({
-    selected,
-    icon,
-    label,
-    size,
-    backgroundColor,
-    variant,
-    height = 'h-12',
-}: ButtonProps) => {
+export const Button = ({ selected, icon, label, size, backgroundColor, variant, shadow, height = "h-12" }: ButtonProps) => {
     const [isSelected, setIsSelected] = useState(false);
 
     const handleButtonClick = () => {
@@ -21,10 +12,10 @@ export const Button = ({
 
     return (
         <button
-            className={`${size} ${height} flex items-center justify-center border px-2 py-2 ${variant} cursor-pointer 
-            ${isSelected ? 'bg-light-blue text-white' : backgroundColor} 
+            className={`${size} ${height} ${shadow} flex items-center justify-center border px-2 py-2 ${variant} cursor-pointer 
+            ${isSelected ? "bg-light-blue text-white" : backgroundColor} 
             duration-350 gap-1 text-sm font-normal transition ease-in-out  
-            ${selected ? '' : 'selectedStyle '}`}
+            ${selected ? "" : "selectedStyle "}`}
             onClick={handleButtonClick}
         >
             {isSelected && icon}

@@ -14,9 +14,15 @@ type ButtonData = {
     selected: boolean;
 };
 const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
-    const ademhaling = useInput();
-    const hartslag = useInput();
-    const saturatie = useInput();
+    const breathing = useInput();
+    const heartbeat = useInput();
+    const saturation = useInput();
+    const collectionTime = useInput();
+    const highBloodPressure = useInput();
+    const lowBloodPressure = useInput();
+    const temperature = useInput();
+    const glycmie = useInput();
+
     const [show, setShow] = useState(true);
     const [selectedItem, setSelectedItems] = useState<ButtonData | null>(null);
     const [eyesOptions, setEyesOptions] = useState<ButtonData | null>(null);
@@ -189,19 +195,17 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                             <InputSpan
                                 label="Ademhaling"
                                 size="h-[40px] w-full"
-                                placeholder="/min"
                                 type="number"
-                                value={ademhaling.value}
-                                onChange={ademhaling.onChange}
+                                value={breathing.value}
+                                onChange={breathing.onChange}
                                 spanString="/min"
                             />
                             <InputSpan
                                 label="Hartslag"
                                 size="h-[40px] w-full"
-                                placeholder="BPM"
                                 type="number"
-                                value={hartslag.value}
-                                onChange={hartslag.onChange}
+                                value={heartbeat.value}
+                                onChange={heartbeat.onChange}
                                 spanString="BPM"
                             />
                         </div>
@@ -226,26 +230,51 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                 <InputSpan
                                     label="spO2"
                                     size="h-[40px] w-full"
-                                    placeholder="%"
                                     type="number"
-                                    value={saturatie.value}
-                                    onChange={saturatie.onChange}
+                                    value={saturation.value}
+                                    onChange={saturation.onChange}
                                     spanString="%"
                                 />
                             </div>
                             <div className="pl-2 pt-8">
                                 {" "}
-                                <InputSpan label="Temperatuur" size="h-[40px] w-full" placeholder="°C" type="number" spanString="°C" />
+                                <InputSpan
+                                    label="Temperatuur"
+                                    size="h-[40px] w-full"
+                                    type="number"
+                                    spanString="°C"
+                                    value={temperature.value}
+                                    onChange={temperature.onChange}
+                                />
                             </div>
                             <div className="pl-2 pt-8">
                                 {" "}
-                                <InputSpan label="Glycemie" size="h-[40px] w-full" placeholder="mg/dl" type="number" spanString="mg/dl" />
+                                <InputSpan
+                                    label="Glycemie"
+                                    size="h-[40px] w-full"
+                                    type="number"
+                                    spanString="mg/dl"
+                                    value={glycmie.value}
+                                    onChange={glycmie.onChange}
+                                />
                             </div>
                             <div className="pl-2 pt-8">
                                 <label htmlFor="timeInput">Bloeddruk</label>{" "}
                                 <div>
-                                    <input type="number" className="mt-4 w-1/2 border-2 px-4" placeholder="Hoog( mm Hg)" />
-                                    <input type="number" className="mt-4 w-1/2 border-2 px-4" placeholder="Laag( mm Hg)" />
+                                    <input
+                                        type="number"
+                                        className="mt-4 w-1/2 border-2 px-4"
+                                        placeholder="Hoog( mm Hg)"
+                                        value={highBloodPressure.value}
+                                        onChange={highBloodPressure.onChange}
+                                    />
+                                    <input
+                                        type="number"
+                                        className="mt-4 w-1/2 border-2 px-4"
+                                        placeholder="Laag( mm Hg)"
+                                        value={lowBloodPressure.value}
+                                        onChange={lowBloodPressure.onChange}
+                                    />
                                 </div>
                             </div>
                             <div className="pl-2 pt-8">
@@ -254,7 +283,13 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                             </div>
                             <div className="flex w-full flex-row justify-between pl-2 pt-8">
                                 {" "}
-                                <InputSpan label="Tijdstip van Afname" size="h-[40px] w-[270px]" placeholder="" type="time" />
+                                <InputSpan
+                                    label="Tijdstip van Afname"
+                                    size="h-[40px] w-[270px]"
+                                    type="time"
+                                    value={collectionTime.value}
+                                    onChange={collectionTime.onChange}
+                                />
                                 <div className="flex flex-row items-end justify-end">
                                     <IconButton
                                         icon={DeleteIcon}

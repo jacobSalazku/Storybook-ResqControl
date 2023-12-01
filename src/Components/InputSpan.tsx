@@ -29,7 +29,7 @@ const InputSpan = ({ label, size, placeholder, value, type = "text", border, req
                         type={type}
                         id="timeInput"
                         ref={inputRef}
-                        className={`${size} border-1 font-inherit absolute left-0 top-0 w-full border-2 bg-transparent px-4 ${border}`}
+                        className={`${size} border-1 font-inherit transparant absolute left-0 top-0 w-full border-2 bg-transparent px-4 ${border}`}
                         placeholder={placeholder}
                         value={input}
                         onChange={handleInputChange}
@@ -37,7 +37,7 @@ const InputSpan = ({ label, size, placeholder, value, type = "text", border, req
                         aria-required={required}
                         required={required}
                     />
-                    <div className="border-1 font-inherit w-full  pl-[18px] pt-[8.5px]">
+                    <div className="border-1 font-inherit w-full  pl-[17.8px] pt-[8.3px]">
                         <span>{input}</span>
                         {"  " + spanString}
                     </div>

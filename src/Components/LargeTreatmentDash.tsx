@@ -3,8 +3,9 @@ import { useState } from "react";
 import { Button } from "./Button";
 import { TreatmentDashProps } from "../interfaces";
 import { arrayOfParacetamol } from "./patientData";
+import Searchbar from "./Searchbar";
 
-export const LargeTreatmentDash = ({ title, topLeftLogo, searchIcon }: TreatmentDashProps) => {
+export const LargeTreatmentDash = ({ title, topLeftLogo }: TreatmentDashProps) => {
     const [show, setShow] = useState(true);
 
     const toggleShow = () => setShow(!show);
@@ -25,7 +26,7 @@ export const LargeTreatmentDash = ({ title, topLeftLogo, searchIcon }: Treatment
                     </div>
 
                     <div className="flex flex-row items-center justify-between gap-2">
-                        <div>{searchIcon}</div>
+                        <Searchbar borderColor="light-blue" placeholder="Search" width={130} height={30} borderRadius="rounded-full" />
 
                         <div className="flex h-auto w-auto cursor-pointer flex-row items-center justify-center " onClick={toggleShow}>
                             <IconChevronDown className={`transform transition-all ${show ? "-rotate-180" : "rotate-0"}`} />

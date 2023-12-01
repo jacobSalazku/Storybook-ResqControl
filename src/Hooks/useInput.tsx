@@ -1,15 +1,13 @@
-import { useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent } from "react";
 
 interface InputOptions {
-    startValue?: string;
+    startValue?: string | number;
 }
 
-export function useInput({ startValue = '' }: InputOptions = {}) {
+export function useInput({ startValue = "" }: InputOptions = {}) {
     const [value, setValue] = useState(startValue);
 
-    const handleChange = (
-        event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-    ) => {
+    const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setValue(event.target.value);
     };
 

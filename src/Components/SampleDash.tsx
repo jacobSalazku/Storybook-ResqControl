@@ -3,7 +3,7 @@ import { TreatmentDashProps } from "../interfaces";
 import InputTextArea from "./InputTextArea";
 import { IconChevronDown } from "@tabler/icons-react";
 
-const SampleDash = ({ title, topLeftLogo, searchIcon }: TreatmentDashProps) => {
+const SampleDash = ({ title, topLeftLogo }: TreatmentDashProps) => {
     const [show, setShow] = useState(true);
 
     const toggleShow = () => setShow(!show);
@@ -23,7 +23,6 @@ const SampleDash = ({ title, topLeftLogo, searchIcon }: TreatmentDashProps) => {
                         </div>
                     </div>
                     <div className="flex flex-row items-center justify-between gap-7">
-                        <div>{searchIcon}</div>
                         <div className="cursor-pointer" onClick={toggleShow}>
                             <IconChevronDown className={`transform transition-all ${show ? "-rotate-180" : "rotate-0"}`} />
                         </div>

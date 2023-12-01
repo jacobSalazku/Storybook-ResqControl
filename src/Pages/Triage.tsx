@@ -50,9 +50,9 @@ const Triage = () => {
         });
     };
     return (
-        <div className="flex h-screen w-full flex-col items-center">
-            <Header />
-            <div className="before: flex w-[58rem] flex-col items-center justify-center gap-2">
+        <div className="flex h-screen flex-col items-center">
+            <div className="flex max-w-[58rem] flex-col items-center justify-center gap-2">
+                <Header />
                 <TitleCard
                     title="Triage"
                     icon={EarLogo}
@@ -75,11 +75,12 @@ const Triage = () => {
                         />
                     }
                 />
-                <div className=" flex w-[58rem] flex-col gap-6 px-10">
-                    <div className="flex w-full flex-row justify-center ">
-                        <div className="flex w-full flex-row justify-between gap-4 ">
+                <div className="max-w flex flex-col gap-6 px-8">
+                    <div className="flex flex-row justify-center ">
+                        <div className="gap-4&& flex w-full flex-row justify-between">
                             <PatientOverviewCard {...Patient} />
-                            <div className="flex w-1/2 flex-col items-start justify-start gap-4">
+                            <div className="flex flex-col items-start justify-start gap-2 pl-4">
+                                <p className="font-semibold">Triage code</p>
                                 <TriageOption />
                                 <div>
                                     <p className="font-semibold">Pathologiën</p>
@@ -93,7 +94,7 @@ const Triage = () => {
                                     icon={<IconPlus color="#ffffFf" stroke={1.5} />}
                                     size="h-[40px] w-[200px]"
                                     variant="rounded"
-                                    backgroundColor="border-[#497DAE] bg-[#497DAE] text-white shadow-lg"
+                                    backgroundColor="border-[#497DAE] bg-[#497DAE] text-white shadow-md shadow-[#808080]"
                                     onClick={() => handleAddPathology()}
                                 />
                             </div>

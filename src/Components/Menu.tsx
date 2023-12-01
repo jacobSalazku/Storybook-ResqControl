@@ -13,10 +13,10 @@ const Menu = () => {
 
     const bgColor = "bg-background-color ";
     const selectedStyle = "transition ease-in-out delay-50 bg-[#35393C] text-white shadow-lg font-light";
-    const navTitles = ["Wachtzaal Inschirjvingen", "WachtZaal PreReg", "WachtZaal Triage", "In Behnadeling"];
+    const navTitles = ["Wachtzaal Inschirjvingen", "WachtZaal Triage", "In Behadeling", "Reeds Behandeld"];
 
     return (
-        <div className="my-1 flex w-full flex-row items-center justify-center gap-3 ">
+        <div className="my-1 flex w-full flex-row items-center justify-center gap-2 ">
             <MenuItem title={navTitles[0]} icon={<IconArmchair color={activeNavIcon(0)} />} backgroundColor={activeNav(0)} onClick={() => handleSelection(0)} />
 
             <MenuItem title={navTitles[1]} icon={<IconReport color={activeNavIcon(1)} />} backgroundColor={activeNav(1)} onClick={() => handleSelection(1)} />

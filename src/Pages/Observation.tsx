@@ -9,8 +9,8 @@ import { menuItems } from "./Medication";
 const Observation = () => {
     return (
         <div className="flex h-screen w-full flex-col items-center">
-            <Header />
             <div className=" flex w-[58rem] flex-col items-center justify-center before:bg-white">
+                <Header />
                 <TitleCard
                     title="Basis Verzorging"
                     icon={<IconStethoscope color="#497DAE" />}

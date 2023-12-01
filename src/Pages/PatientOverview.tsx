@@ -1,10 +1,10 @@
-import { PatientOverviewCard } from "../Components/PatientOverviewCard";
 import IconButton from "../Components/IconButton";
 import TreatmentCard from "../Components/TreatmentCard";
 import TitleCard from "../Components/TitleCard";
 import { IconRun, IconEye } from "@tabler/icons-react";
 import { useState } from "react";
 import Header from "../Components/Header";
+import PatientOverviewCard from "../Components/PatientOverviewCard";
 
 const Patient = {
     time: "12:50",

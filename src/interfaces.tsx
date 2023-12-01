@@ -10,6 +10,7 @@ export interface ButtonProps {
     onClick?: () => void;
     HandleOptions?: () => void;
     height?: string;
+    shadow?: string;
 }
 
 export interface iconProps {
@@ -96,8 +97,8 @@ export interface InputProps {
     label: string;
     templateStr?: string;
     size: string;
-    placeholder: string;
-    value?: string;
+    placeholder?: string;
+    value?: string | number;
     type: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     border?: string;
