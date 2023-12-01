@@ -273,6 +273,12 @@ export const MedCards = [
         dosage: "15mg",
         feeding: "With meal",
     },
+    {
+        date: "2023-11-21",
+        time: "06:00 PM",
+        dosage: "15mg",
+        feeding: "With meal",
+    },
 ];
 
 export const nationalities = [

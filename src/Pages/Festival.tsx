@@ -8,9 +8,9 @@ import TreatmentMenu from "../Components/TreatmentMenu";
 export const menuItems = ["Terug naar festival", "Naar huis", "Doorverwijzing naar Arts", "ZiekenWagen", "Weigering"];
 const Festival = () => {
     return (
-        <div className="max-w-[58rem]flex h-auto flex-col items-center">
-            <Header />
-            <div className="before: w-full] flex flex-col items-center justify-center bg-white">
+        <div className="flex h-auto max-w-[58rem] flex-col items-center">
+            <div className="flex w-full flex-col items-center justify-center bg-white ">
+                <Header />
                 <TitleCard
                     title="Ontslag"
                     icon={<IconDoorExit color="#497DAE" />}

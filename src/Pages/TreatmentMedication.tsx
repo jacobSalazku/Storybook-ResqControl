@@ -8,9 +8,9 @@ import { menuItems } from "./Medication";
 
 const TreatmentMedication = () => {
     return (
-        <div className="flex h-screen w-full flex-col items-center">
-            <Header />
-            <div className="before: flex w-[58rem] flex-col items-center justify-center bg-white">
+        <div className="flex h-auto max-w-[58rem] flex-col items-center">
+            <div className="flex w-full flex-col items-center justify-center bg-white ">
+                <Header />
                 <TitleCard
                     title="Behandeling"
                     icon={<IconStethoscope color="#497DAE" />}
