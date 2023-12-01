@@ -6,6 +6,7 @@ interface Searchbar {
     width: number | string;
     height: number | string;
     placeholder?: string;
+    iconColor?: string;
 }
 
 const Searchbar = ({
@@ -14,10 +15,11 @@ const Searchbar = ({
     height,
     placeholder,
     borderRadius,
+    iconColor,
 }: Searchbar) => {
     return (
         <div
-            className={`relative flex flex-row border-[${borderColor}] w-[${width}px] h-[${height}px] ${borderRadius} border-2`}
+            className={`relative flex flex-row border-${borderColor} w-[${width}px] h-[${height}px] ${borderRadius} border-2`}
         >
             <input
                 className={`h-full w-full ${borderRadius} py-2 pl-12 text-[16px]`}
@@ -25,7 +27,7 @@ const Searchbar = ({
                 placeholder={placeholder}
             ></input>
             <span className="absolute left-2 top-1/2 -translate-y-1/2 transform">
-                <IconSearch color={borderColor} />
+                <IconSearch color={iconColor} />
             </span>
         </div>
     );

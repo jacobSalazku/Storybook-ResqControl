@@ -14,7 +14,14 @@ import {
 import { PatientProps } from '../interfaces';
 import { useState } from 'react';
 
-export const PatientOverviewCard = ({
+interface EditData {
+    gender: string;
+    language: string;
+    nationality: string;
+    dateOfBirth: string;
+    allergies: boolean;
+}
+const PatientOverviewCard = ({
     time,
     name,
     language,
@@ -27,56 +34,64 @@ export const PatientOverviewCard = ({
     const [editMode, setEditMode] = useState(false);
     const [nationalities, setNationalities] = useState(nationality);
     const [languages, setLanguages] = useState(language);
+    const [dateOfBirthState, setDateOfBirth] = useState(dateOfBirth);
+    const [allergiesState, setAllergies] = useState(allergies);
 
-    const [editData, setEditData] = useState({
-        gender: { gender },
-        language: { language },
-        nationality: { nationality },
-        dateOfBirth: { dateOfBirth },
-        allergies: { allergies },
+    const [originalValues, setOriginalValues] = useState<EditData>({
+        gender,
+        language,
+        nationality,
+        dateOfBirth,
+        allergies,
     });
+
+    const [editData, setEditData] = useState<EditData>(originalValues);
+
     const ClickEditMode = () => setEditMode(true);
 
     const handleCancelEdit = () => {
         setEditMode(false);
-        setEditData({
-            gender: { gender },
-            language: { language },
-            nationality: { nationality },
-            dateOfBirth: { dateOfBirth },
-            allergies: { allergies },
-        });
+        setEditData(originalValues);
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleSaveEdit = () => {
-        setEditData((prevState) => {
-            return {
-                ...prevState,
-                editData,
-            };
-        });
+        setEditData((prevState: EditData) => ({
+            ...prevState,
+            language: languages,
+            nationality: nationalities,
+            dateOfBirth: dateOfBirthState,
+            allergies: allergiesState,
+        }));
         setEditMode(false);
+    };
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const [newNationality, newLanguage, newDateOfBirth, newAllergies] =
+            e.target.value.split(' - ');
+        setNationalities(newNationality);
+        setLanguages(newLanguage);
+        setDateOfBirth(newDateOfBirth);
+        setAllergies(newAllergies === 'Yes');
     };
 
     return (
         <div
-            className={`h-[309px] w-[391px] bg-transparant shadow-xl border flex flex-row justify-between border-l-[6px] ${getBorderColorClass(
+            className={`bg-transparant flex h-[309px] w-[391px] flex-row justify-between border border-l-[6px] shadow-xl ${getBorderColorClass(
                 urgency,
-            )} pt-3 rounded-md`}
+            )} rounded-md pt-3`}
         >
-            <div className="flex flex-col h-full w-full">
+            <div className="flex h-full w-full flex-col">
                 <div className="pl-4">
-                    <p className="text-2xl text-black font-medium">{name}</p>
+                    <p className="text-2xl font-medium text-black">{name}</p>
                 </div>
-                <div className="flex flex-row gap- pl-5">
-                    <div className="w-3/5 flex flex-col justify-start gap-2 pt-2 pr-2 text-p-text-color font-light ">
-                        <div className=" flex flow-row gap-4">
-                            <p className="font-semibold text">
+                <div className="gap- flex flex-row pl-5">
+                    <div className="flex w-3/5 flex-col justify-start gap-2 pr-2 pt-2 font-light text-p-text-color ">
+                        <div className="flow-row flex gap-4">
+                            <p className="text font-semibold">
                                 Gegevens Patient
                             </p>
                             {editMode ? (
-                                <div className=" w-1/5 flex flex-row justify-end">
+                                <div className="flex w-1/5 flex-row justify-end ">
                                     <IconX
                                         onClick={handleCancelEdit}
                                         className="cursor-pointer"
@@ -88,7 +103,7 @@ export const PatientOverviewCard = ({
                                     />
                                 </div>
                             ) : (
-                                <div className="w-1/5 flex flex-row  justify-end ">
+                                <div className="flex w-1/5 flex-row justify-end ">
                                     <IconEdit
                                         onClick={ClickEditMode}
                                         className="cursor-pointer"
@@ -96,54 +111,52 @@ export const PatientOverviewCard = ({
                                 </div>
                             )}
                         </div>
-                        <div className="flex flex-row gap-4 border-b border-color-grey pb-2">
+                        <div className="border-color-grey flex flex-row gap-4 border-b pb-2">
                             {getGender(gender)}
                             <div>
                                 <p>{gender}</p>
                             </div>
                         </div>
-                        <div className="flex flex-row gap-4 border-b border-color-grey pb-2">
+                        <div className="border-color-grey flex flex-row gap-4 border-b py-2">
                             <IconWorld color="#294564" stroke="1.3" />
                             {editMode ? (
                                 <>
                                     <input
+                                        className=""
                                         value={`${nationalities} - ${languages}`}
                                         type="text"
-                                        onChange={(e) => {
-                                            const [
-                                                newNationality,
-                                                newLanguage,
-                                            ] = e.target.value.split(' - ');
-                                            setNationalities(newNationality);
-                                            setLanguages(newLanguage);
-                                        }}
+                                        onChange={handleInputChange}
                                     />
                                 </>
                             ) : (
                                 <>
-                                    <div>
+                                    <div className="">
                                         <p>
-                                            {nationality} - {language}
+                                            {editData.nationality} -{' '}
+                                            {editData.language}
                                         </p>
                                     </div>
                                 </>
                             )}
                         </div>
-                        <div className="flex flex-row gap-4 border-b border-color-grey pb-2">
+                        <div className="border-color-grey flex flex-row gap-4 border-b pb-2">
                             <IconCalendarEvent color="#294564" stroke="1.3" />
                             {editMode ? (
                                 <>
-                                    <input value={dateOfBirth} type="text" />
+                                    <input
+                                        value={dateOfBirthState}
+                                        type="text"
+                                    />
                                 </>
                             ) : (
                                 <>
                                     <div>
-                                        <p>{dateOfBirth}</p>
+                                        <p>{editData.dateOfBirth}</p>
                                     </div>
                                 </>
                             )}
                         </div>
-                        <div className="flex flex-row gap-4 border-b border-color-grey pb-2">
+                        <div className="border-color-grey flex flex-row gap-4 border-b pb-2">
                             <IconClockHour4 color="#294564" stroke="1.3" />
                             <div>
                                 <p>{time}</p>
@@ -155,9 +168,10 @@ export const PatientOverviewCard = ({
                                 <>
                                     <input
                                         value={`Allergieën: ${
-                                            allergies.toString() == 'false'
+                                            editData.allergies.toString() ==
+                                            'false'
                                                 ? 'No'
-                                                : 'es'
+                                                : 'Yes'
                                         }`}
                                         type="text"
                                     />
@@ -173,7 +187,7 @@ export const PatientOverviewCard = ({
                             )}
                         </div>
                     </div>
-                    <div className="flex flex-col items-start justify-start gap-2 pt-2 pl-2 border-l border-black font-light">
+                    <div className="flex flex-col items-start justify-start gap-2 border-l border-black pl-2 pt-2 font-light">
                         <div>
                             <p className="font-semibold">Klachten Patient</p>
                         </div>

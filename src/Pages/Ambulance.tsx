@@ -4,7 +4,8 @@ import IconButton from '../Components/IconButton';
 import TitleCard from '../Components/TitleCard';
 import TreatmentMenu from '../Components/TreatmentMenu';
 import { menuItems } from './Festival';
-import InputSelect from '../Components/inputSelect';
+import InputSelect from '../Components/InputSelect';
+
 const ambulances = ['SpoedAmbulance', 'Solo Ambulance', 'Planbaar Vervoer'];
 const Ambulance = () => {
     return (

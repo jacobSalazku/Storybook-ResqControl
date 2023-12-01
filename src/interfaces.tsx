@@ -105,3 +105,10 @@ export interface InputProps {
     spanString?: string;
     onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
 }
+
+export interface PathologyData {
+    location: string;
+    side: string;
+    onDelete?: (index: number) => void;
+    index?: number;
+}

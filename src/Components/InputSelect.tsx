@@ -68,7 +68,7 @@ const InputSelect = ({
                 >
                     <Menu.Items
                         placeholder={placeholder}
-                        className="absolute right-0 z-10 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none max-h-40 overflow-y-auto"
+                        className="absolute right-0 z-10 max-h-40 w-full origin-top-right overflow-y-auto rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                     >
                         {/* max-h-40 sets the maximum height, adjust as needed */}
 

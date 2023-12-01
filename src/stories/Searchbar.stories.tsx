@@ -19,5 +19,6 @@ export const SearchbarMedicijnen: Story = {
         height: 40,
         borderRadius: 'rounded-full',
         placeholder: 'Search',
+        iconColor: '#497DAE',
     },
 };
