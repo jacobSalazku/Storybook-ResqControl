@@ -1,22 +1,12 @@
-import {
-    IconDeviceFloppy,
-    IconSearch,
-    IconStethoscope,
-    IconVaccine,
-} from '@tabler/icons-react';
-import Header from '../Components/Header';
-import IconButton from '../Components/IconButton';
-import TitleCard from '../Components/TitleCard';
-import LargeTreatmentDash from '../Components/LargeTreatmentDash';
-import TreatmentMenu from '../Components/TreatmentMenu';
-import { useState } from 'react';
+import { IconDeviceFloppy, IconSearch, IconStethoscope, IconVaccine } from "@tabler/icons-react";
+import Header from "../Components/Header";
+import IconButton from "../Components/IconButton";
+import TitleCard from "../Components/TitleCard";
+import LargeTreatmentDash from "../Components/LargeTreatmentDash";
+import TreatmentMenu from "../Components/TreatmentMenu";
+import { useState } from "react";
 
-export const menuItems = [
-    'Verzorging',
-    'Medicatie',
-    'Materiaal',
-    'Opmerkingen',
-];
+export const menuItems = ["Verzorging", "Medicatie", "Materiaal", "Opmerkingen"];
 const Medication = () => {
     const [isSearchInputVisible, setSearchInputVisible] = useState(false);
     const toggleSearchInput = () => {

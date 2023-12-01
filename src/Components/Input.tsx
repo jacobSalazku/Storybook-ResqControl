@@ -1,21 +1,13 @@
-import { InputProps } from '../interfaces';
-const Input = ({
-    label,
-    size,
-    placeholder,
-    value,
-    type = 'text',
-    onChange,
-    border,
-    required,
-}: InputProps) => {
+import { InputProps } from "../interfaces";
+
+const Input = ({ label, size, placeholder, value, type = "text", onChange, border, required }: InputProps) => {
     return (
         <div className="flex flex-col gap-2">
             <label htmlFor="timeInput">{label}</label>
             <input
                 type={type}
                 id="timeInput"
-                className={`${size} px-4 border-2  ${border}`}
+                className={`${size} border-2 px-4  ${border}`}
                 placeholder={placeholder}
                 value={value}
                 onChange={onChange}

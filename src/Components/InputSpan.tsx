@@ -1,16 +1,7 @@
-import { InputProps } from '../interfaces';
-import { ChangeEvent, useRef, useState } from 'react';
+import { InputProps } from "../interfaces";
+import { ChangeEvent, useRef, useState } from "react";
 
-const InputSpan = ({
-    label,
-    size,
-    placeholder,
-    value,
-    type = 'text',
-    border,
-    required,
-    spanString,
-}: InputProps) => {
+const InputSpan = ({ label, size, placeholder, value, type = "text", border, required, spanString }: InputProps) => {
     const [input, setInput] = useState(value);
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -48,7 +39,7 @@ const InputSpan = ({
                     />
                     <div className="border-1 font-inherit w-full  pl-[18px] pt-[8.5px]">
                         <span>{input}</span>
-                        {'  ' + spanString}
+                        {"  " + spanString}
                     </div>
                 </div>
             </div>

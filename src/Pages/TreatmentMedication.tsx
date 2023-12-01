@@ -1,14 +1,10 @@
-import {
-    IconDeviceFloppy,
-    IconStethoscope,
-    IconVaccine,
-} from '@tabler/icons-react';
-import Header from '../Components/Header';
-import IconButton from '../Components/IconButton';
-import MedicationDash from '../Components/MedicationDash';
-import TitleCard from '../Components/TitleCard';
-import TreatmentMenu from '../Components/TreatmentMenu';
-import { menuItems } from './Medication';
+import { IconDeviceFloppy, IconStethoscope, IconVaccine } from "@tabler/icons-react";
+import Header from "../Components/Header";
+import IconButton from "../Components/IconButton";
+import MedicationDash from "../Components/MedicationDash";
+import TitleCard from "../Components/TitleCard";
+import TreatmentMenu from "../Components/TreatmentMenu";
+import { menuItems } from "./Medication";
 
 const TreatmentMedication = () => {
     return (
@@ -30,10 +26,7 @@ const TreatmentMedication = () => {
                 />
             </div>
             <TreatmentMenu menuItems={menuItems} activeTitle={2} />
-            <MedicationDash
-                title="Medicatie"
-                topLeftLogo={<IconVaccine color="#497DAE" />}
-            />
+            <MedicationDash title="Medicatie" topLeftLogo={<IconVaccine color="#497DAE" />} />
         </div>
     );
 };

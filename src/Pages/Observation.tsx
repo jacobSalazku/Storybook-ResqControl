@@ -1,14 +1,10 @@
-import {
-    IconDeviceFloppy,
-    IconNote,
-    IconStethoscope,
-} from '@tabler/icons-react';
-import Header from '../Components/Header';
-import IconButton from '../Components/IconButton';
-import ObservationDash from '../Components/ObservationDash';
-import TitleCard from '../Components/TitleCard';
-import TreatmentMenu from '../Components/TreatmentMenu';
-import { menuItems } from './Medication';
+import { IconDeviceFloppy, IconNote, IconStethoscope } from "@tabler/icons-react";
+import Header from "../Components/Header";
+import IconButton from "../Components/IconButton";
+import ObservationDash from "../Components/ObservationDash";
+import TitleCard from "../Components/TitleCard";
+import TreatmentMenu from "../Components/TreatmentMenu";
+import { menuItems } from "./Medication";
 
 const Observation = () => {
     return (
@@ -30,14 +26,8 @@ const Observation = () => {
                 />
             </div>
             <TreatmentMenu menuItems={menuItems} activeTitle={3} />
-            <ObservationDash
-                topLeftLogo={<IconNote color="#497DAE" stroke={1.5} />}
-                title={'Buikepijn'}
-            />
-            <ObservationDash
-                topLeftLogo={<IconNote color="#497DAE" stroke={1.5} />}
-                title="Buikepijn"
-            />
+            <ObservationDash topLeftLogo={<IconNote color="#497DAE" stroke={1.5} />} title={"Buikepijn"} />
+            <ObservationDash topLeftLogo={<IconNote color="#497DAE" stroke={1.5} />} title="Buikepijn" />
         </div>
     );
 };

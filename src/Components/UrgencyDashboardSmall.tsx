@@ -1,20 +1,14 @@
-import { patientData } from './patientData';
-import SmallDataCard from './SmallDataCard';
+import { patientData } from "./patientData";
+import SmallDataCard from "./SmallDataCard";
 
-const filteredDataStandard = patientData.filter(
-    (patient) => patient.urgency === 'T1',
-);
-const filteredDataUrgent = patientData.filter(
-    (patient) => patient.urgency === 'T2',
-);
-const filteredDataImmediate = patientData.filter(
-    (patient) => patient.urgency === 'T3',
-);
+const filteredDataStandard = patientData.filter((patient) => patient.urgency === "T1");
+const filteredDataUrgent = patientData.filter((patient) => patient.urgency === "T2");
+const filteredDataImmediate = patientData.filter((patient) => patient.urgency === "T3");
 
 const UrgencyDashboardSmall = () => {
     return (
-        <div className="w-full h-full flex flex-col flex-wrap items-center pt-8 gap-10 px-5  ">
-            <div className="w-full flex flex-row flex-wrap gap-4 ">
+        <div className="flex h-full w-full flex-col flex-wrap items-center gap-10 px-5 pt-8 ">
+            <div className="flex w-full flex-row flex-wrap gap-4 ">
                 {filteredDataImmediate.map((patient) => (
                     <SmallDataCard key={patient.name} {...patient} />
                 ))}

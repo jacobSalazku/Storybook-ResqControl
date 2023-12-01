@@ -1,12 +1,12 @@
-import { IconDeviceFloppy, IconDoorExit } from '@tabler/icons-react';
-import Header from '../Components/Header';
-import IconButton from '../Components/IconButton';
-import TitleCard from '../Components/TitleCard';
-import TreatmentMenu from '../Components/TreatmentMenu';
-import { menuItems } from './Festival';
-import InputSelect from '../Components/InputSelect';
+import { IconDeviceFloppy, IconDoorExit } from "@tabler/icons-react";
+import Header from "../Components/Header";
+import IconButton from "../Components/IconButton";
+import TitleCard from "../Components/TitleCard";
+import TreatmentMenu from "../Components/TreatmentMenu";
+import { menuItems } from "./Festival";
+import InputSelect from "../Components/InputSelect";
 
-const ambulances = ['SpoedAmbulance', 'Solo Ambulance', 'Planbaar Vervoer'];
+const ambulances = ["SpoedAmbulance", "Solo Ambulance", "Planbaar Vervoer"];
 const Ambulance = () => {
     return (
         <div className="flex h-auto w-full flex-col items-center">
@@ -34,9 +34,7 @@ const Ambulance = () => {
                             <div className="flex flex-row gap-6">
                                 <div className="flex flex-col gap-4">
                                     <div>
-                                        <p className="font-semibold">
-                                            ZiekenWages/andere
-                                        </p>
+                                        <p className="font-semibold">ZiekenWages/andere</p>
                                     </div>
                                     <InputSelect
                                         placeholder="Selecteer ZiekenWagen"
@@ -60,9 +58,7 @@ const Ambulance = () => {
                                 </div>
                                 <div className="flex flex-col gap-4">
                                     <div>
-                                        <p className="font-semibold">
-                                            Ziekenhuis
-                                        </p>
+                                        <p className="font-semibold">Ziekenhuis</p>
                                     </div>
                                     <InputSelect
                                         placeholder="Selecteer Ziekenhuis"
@@ -78,31 +74,19 @@ const Ambulance = () => {
                             <div className="flex flex-row gap-6">
                                 <div className="flex flex-col gap-4">
                                     <div>
-                                        <p className="font-semibold">
-                                            Ritnummer 112
-                                        </p>
+                                        <p className="font-semibold">Ritnummer 112</p>
                                     </div>
-                                    <input
-                                        placeholder="Ritnummer dienst"
-                                        className="h-[55px] w-[275px] rounded-full border-2 px-4 ring-2"
-                                    />
+                                    <input placeholder="Ritnummer dienst" className="h-[55px] w-[275px] rounded-full border-2 px-4 ring-2" />
                                 </div>
                                 <div className="flex flex-col gap-4">
                                     <div>
-                                        <p className="font-semibold">
-                                            Ritnummer dienst
-                                        </p>
+                                        <p className="font-semibold">Ritnummer dienst</p>
                                     </div>
-                                    <input
-                                        placeholder="Ritnummer dienst"
-                                        className=" h-[55px] w-[275px] rounded-full border-2 px-4 ring-2"
-                                    />
+                                    <input placeholder="Ritnummer dienst" className=" h-[55px] w-[275px] rounded-full border-2 px-4 ring-2" />
                                 </div>
                                 <div className="flex flex-col gap-4">
                                     <div>
-                                        <h2 className="font-semibold">
-                                            Conrtact(en)
-                                        </h2>
+                                        <h2 className="font-semibold">Conrtact(en)</h2>
                                         <p>JEFK VERMISSEN</p>
                                         <p>+324 22 33 44 55</p>
                                         <p>JEFKE VERMISSEN</p>

@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import Input from '../Components/Input';
-import { languages, nationalities } from '../Components/patientData';
-import { useInput } from '../Hooks/useInput';
-import InputSelect from '../Components/InputSelect';
+import { useState } from "react";
+import Input from "../Components/Input";
+import { languages, nationalities } from "../Components/patientData";
+import { useInput } from "../Hooks/useInput";
+import InputSelect from "../Components/InputSelect";
 
-const languagesAbbrivaition = ['NL', 'ENG'];
-const genderArr = ['Man', 'Vrouw'];
+const languagesAbbrivaition = ["NL", "ENG"];
+const genderArr = ["Man", "Vrouw"];
 
 const Registration = () => {
-    const [optionSelect, setOptionSelect] = useState('');
+    const [optionSelect, setOptionSelect] = useState("");
     const firstName = useInput();
     const lastName = useInput();
     const emergencyContact = useInput();
@@ -59,11 +59,7 @@ const Registration = () => {
                 </div>
                 <div className="flex flex-col gap-3">
                     <p>Nationaliteit</p>
-                    <select
-                        value={optionSelect}
-                        title="Selecteer je geslacht"
-                        defaultValue={nationalities}
-                    >
+                    <select value={optionSelect} title="Selecteer je geslacht" defaultValue={nationalities}>
                         {nationalities.map((nationality) => (
                             <option value={optionSelect}>{nationality}</option>
                         ))}
@@ -82,13 +78,7 @@ const Registration = () => {
                     />
                 </div>
 
-                <Input
-                    label="Geboorte datum"
-                    size="w-full h-[48px]"
-                    placeholder="dd/mm/yyyy"
-                    type="date"
-                    border="rounded-full border-light-blue"
-                />
+                <Input label="Geboorte datum" size="w-full h-[48px]" placeholder="dd/mm/yyyy" type="date" border="rounded-full border-light-blue" />
                 <Input
                     label="Contactpersoon (ICE)"
                     size="w-full h-[48px]"

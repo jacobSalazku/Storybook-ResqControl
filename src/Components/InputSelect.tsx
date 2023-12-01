@@ -1,9 +1,9 @@
-import { Menu, Transition } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
-import { useState, Fragment } from 'react';
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { useState, Fragment } from "react";
 
 function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(' ');
+    return classes.filter(Boolean).join(" ");
 }
 
 interface InputSelectProps {
@@ -25,13 +25,13 @@ const InputSelect = ({
     title,
     onChange,
     menuItems,
-    backgroundColor = 'bg-white',
-    arrowColor = 'dark-blue',
+    backgroundColor = "bg-white",
+    arrowColor = "dark-blue",
     textColor,
     height,
-    borderColor = 'ring-2 ring-inset ring-light-blue',
+    borderColor = "ring-2 ring-inset ring-light-blue",
     placeholder,
-    width = 'w-full',
+    width = "w-full",
 }: InputSelectProps) => {
     const [selectedItem, setSelectedItem] = useState(menuItems[0]);
 
@@ -50,10 +50,7 @@ const InputSelect = ({
                         className={`inline-flex items-center ${width} justify-between ${height} ${borderColor} ${textColor} gap-x-1.5 rounded-full ${backgroundColor} px-4 py-2 text-sm font-semibold text-gray-900 `}
                     >
                         {selectedItem ? selectedItem : title}
-                        <ChevronDownIcon
-                            className={`mr-1 h-5 w-5 text-${arrowColor}`}
-                            aria-hidden="true"
-                        />
+                        <ChevronDownIcon className={`mr-1 h-5 w-5 text-${arrowColor}`} aria-hidden="true" />
                     </Menu.Button>
                 </div>
 
@@ -80,12 +77,7 @@ const InputSelect = ({
                                             onClick={() => {
                                                 handleItemClick(item);
                                             }}
-                                            className={classNames(
-                                                active
-                                                    ? 'bg-gray-100 text-gray-900'
-                                                    : 'text-gray-700',
-                                                'block px-4 py-2 text-sm',
-                                            )}
+                                            className={classNames(active ? "bg-gray-100 text-gray-900" : "text-gray-700", "block px-4 py-2 text-sm")}
                                         >
                                             {item}
                                         </a>

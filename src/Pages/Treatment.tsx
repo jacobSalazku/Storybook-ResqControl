@@ -1,16 +1,11 @@
-import TitleCard from '../Components/TitleCard';
-import Header from '../Components/Header';
-import IconButton from '../Components/IconButton';
-import TreatmentMenu from '../Components/TreatmentMenu';
-import TreatmentDash from '../Components/TreatmentDash';
-import { useState } from 'react';
-import { menuItems } from './Medication';
-import {
-    IconDeviceFloppy,
-    IconVaccine,
-    IconSearch,
-    IconStethoscope,
-} from '@tabler/icons-react';
+import TitleCard from "../Components/TitleCard";
+import Header from "../Components/Header";
+import IconButton from "../Components/IconButton";
+import TreatmentMenu from "../Components/TreatmentMenu";
+import TreatmentDash from "../Components/TreatmentDash";
+import { useState } from "react";
+import { menuItems } from "./Medication";
+import { IconDeviceFloppy, IconVaccine, IconSearch, IconStethoscope } from "@tabler/icons-react";
 
 const Treatment = () => {
     const [isSearchInputVisible, setSearchInputVisible] = useState(false);

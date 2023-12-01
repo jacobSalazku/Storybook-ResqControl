@@ -1,13 +1,6 @@
-import { TextAreaProps } from '../interfaces';
+import { TextAreaProps } from "../interfaces";
 
-const InputTextArea = ({
-    title,
-    width,
-    height,
-    placeholder,
-    border,
-    icon,
-}: TextAreaProps) => {
+const InputTextArea = ({ title, width, height, placeholder, border, icon }: TextAreaProps) => {
     return (
         <div className="flex w-full flex-col justify-center">
             <div className="flex flex-col gap-8 pt-4">

@@ -9,6 +9,7 @@ import { IconPlus } from "@tabler/icons-react";
 import { useState } from "react";
 import { PathologyData } from "../interfaces";
 import { IconArrowBarLeft, IconArrowBarRight, IconReport } from "@tabler/icons-react";
+import TriageOption from "../Components/TriageOption";
 
 const Patient = {
     time: "12:50",
@@ -79,16 +80,13 @@ const Triage = () => {
                         <div className="flex w-full flex-row justify-between gap-4 ">
                             <PatientOverviewCard {...Patient} />
                             <div className="flex w-1/2 flex-col items-start justify-start gap-4">
+                                <TriageOption />
                                 <div>
                                     <p className="font-semibold">Pathologiën</p>
                                 </div>
 
                                 {pathologies.map((pathology: PathologyData, index: number) => (
-                                    <Pathology
-                                        location={pathology.location}
-                                        side={pathology.side}
-                                        onDelete={() => DeletePathology(index)}
-                                    />
+                                    <Pathology location={pathology.location} side={pathology.side} onDelete={() => DeletePathology(index)} />
                                 ))}
                                 <IconButton
                                     label="Voeg pathologie toe"

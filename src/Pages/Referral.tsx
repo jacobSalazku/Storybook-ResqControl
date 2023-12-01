@@ -1,10 +1,11 @@
-import { IconDeviceFloppy, IconDoorExit, IconNote } from '@tabler/icons-react';
-import Header from '../Components/Header';
-import IconButton from '../Components/IconButton';
-import InputTextArea from '../Components/InputTextArea';
-import TitleCard from '../Components/TitleCard';
-import TreatmentMenu from '../Components/TreatmentMenu';
-import { menuItems } from './Festival';
+import { IconDeviceFloppy, IconDoorExit, IconNote } from "@tabler/icons-react";
+import Header from "../Components/Header";
+import IconButton from "../Components/IconButton";
+import InputTextArea from "../Components/InputTextArea";
+import TitleCard from "../Components/TitleCard";
+import TreatmentMenu from "../Components/TreatmentMenu";
+import { menuItems } from "./Festival";
+
 const Referral = () => {
     return (
         <div className="flex h-auto w-full flex-col items-center justify-center">

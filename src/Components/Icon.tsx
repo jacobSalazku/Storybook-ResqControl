@@ -1,11 +1,6 @@
-import { iconProps } from '../interfaces';
-const Icon = ({
-    width = '22',
-    height = '22',
-    color,
-    icon,
-    path,
-}: iconProps) => {
+import { iconProps } from "../interfaces";
+
+const Icon = ({ width = "22", height = "22", color, icon, path }: iconProps) => {
     return (
         <div>
             <svg

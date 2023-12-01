@@ -1,16 +1,11 @@
-import {
-    IconDeviceFloppy,
-    IconDna2,
-    IconSearch,
-    IconStethoscope,
-} from '@tabler/icons-react';
-import { useState } from 'react';
-import Header from '../Components/Header';
-import IconButton from '../Components/IconButton';
-import SampleDash from '../Components/SampleDash';
-import TitleCard from '../Components/TitleCard';
-import TreatmentMenu from '../Components/TreatmentMenu';
-import { menuItems } from './Medication';
+import { IconDeviceFloppy, IconDna2, IconSearch, IconStethoscope } from "@tabler/icons-react";
+import { useState } from "react";
+import Header from "../Components/Header";
+import IconButton from "../Components/IconButton";
+import SampleDash from "../Components/SampleDash";
+import TitleCard from "../Components/TitleCard";
+import TreatmentMenu from "../Components/TreatmentMenu";
+import { menuItems } from "./Medication";
 
 const Sample = () => {
     const [isSearchInputVisible, setSearchInputVisible] = useState(true);

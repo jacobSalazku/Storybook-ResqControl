@@ -1,18 +1,13 @@
-import {
-    IconDeviceFloppy,
-    IconSearch,
-    IconStethoscope,
-    IconVaccine,
-} from '@tabler/icons-react';
-import Header from '../Components/Header';
-import IconButton from '../Components/IconButton';
-import { proceedsArr } from '../Components/patientData';
-import TitleCard from '../Components/TitleCard';
-import TreatmentMenu from '../Components/TreatmentMenu';
-import { menuItems } from './Medication';
-import { useState } from 'react';
-import ProceedsDash from '../Components/ProceedsDash';
-import { stringTime } from '../stories/helpers/DateTime';
+import { IconDeviceFloppy, IconSearch, IconStethoscope, IconVaccine } from "@tabler/icons-react";
+import Header from "../Components/Header";
+import IconButton from "../Components/IconButton";
+import { proceedsArr } from "../Components/patientData";
+import TitleCard from "../Components/TitleCard";
+import TreatmentMenu from "../Components/TreatmentMenu";
+import { menuItems } from "./Medication";
+import { useState } from "react";
+import ProceedsDash from "../Components/ProceedsDash";
+import { stringTime } from "../stories/helpers/DateTime";
 
 const Proceedings = () => {
     const [isSearchInputVisible, setSearchInputVisible] = useState(false);

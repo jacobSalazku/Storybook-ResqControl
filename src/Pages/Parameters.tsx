@@ -1,25 +1,14 @@
-import {
-    IconDeviceFloppy,
-    IconSearch,
-    IconStethoscope,
-    IconVaccine,
-} from '@tabler/icons-react';
-import { useState } from 'react';
-import Header from '../Components/Header';
-import IconButton from '../Components/IconButton';
-import ParametersDash from '../Components/ParametersDash';
-import { proceedsArr } from '../Components/patientData';
-import TitleCard from '../Components/TitleCard';
-import TreatmentMenu from '../Components/TreatmentMenu';
-import { stringTime } from '../stories/helpers/DateTime';
+import { IconDeviceFloppy, IconSearch, IconStethoscope, IconVaccine } from "@tabler/icons-react";
+import { useState } from "react";
+import Header from "../Components/Header";
+import IconButton from "../Components/IconButton";
+import ParametersDash from "../Components/ParametersDash";
+import { proceedsArr } from "../Components/patientData";
+import TitleCard from "../Components/TitleCard";
+import TreatmentMenu from "../Components/TreatmentMenu";
+import { stringTime } from "../stories/helpers/DateTime";
 
-const menuItems = [
-    'Parameters',
-    'Handelingen',
-    'Medicatie',
-    'Sample',
-    'Opmerkingen',
-];
+const menuItems = ["Parameters", "Handelingen", "Medicatie", "Sample", "Opmerkingen"];
 
 const Parameters = () => {
     const [isSearchInputVisible, setSearchInputVisible] = useState(false);

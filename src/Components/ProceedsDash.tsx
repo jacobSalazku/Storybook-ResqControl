@@ -1,54 +1,45 @@
-import { IconCheck } from '@tabler/icons-react';
-import { useState } from 'react';
-import { Button } from './Button';
-import { pointArrow } from './helpers';
-import { TreatmentDashProps } from '../interfaces';
-import { proceedsArr } from './patientData';
-import IconButton from './IconButton';
-import { DeleteIcon } from '../stories/helpers/ClientDataFunctions';
-import { stringTime } from '../stories/helpers/DateTime';
-import Input from './Input';
+import { IconCheck, IconChevronDown } from "@tabler/icons-react";
+import { useState } from "react";
+import { Button } from "./Button";
+import { TreatmentDashProps } from "../interfaces";
+import { proceedsArr } from "./patientData";
+import IconButton from "./IconButton";
+import { DeleteIcon } from "../stories/helpers/ClientDataFunctions";
+import { stringTime } from "../stories/helpers/DateTime";
+import Input from "./Input";
 
-const ProceedsDash = ({
-    title,
-    topLeftLogo,
-    searchIcon,
-}: TreatmentDashProps) => {
+const ProceedsDash = ({ title, topLeftLogo, searchIcon }: TreatmentDashProps) => {
     const [show, setShow] = useState(true);
 
     const toggleShow = () => setShow(!show);
 
     return (
-        <div className="w-full flex flex-row justify-center py-2">
+        <div className="flex w-full flex-row justify-center py-2">
             <div
                 className={`w-[55rem] ${
-                    show
-                        ? 'h-auto transition-max-h transition-opacity duration-300 ease-in-out'
-                        : 'h-[4rem]'
+                    show ? "transition-max-h h-auto transition-opacity duration-300 ease-in-out" : "h-[4rem]"
                 } rounded-b-xl rounded-t-xl border-4 border-background-color`}
             >
-                <div className="w-[54.6rem] h-[3.7rem] flex flex-row justify justify-between border-background-color px-5 items-center rounded">
-                    <div className="flex flex-row justify-start items-center gap-4 ml-2">
+                <div className="justify flex h-[3.7rem] w-[54.6rem] flex-row items-center justify-between rounded border-background-color px-5">
+                    <div className="ml-2 flex flex-row items-center justify-start gap-4">
                         {topLeftLogo}
                         <div>
-                            <p className="text-lg text-p-text-color flex flex-row items-center font-medium">
-                                {title}
-                            </p>
+                            <p className="flex flex-row items-center text-lg font-medium text-p-text-color">{title}</p>
                         </div>
                     </div>
-                    <div className="flex flex-row justify-between items-center gap-7">
+                    <div className="flex flex-row items-center justify-between gap-7">
                         <div>{searchIcon}</div>
                         <div className="cursor-pointer" onClick={toggleShow}>
-                            {pointArrow(show)}
+                            <IconChevronDown className={`transform transition-all ${show ? "-rotate-180" : "rotate-0"}`} />
                         </div>
                     </div>
                 </div>
                 <div
                     className={`transition-max-h transition-opacity duration-300 ease-in-out ${
-                        show ? '-h-[17.rem] opacity-100' : 'max-h-0 opacity-0'
-                    } w-full border-8 border-white rounded-md mb-2 flex flex-col justify-center mt-4`}
+                        show ? "-h-[17.rem] opacity-100" : "max-h-0 opacity-0"
+                    } mb-2 mt-4 flex w-full flex-col justify-center rounded-md border-8 border-white`}
                 >
-                    <div className="w-full h-full flex flex-row flex-wrap justify-between items-center px-6 gap-x-1 gap-y-4">
+                    <div className="flex h-full w-full flex-row flex-wrap items-center justify-between gap-x-1 gap-y-4 px-6">
                         {proceedsArr.map((item, index) => (
                             <Button
                                 key={index}
@@ -61,21 +52,11 @@ const ProceedsDash = ({
                             />
                         ))}
                     </div>
-                    <div className="w-full flex flex-row pt-8 pl-2 justify-between">
-                        {' '}
-                        <Input
-                            label="Tijdstip van Afname"
-                            size="h-[40px] w-[270px]"
-                            placeholder={stringTime}
-                            type="time"
-                        />
+                    <div className="flex w-full flex-row justify-between pl-2 pt-8">
+                        {" "}
+                        <Input label="Tijdstip van Afname" size="h-[40px] w-[270px]" placeholder={stringTime} type="time" />
                         <div className="flex flex-row items-end justify-end">
-                            <IconButton
-                                icon={DeleteIcon}
-                                variant="rounded"
-                                size="w-[132px] h-[44px]"
-                                backgroundColor="bg-p-red text-white border-p-red"
-                            />
+                            <IconButton icon={DeleteIcon} variant="rounded" size="w-[132px] h-[44px]" backgroundColor="bg-p-red text-white border-p-red" />
                         </div>
                     </div>
                 </div>

@@ -1,24 +1,15 @@
-import { TitelCardProps } from '../interfaces';
+import { TitelCardProps } from "../interfaces";
 
-const TitleCard = ({
-    rightButton,
-    leftButton,
-    icon,
-    title,
-}: TitelCardProps) => {
+const TitleCard = ({ rightButton, leftButton, icon, title }: TitelCardProps) => {
     return (
-        <div className="h-16 w-[58rem] flex flex-row justify-center px-10 items-center shadow-md overflow-hidden bg-background-color mb-4">
-            <div className="w-full flex flex-row justify-between items-center ">
+        <div className="mb-4 flex h-16 w-[58rem] flex-row items-center justify-center overflow-hidden bg-background-color px-10 shadow-md">
+            <div className="flex w-full flex-row items-center justify-between ">
                 <div>{leftButton}</div>
                 <div className="flex flex-row items-center gap-2">
                     <div>{icon}</div>
-                    <p className="text-2xl text-p-text-color flex flex-row items-center font-medium">
-                        {title}
-                    </p>
+                    <p className="flex flex-row items-center text-2xl font-medium text-p-text-color">{title}</p>
                 </div>
-                <div className="flex justify-center items-center">
-                    {rightButton}
-                </div>
+                <div className="flex items-center justify-center">{rightButton}</div>
             </div>
         </div>
     );
