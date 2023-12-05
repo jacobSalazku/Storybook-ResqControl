@@ -14,7 +14,7 @@ export const getGender = (gender: string) => {
 
 export const checkIfCompleted = (isCompleted: boolean) => {
     if (!isCompleted) {
-        return <IconArrowBigRightLines color="#3A638A" size={36} />;
+        return <IconArrowBigRightLines color="#3A638A" size={24} />;
     }
-    return <IconCheck color="#3A638A" size={36} />;
+    return <IconCheck color="#3A638A" size={24} />;
 };

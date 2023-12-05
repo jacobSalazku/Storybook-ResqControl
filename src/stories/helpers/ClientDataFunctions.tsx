@@ -33,13 +33,11 @@ export const getUrgencyIcon = (urgency: string | undefined) => {
 // eslint-disable-next-line
 export const getBorderColorClass = (urgency: string | undefined) => {
     if (urgency === 'T1') {
-        return 'border-p-green';
+        return 'border-l-p-green';
     } else if (urgency === 'T2') {
-        return 'border-p-yellow';
+        return 'border-l-p-yellow';
     } else if (urgency === 'T3') {
-        return 'border-[#D71010]';
-    } else if (urgency === 'base') {
-        return 'border-dark-green';
+        return 'border-l-[#D71010]';
     }
 };
 // eslint-disable-next-line

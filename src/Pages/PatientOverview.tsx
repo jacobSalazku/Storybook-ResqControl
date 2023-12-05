@@ -8,14 +8,14 @@ import PatientOverviewCard from '../Components/PatientOverviewCard';
 
 const Patient = {
     time: '12:50',
-    urgency: 'base',
+    urgency: 'T2',
     name: 'John Doe',
     language: 'DE',
     date: '20',
     gender: 'Man',
     nationality: 'België',
     dateOfBirth: '02/12/2002',
-    triageLevel: 'T2',
+    triageLevel: 'T3',
     allergies: false,
 };
 
@@ -43,7 +43,7 @@ export const PatientOverview = () => {
     return (
         <>
             <div className="flex h-auto max-w-[960px] flex-col items-center">
-                <div className="flex w-full flex-col items-center justify-center bg-white ">
+                <div className="flex w-full flex-col items-center justify-center bg-background-color ">
                     <Header />
                     <TitleCard
                         title="Patient Overzicht"
@@ -65,7 +65,7 @@ export const PatientOverview = () => {
                             <div className="mx-6">
                                 <PatientOverviewCard {...Patient} />
                             </div>
-                            <div className="mr-4 w-full ">
+                            <div className="w-full ">
                                 <TreatmentCard
                                     isCompleted={completedTreatments[0]}
                                     description="Basis Verzorging"

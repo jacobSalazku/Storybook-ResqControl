@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ExitIcon, PrintIcon, SendIcon } from './helpers/ClientDataFunctions';
+import { ExitIcon, SendIcon } from './helpers/ClientDataFunctions';
 import IconButton from '../Components/IconButton';
 
 import { PatientOverview } from '../Pages/PatientOverview';

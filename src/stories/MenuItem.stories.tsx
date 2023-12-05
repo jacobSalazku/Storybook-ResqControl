@@ -7,16 +7,6 @@ const meta: Meta<typeof MenuItem> = {
     tags: ['autodocs'],
     title: 'Fundaments/Waiting Room Menu Item',
     argTypes: {
-        border: {
-            control: { type: 'select' },
-            options: {
-                small: 'rounded',
-                medium: 'rounded-lg',
-                large: 'rounded-xl',
-                xl: 'rounded-3xl',
-                circle: 'rounded-full',
-            },
-        },
         backgroundColor: {
             control: { type: 'select' },
             options: {

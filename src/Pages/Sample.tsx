@@ -1,10 +1,8 @@
 import {
     IconDeviceFloppy,
     IconDna2,
-    IconSearch,
     IconStethoscope,
 } from '@tabler/icons-react';
-import { useState } from 'react';
 import Header from '../Components/Header';
 import IconButton from '../Components/IconButton';
 import SampleDash from '../Components/SampleDash';
@@ -13,11 +11,6 @@ import TreatmentMenu from '../Components/TreatmentMenu';
 import { menuItems } from './Medication';
 
 const Sample = () => {
-    const [isSearchInputVisible, setSearchInputVisible] = useState(true);
-
-    const toggleSearchInput = () => {
-        setSearchInputVisible(!isSearchInputVisible);
-    };
     return (
         <div className="flex h-auto max-w-[960px] flex-col items-center">
             <div className="flex w-full flex-col items-center justify-center bg-white ">
@@ -42,15 +35,6 @@ const Sample = () => {
                 <SampleDash
                     title="Sample"
                     topLeftLogo={<IconDna2 color="#497DAE" />}
-                    searchIcon={
-                        <IconButton
-                            icon={<IconSearch color="#497DAE" />}
-                            variant="rounded-full"
-                            size="w-[130px] h-[40px]"
-                            backgroundColor="border-light-blue"
-                            onClick={toggleSearchInput}
-                        />
-                    }
                 />
             </div>
         </div>

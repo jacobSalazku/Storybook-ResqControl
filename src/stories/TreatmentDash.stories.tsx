@@ -1,8 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-
-import { PrikIcon } from './helpers/ClientDataFunctions';
-
 import TreatmentDash from '../Components/TreatmentDash';
+import { IconVaccine } from '@tabler/icons-react';
 
 const meta: Meta<typeof TreatmentDash> = {
     component: TreatmentDash,
@@ -18,6 +16,6 @@ type Story = StoryObj<typeof meta>;
 export const BasisTreament: Story = {
     args: {
         title: 'Buikpijn',
-        topLeftLogo: PrikIcon,
+        topLeftLogo: <IconVaccine color="#3A638A" />,
     },
 };

@@ -7,10 +7,10 @@ const TitleCard = ({
     title,
 }: TitelCardProps) => {
     return (
-        <div className="mb-4 flex h-16 w-full flex-row items-center justify-center overflow-hidden px-10 shadow-md">
+        <div className="mb-4 flex h-16 w-full flex-row items-center justify-center overflow-hidden bg-white px-10 shadow-md">
             <div className="flex w-full flex-row items-center justify-between ">
                 <div>{leftButton}</div>
-                <div className="flex flex-row items-center gap-2">
+                <div className="flex flex-row items-center justify-center gap-2">
                     <div>{icon}</div>
                     <p className="flex flex-row items-center text-2xl font-medium text-p-text-color">
                         {title}
