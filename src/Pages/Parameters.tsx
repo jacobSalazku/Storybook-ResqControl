@@ -1,21 +1,25 @@
-import { IconDeviceFloppy, IconSearch, IconStethoscope, IconVaccine } from "@tabler/icons-react";
-import { useState } from "react";
-import Header from "../Components/Header";
-import IconButton from "../Components/IconButton";
-import ParametersDash from "../Components/ParametersDash";
-import { proceedsArr } from "../Components/patientData";
-import TitleCard from "../Components/TitleCard";
-import TreatmentMenu from "../Components/TreatmentMenu";
-import { stringTime } from "../stories/helpers/DateTime";
+import {
+    IconDeviceFloppy,
+    IconStethoscope,
+    IconVaccine,
+} from '@tabler/icons-react';
+import Header from '../Components/Header';
+import IconButton from '../Components/IconButton';
+import ParametersDash from '../Components/ParametersDash';
+import { proceedsArr } from '../Components/patientData';
+import TitleCard from '../Components/TitleCard';
+import TreatmentMenu from '../Components/TreatmentMenu';
+import { stringTime } from '../stories/helpers/DateTime';
 
-const menuItems = ["Parameters", "Handelingen", "Medicatie", "Sample", "Opmerkingen"];
+const menuItems = [
+    'Parameters',
+    'Handelingen',
+    'Medicatie',
+    'Sample',
+    'Opmerkingen',
+];
 
 const Parameters = () => {
-    const [isSearchInputVisible, setSearchInputVisible] = useState(false);
-    const toggleSearchInput = () => {
-        setSearchInputVisible(!isSearchInputVisible);
-    };
-
     return (
         <div className="flex h-auto max-w-[58rem] flex-col items-center">
             <div className="flex w-full flex-col items-center justify-center bg-white ">
@@ -40,15 +44,6 @@ const Parameters = () => {
                 title={stringTime}
                 topLeftLogo={<IconVaccine color="#497DAE" />}
                 Itemsarr={proceedsArr}
-                searchIcon={
-                    <IconButton
-                        icon={<IconSearch color="#497DAE" />}
-                        variant="rounded-full"
-                        size="w-[130px] h-[40px]"
-                        backgroundColor="border-light-blue"
-                        onClick={toggleSearchInput}
-                    />
-                }
             />
         </div>
     );

@@ -1,27 +1,32 @@
-import IconButton from "../Components/IconButton";
-import TreatmentCard from "../Components/TreatmentCard";
-import TitleCard from "../Components/TitleCard";
-import { IconRun, IconEye } from "@tabler/icons-react";
-import { useState } from "react";
-import Header from "../Components/Header";
-import PatientOverviewCard from "../Components/PatientOverviewCard";
+import IconButton from '../Components/IconButton';
+import TreatmentCard from '../Components/TreatmentCard';
+import TitleCard from '../Components/TitleCard';
+import { IconRun, IconEye } from '@tabler/icons-react';
+import { useState } from 'react';
+import Header from '../Components/Header';
+import PatientOverviewCard from '../Components/PatientOverviewCard';
 
 const Patient = {
-    time: "12:50",
-    urgency: "base",
-    name: "John Doe",
-    language: "DE",
-    date: "20",
-    gender: "Man",
-    nationality: "België",
-    dateOfBirth: "02/12/2002",
-    triageLevel: "T2",
+    time: '12:50',
+    urgency: 'base',
+    name: 'John Doe',
+    language: 'DE',
+    date: '20',
+    gender: 'Man',
+    nationality: 'België',
+    dateOfBirth: '02/12/2002',
+    triageLevel: 'T2',
     allergies: false,
 };
 
 export const PatientOverview = () => {
-    const [completedTreatments, setCompletedTreatments] = useState([false, false, false]);
-    const [currentTreatmentCardIndex, setCurrentTreatmentCardIndex] = useState(0);
+    const [completedTreatments, setCompletedTreatments] = useState([
+        false,
+        false,
+        false,
+    ]);
+    const [currentTreatmentCardIndex, setCurrentTreatmentCardIndex] =
+        useState(0);
 
     const handleClick = () => {
         const newCompletedTreatments = [...completedTreatments];
@@ -42,7 +47,9 @@ export const PatientOverview = () => {
                     <Header />
                     <TitleCard
                         title="Patient Overzicht"
-                        icon={<IconEye color="#497DAE" size="44" stroke="1.5" />}
+                        icon={
+                            <IconEye color="#497DAE" size="44" stroke="1.5" />
+                        }
                         rightButton={
                             <IconButton
                                 label="Patient weg"
@@ -59,9 +66,21 @@ export const PatientOverview = () => {
                                 <PatientOverviewCard {...Patient} />
                             </div>
                             <div className="mr-4 w-full ">
-                                <TreatmentCard isCompleted={completedTreatments[0]} description="Basis Verzorging" onClick={handleClick} />
-                                <TreatmentCard isCompleted={completedTreatments[1]} description="Behandelingen" onClick={handleClick} />
-                                <TreatmentCard isCompleted={completedTreatments[2]} description="Ontslag" onClick={handleClick} />
+                                <TreatmentCard
+                                    isCompleted={completedTreatments[0]}
+                                    description="Basis Verzorging"
+                                    onClick={handleClick}
+                                />
+                                <TreatmentCard
+                                    isCompleted={completedTreatments[1]}
+                                    description="Behandelingen"
+                                    onClick={handleClick}
+                                />
+                                <TreatmentCard
+                                    isCompleted={completedTreatments[2]}
+                                    description="Ontslag"
+                                    onClick={handleClick}
+                                />
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { TaskIconGreen, TimeIconWhite } from './helpers/ClientDataFunctions';
 import MenuItem from '../Components/MenuItem';
+import { IconCircleDashed, IconClipboardList } from '@tabler/icons-react';
 
 const meta: Meta<typeof MenuItem> = {
     component: MenuItem,
@@ -41,7 +41,7 @@ type Story = StoryObj<typeof meta>;
 export const NormalState: Story = {
     args: {
         title: 'WachtZaal Triage',
-        icon: TaskIconGreen,
+        icon: <IconClipboardList color="#4A4A4A" />,
         backgroundColor: 'bg-white text-p-text-color border',
     },
 };
@@ -49,8 +49,8 @@ export const NormalState: Story = {
 /** Menu Item Selected State */
 export const SelectedState: Story = {
     args: {
-        title: 'WachtzaalPreReg',
+        title: 'in behandeling',
         backgroundColor: 'bg-dark-blue text-white transition',
-        icon: TimeIconWhite,
+        icon: <IconCircleDashed color="#ffffff" />,
     },
 };

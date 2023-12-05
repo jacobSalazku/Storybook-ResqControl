@@ -1,8 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import TitleCard from '../Components/TitleCard';
-import { StethoscopeIcon, EarLogo } from './helpers/ClientDataFunctions';
 import IconButton from '../Components/IconButton';
-import { IconArmchair, IconReport, IconSend } from '@tabler/icons-react';
+import { IconArrowBarLeft, IconPlus, IconReport } from '@tabler/icons-react';
+import IconButtonLogoRight from '../Components/IconButtonLogoRight';
+import Searchbar from '../Components/Searchbar';
 
 const meta: Meta<typeof TitleCard> = {
     component: TitleCard,
@@ -22,8 +23,26 @@ export const Base: Story = {
 
 export const PatientOverview: Story = {
     args: {
-        title: 'Wachtzaal inschrijvingen',
-        icon: <IconArmchair color="#497DAE" height="40" width="40" />,
+        title: 'Overzicht patiënten',
+        leftButton: (
+            <IconButtonLogoRight
+                label="Patient toevoegen"
+                size="h-[40px] w-[px]"
+                icon={<IconPlus color="#497DAE" />}
+                backgroundColor="border-2 border-[#497DAE] text-[#497DAE] shadow-md "
+                variant="rounded-md"
+            />
+        ),
+        rightButton: (
+            <Searchbar
+                borderColor="[#497DAE]"
+                borderRadius="rounded-full"
+                placeholder="search"
+                iconColor="black"
+                width={140}
+                height={30}
+            />
+        ),
     },
 };
 
@@ -34,7 +53,9 @@ export const Triage: Story = {
             <IconButton
                 label="Triage Annuleren"
                 size="h-[40px] w-[171px]"
-                icon={<IconSend color="#FFFFFF" height="20" width="20" />}
+                icon={
+                    <IconArrowBarLeft color="#FFFFFF" height="20" width="20" />
+                }
                 backgroundColor="bg-p-red border-p-red hover:bg-[#f7554f] shadow-md text-white"
                 variant="rounded-sm"
             />
@@ -48,20 +69,15 @@ export const Triage: Story = {
                 variant="rounded-sm"
             />
         ),
-        icon: EarLogo,
     },
 };
 export const BasicTreatment: Story = {
     args: {
         title: 'Basis verzorging',
-
-        icon: StethoscopeIcon,
     },
 };
 export const Treatment: Story = {
     args: {
         title: 'Behandeling',
-
-        icon: StethoscopeIcon,
     },
 };

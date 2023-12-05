@@ -17,10 +17,10 @@ export default {
                 'brown-accent': '#EAC893',
                 'p-text-color': '#152A23',
                 's-text-color': '#141414',
-                'p-red': '#EE7E7A',
+                'p-red': '#D71010',
                 'p-yellow': '#FFC161',
                 'p-grey': '#808080',
-                'p-green': '#84FFB5',
+                'p-green': '#27894F',
             },
             borderColor: {
                 'white-green': 'linear-gradient(to right, white, #6EE7B7)',

@@ -1,34 +1,37 @@
-import { EarLogo } from "../stories/helpers/ClientDataFunctions";
-import IconButton from "../Components/IconButton";
-import TitleCard from "../Components/TitleCard";
-import IconButtonLogoRight from "../Components/IconButtonLogoRight";
-import Header from "../Components/Header";
-import PatientOverviewCard from "../Components/PatientOverviewCard";
-import Pathology from "../Components/Pathology";
-import { IconPlus } from "@tabler/icons-react";
-import { useState } from "react";
-import { PathologyData } from "../interfaces";
-import { IconArrowBarLeft, IconArrowBarRight, IconReport } from "@tabler/icons-react";
-import TriageOption from "../Components/TriageOption";
+import IconButton from '../Components/IconButton';
+import TitleCard from '../Components/TitleCard';
+import IconButtonLogoRight from '../Components/IconButtonLogoRight';
+import Header from '../Components/Header';
+import PatientOverviewCard from '../Components/PatientOverviewCard';
+import Pathology from '../Components/Pathology';
+import { IconPlus } from '@tabler/icons-react';
+import { useState } from 'react';
+import { PathologyData } from '../interfaces';
+import {
+    IconArrowBarLeft,
+    IconArrowBarRight,
+    IconReport,
+} from '@tabler/icons-react';
+import TriageOption from '../Components/TriageOption';
 
 const Patient = {
-    time: "12:50",
-    urgency: "base",
-    name: "John Doe",
-    language: "DE",
-    date: "20-03",
-    triageLevel: "T2",
-    gender: "male",
-    nationality: "Belgie",
-    dateOfBirth: "20/02/1997",
+    time: '12:50',
+    urgency: 'base',
+    name: 'John Doe',
+    language: 'DE',
+    date: '20-03',
+    triageLevel: 'T2',
+    gender: 'male',
+    nationality: 'Belgie',
+    dateOfBirth: '20/02/1997',
     allergies: false,
 };
 
 const Triage = () => {
     const [pathologies, setPathologies] = useState([
         {
-            location: "",
-            side: "",
+            location: '',
+            side: '',
         },
     ]);
 
@@ -36,8 +39,8 @@ const Triage = () => {
         setPathologies((prevPathologies: PathologyData[]) => [
             ...prevPathologies,
             {
-                location: "",
-                side: "",
+                location: '',
+                side: '',
             },
         ]);
     };
@@ -55,12 +58,17 @@ const Triage = () => {
                 <Header />
                 <TitleCard
                     title="Triage"
-                    icon={EarLogo}
                     leftButton={
                         <IconButton
                             label="Triage Annuleren"
                             size="h-[40px] w-[171px]"
-                            icon={<IconArrowBarLeft color="#FFFFFF" height="20" width="20" />}
+                            icon={
+                                <IconArrowBarLeft
+                                    color="#FFFFFF"
+                                    height="20"
+                                    width="20"
+                                />
+                            }
                             backgroundColor="bg-p-red border-p-red hover:bg-[#f7554f] shadow-md text-white"
                             variant="rounded-sm"
                         />
@@ -86,12 +94,28 @@ const Triage = () => {
                                     <p className="font-semibold">Pathologiën</p>
                                 </div>
 
-                                {pathologies.map((pathology: PathologyData, index: number) => (
-                                    <Pathology location={pathology.location} side={pathology.side} onDelete={() => DeletePathology(index)} />
-                                ))}
+                                {pathologies.map(
+                                    (
+                                        pathology: PathologyData,
+                                        index: number,
+                                    ) => (
+                                        <Pathology
+                                            location={pathology.location}
+                                            side={pathology.side}
+                                            onDelete={() =>
+                                                DeletePathology(index)
+                                            }
+                                        />
+                                    ),
+                                )}
                                 <IconButton
                                     label="Voeg pathologie toe"
-                                    icon={<IconPlus color="#ffffFf" stroke={1.5} />}
+                                    icon={
+                                        <IconPlus
+                                            color="#ffffFf"
+                                            stroke={1.5}
+                                        />
+                                    }
                                     size="h-[40px] w-[200px]"
                                     variant="rounded"
                                     backgroundColor="border-[#497DAE] bg-[#497DAE] text-white shadow-md shadow-[#808080]"

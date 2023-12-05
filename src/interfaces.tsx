@@ -55,7 +55,7 @@ export interface TitelCardProps {
     title: string;
     rightButton?: JSX.Element;
     leftButton?: JSX.Element;
-    icon: JSX.Element;
+    icon?: JSX.Element;
 }
 
 export interface TreatmentProps {
@@ -68,7 +68,7 @@ export interface TreatmentProps {
 export interface TreatmentDashProps {
     title: string;
     topLeftLogo: JSX.Element;
-    searchIcon?: JSX.Element;
+    searchBar?: JSX.Element;
     Itemsarr?: string[];
 }
 

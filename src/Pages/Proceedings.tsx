@@ -1,20 +1,18 @@
-import { IconDeviceFloppy, IconSearch, IconStethoscope, IconVaccine } from "@tabler/icons-react";
-import Header from "../Components/Header";
-import IconButton from "../Components/IconButton";
-import { proceedsArr } from "../Components/patientData";
-import TitleCard from "../Components/TitleCard";
-import TreatmentMenu from "../Components/TreatmentMenu";
-import { menuItems } from "./Medication";
-import { useState } from "react";
-import ProceedsDash from "../Components/ProceedsDash";
-import { stringTime } from "../stories/helpers/DateTime";
+import {
+    IconDeviceFloppy,
+    IconStethoscope,
+    IconVaccine,
+} from '@tabler/icons-react';
+import Header from '../Components/Header';
+import IconButton from '../Components/IconButton';
+import { proceedsArr } from '../Components/patientData';
+import TitleCard from '../Components/TitleCard';
+import TreatmentMenu from '../Components/TreatmentMenu';
+import { menuItems } from './Medication';
+import ProceedsDash from '../Components/ProceedsDash';
+import { stringTime } from '../stories/helpers/DateTime';
 
 const Proceedings = () => {
-    const [isSearchInputVisible, setSearchInputVisible] = useState(false);
-
-    const toggleSearchInput = () => {
-        setSearchInputVisible(!isSearchInputVisible);
-    };
     return (
         <div className="flex h-screen w-full flex-col items-center">
             <Header />
@@ -40,15 +38,6 @@ const Proceedings = () => {
                     title={stringTime}
                     topLeftLogo={<IconVaccine color="#497DAE" />}
                     Itemsarr={proceedsArr}
-                    searchIcon={
-                        <IconButton
-                            icon={<IconSearch color="#497DAE" />}
-                            variant="rounded-full"
-                            size="w-[130px] h-[40px]"
-                            backgroundColor="border-light-blue"
-                            onClick={toggleSearchInput}
-                        />
-                    }
                 />
             </div>
         </div>

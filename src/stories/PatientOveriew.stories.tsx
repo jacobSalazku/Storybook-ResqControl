@@ -3,6 +3,7 @@ import { ExitIcon, PrintIcon, SendIcon } from './helpers/ClientDataFunctions';
 import IconButton from '../Components/IconButton';
 
 import { PatientOverview } from '../Pages/PatientOverview';
+import { IconPrinter } from '@tabler/icons-react';
 
 const meta: Meta<typeof PatientOverview> = {
     component: PatientOverview,
@@ -39,7 +40,7 @@ export const Completed: Story = {
         ),
         middleButton: (
             <IconButton
-                icon={PrintIcon}
+                icon={<IconPrinter color="#fffff" />}
                 size="w-32"
                 backgroundColor="bg-dark-blue"
                 variant="rounded-full"
