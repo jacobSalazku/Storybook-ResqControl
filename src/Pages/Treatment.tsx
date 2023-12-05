@@ -1,11 +1,16 @@
-import TitleCard from "../Components/TitleCard";
-import Header from "../Components/Header";
-import IconButton from "../Components/IconButton";
-import TreatmentMenu from "../Components/TreatmentMenu";
-import TreatmentDash from "../Components/TreatmentDash";
-import { useState } from "react";
-import { menuItems } from "./Medication";
-import { IconDeviceFloppy, IconVaccine, IconSearch, IconStethoscope } from "@tabler/icons-react";
+import TitleCard from '../Components/TitleCard';
+import Header from '../Components/Header';
+import IconButton from '../Components/IconButton';
+import TreatmentMenu from '../Components/TreatmentMenu';
+import TreatmentDash from '../Components/TreatmentDash';
+import { useState } from 'react';
+import { menuItems } from './Medication';
+import {
+    IconDeviceFloppy,
+    IconVaccine,
+    IconSearch,
+    IconStethoscope,
+} from '@tabler/icons-react';
 
 const Treatment = () => {
     const [isSearchInputVisible, setSearchInputVisible] = useState(false);
@@ -14,7 +19,7 @@ const Treatment = () => {
         setSearchInputVisible(!isSearchInputVisible);
     };
     return (
-        <div className="flex h-auto max-w-[58rem] flex-col items-center">
+        <div className="flex h-auto max-w-[960px] flex-col items-center">
             <div className="flex w-full flex-col items-center justify-center bg-white ">
                 <Header />
                 <TitleCard

@@ -1,14 +1,18 @@
-import { IconDeviceFloppy, IconStethoscope, IconVaccine } from "@tabler/icons-react";
-import Header from "../Components/Header";
-import IconButton from "../Components/IconButton";
-import MedicationDash from "../Components/MedicationDash";
-import TitleCard from "../Components/TitleCard";
-import TreatmentMenu from "../Components/TreatmentMenu";
-import { menuItems } from "./Medication";
+import {
+    IconDeviceFloppy,
+    IconStethoscope,
+    IconVaccine,
+} from '@tabler/icons-react';
+import Header from '../Components/Header';
+import IconButton from '../Components/IconButton';
+import MedicationDash from '../Components/MedicationDash';
+import TitleCard from '../Components/TitleCard';
+import TreatmentMenu from '../Components/TreatmentMenu';
+import { menuItems } from './Medication';
 
 const TreatmentMedication = () => {
     return (
-        <div className="flex h-auto max-w-[58rem] flex-col items-center">
+        <div className="flex h-auto max-w-[960px] flex-col items-center">
             <div className="flex w-full flex-col items-center justify-center bg-white ">
                 <Header />
                 <TitleCard
@@ -26,7 +30,10 @@ const TreatmentMedication = () => {
                 />
             </div>
             <TreatmentMenu menuItems={menuItems} activeTitle={2} />
-            <MedicationDash title="Medicatie" topLeftLogo={<IconVaccine color="#497DAE" />} />
+            <MedicationDash
+                title="Medicatie"
+                topLeftLogo={<IconVaccine color="#497DAE" />}
+            />
         </div>
     );
 };

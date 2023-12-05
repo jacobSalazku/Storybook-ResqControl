@@ -1,9 +1,18 @@
-import "../index.css";
-import { getGender } from "./helpers";
-import { getBorderColorClass } from "../stories/helpers/ClientDataFunctions";
-import { IconCalendarEvent, IconClockHour4, IconDownload, IconEdit, IconPill, IconPointFilled, IconWorld, IconX } from "@tabler/icons-react";
-import { PatientProps } from "../interfaces";
-import { useState } from "react";
+import '../index.css';
+import { getGender } from './helpers';
+import { getBorderColorClass } from '../stories/helpers/ClientDataFunctions';
+import {
+    IconCalendarEvent,
+    IconClockHour4,
+    IconDownload,
+    IconEdit,
+    IconPill,
+    IconPointFilled,
+    IconWorld,
+    IconX,
+} from '@tabler/icons-react';
+import { PatientProps } from '../interfaces';
+import { useState } from 'react';
 
 interface EditData {
     gender: string;
@@ -12,7 +21,16 @@ interface EditData {
     dateOfBirth: string;
     allergies: boolean;
 }
-const PatientOverviewCard = ({ time, name, language, gender, dateOfBirth, urgency, nationality, allergies }: PatientProps) => {
+const PatientOverviewCard = ({
+    time,
+    name,
+    language,
+    gender,
+    dateOfBirth,
+    urgency,
+    nationality,
+    allergies,
+}: PatientProps) => {
     const [editMode, setEditMode] = useState(false);
     const [nationalities, setNationalities] = useState(nationality);
     const [languages, setLanguages] = useState(language);
@@ -48,16 +66,17 @@ const PatientOverviewCard = ({ time, name, language, gender, dateOfBirth, urgenc
     };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const [newNationality, newLanguage, newDateOfBirth, newAllergies] = e.target.value.split(" - ");
+        const [newNationality, newLanguage, newDateOfBirth, newAllergies] =
+            e.target.value.split(' - ');
         setNationalities(newNationality);
         setLanguages(newLanguage);
         setDateOfBirth(newDateOfBirth);
-        setAllergies(newAllergies === "Yes");
+        setAllergies(newAllergies === 'Yes');
     };
 
     return (
         <div
-            className={`bg-transparant flex h-[309px] w-[391px] flex-row justify-between border border-l-[6px] shadow-lg shadow-[#808080] ${getBorderColorClass(
+            className={`bg-transparant flex h-[470px] w-[432px] flex-row justify-between border border-l-[6px] shadow-lg shadow-[#808080] ${getBorderColorClass(
                 urgency,
             )} rounded pt-3`}
         >
@@ -66,18 +85,29 @@ const PatientOverviewCard = ({ time, name, language, gender, dateOfBirth, urgenc
                     <p className="text-2xl font-medium text-black">{name}</p>
                 </div>
                 <div className="gap- flex flex-row pl-5">
-                    <div className="flex w-3/5 flex-col justify-start gap-2 pr-2 pt-2 font-light text-p-text-color ">
+                    <div className="flex w-auto flex-col justify-start gap-2 pr-2 pt-2 font-light text-p-text-color ">
                         <div className="flow-row flex gap-4">
-                            <p className="text font-semibold">Gegevens Patient</p>
+                            <p className="text font-semibold">
+                                Gegevens Patient
+                            </p>
                             {editMode ? (
                                 <div className="flex w-1/5 flex-row justify-end ">
-                                    <IconX onClick={handleCancelEdit} className="cursor-pointer" />
+                                    <IconX
+                                        onClick={handleCancelEdit}
+                                        className="cursor-pointer"
+                                    />
 
-                                    <IconDownload onClick={() => handleSaveEdit()} className="cursor-pointer" />
+                                    <IconDownload
+                                        onClick={() => handleSaveEdit()}
+                                        className="cursor-pointer"
+                                    />
                                 </div>
                             ) : (
                                 <div className="flex w-1/5 flex-row justify-end ">
-                                    <IconEdit onClick={ClickEditMode} className="cursor-pointer" />
+                                    <IconEdit
+                                        onClick={ClickEditMode}
+                                        className="cursor-pointer"
+                                    />
                                 </div>
                             )}
                         </div>
@@ -91,13 +121,19 @@ const PatientOverviewCard = ({ time, name, language, gender, dateOfBirth, urgenc
                             <IconWorld color="#294564" stroke="1.3" />
                             {editMode ? (
                                 <>
-                                    <input className="" value={`${nationalities} - ${languages}`} type="text" onChange={handleInputChange} />
+                                    <input
+                                        className=""
+                                        value={`${nationalities} - ${languages}`}
+                                        type="text"
+                                        onChange={handleInputChange}
+                                    />
                                 </>
                             ) : (
                                 <>
                                     <div className="">
                                         <p>
-                                            {editData.nationality} - {editData.language}
+                                            {editData.nationality} -{' '}
+                                            {editData.language}
                                         </p>
                                     </div>
                                 </>
@@ -107,7 +143,10 @@ const PatientOverviewCard = ({ time, name, language, gender, dateOfBirth, urgenc
                             <IconCalendarEvent color="#294564" stroke="1.3" />
                             {editMode ? (
                                 <>
-                                    <input value={dateOfBirthState} type="text" />
+                                    <input
+                                        value={dateOfBirthState}
+                                        type="text"
+                                    />
                                 </>
                             ) : (
                                 <>
@@ -127,28 +166,54 @@ const PatientOverviewCard = ({ time, name, language, gender, dateOfBirth, urgenc
                             <IconPill color="#294564" stroke="1.3" />
                             {editMode ? (
                                 <>
-                                    <input value={`Allergieën: ${editData.allergies.toString() == "false" ? "No" : "Yes"}`} type="text" />
+                                    <input
+                                        value={`Allergieën: ${
+                                            editData.allergies.toString() ==
+                                            'false'
+                                                ? 'No'
+                                                : 'Yes'
+                                        }`}
+                                        type="text"
+                                    />
                                 </>
                             ) : (
-                                <div>{allergies ? <p>Allergieën: Yes</p> : <p>Allergieën: No</p>}</div>
+                                <div>
+                                    {allergies ? (
+                                        <p>Allergieën: Yes</p>
+                                    ) : (
+                                        <p>Allergieën: No</p>
+                                    )}
+                                </div>
                             )}
                         </div>
-                    </div>
-                    <div className="flex flex-col items-start justify-start gap-2 border-l border-black pl-2 pt-2 font-light">
                         <div>
                             <p className="font-semibold">Klachten Patient</p>
                         </div>
-                        <div className="flex flex-row items-center gap-1">
-                            <IconPointFilled color="#294564" stroke="1.3" size="6" />
-                            <p>Pijn op de borst</p>
-                        </div>
-                        <div className="flex flex-row items-center gap-1">
-                            <IconPointFilled color="#294564" stroke="1.3" size="6" />
-                            <p>Hoofdpijn</p>
-                        </div>
-                        <div className="flex flex-row items-center gap-1">
-                            <IconPointFilled color="#294564" stroke="1.3" size="6" />
-                            <p>Braken</p>
+                        <div className="flex w-full flex-row items-start justify-start gap-2 pl-2 font-light ">
+                            <div className="flex flex-row items-center gap-1">
+                                <IconPointFilled
+                                    color="#294564"
+                                    stroke="1.3"
+                                    size="6"
+                                />
+                                <p>Pijn op de borst</p>
+                            </div>
+                            <div className="flex flex-row items-center gap-1">
+                                <IconPointFilled
+                                    color="#294564"
+                                    stroke="1.3"
+                                    size="6"
+                                />
+                                <p>Hoofdpijn</p>
+                            </div>
+                            <div className="flex flex-row items-center gap-1">
+                                <IconPointFilled
+                                    color="#294564"
+                                    stroke="1.3"
+                                    size="6"
+                                />
+                                <p>Braken</p>
+                            </div>
                         </div>
                     </div>
                 </div>

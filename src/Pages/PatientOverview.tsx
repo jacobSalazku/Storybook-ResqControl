@@ -42,7 +42,7 @@ export const PatientOverview = () => {
 
     return (
         <>
-            <div className="flex h-auto max-w-[58rem] flex-col items-center">
+            <div className="flex h-auto max-w-[960px] flex-col items-center">
                 <div className="flex w-full flex-col items-center justify-center bg-white ">
                     <Header />
                     <TitleCard

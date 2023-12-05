@@ -54,7 +54,7 @@ const Triage = () => {
     };
     return (
         <div className="flex h-screen flex-col items-center">
-            <div className="flex max-w-[58rem] flex-col items-center justify-center gap-2">
+            <div className="flex max-w-[960px] flex-col items-center justify-center gap-2">
                 <Header />
                 <TitleCard
                     title="Triage"

@@ -1,14 +1,20 @@
-import { IconDeviceFloppy, IconDoorExit, IconNote } from "@tabler/icons-react";
-import Header from "../Components/Header";
-import IconButton from "../Components/IconButton";
-import InputTextArea from "../Components/InputTextArea";
-import TitleCard from "../Components/TitleCard";
-import TreatmentMenu from "../Components/TreatmentMenu";
+import { IconDeviceFloppy, IconDoorExit, IconNote } from '@tabler/icons-react';
+import Header from '../Components/Header';
+import IconButton from '../Components/IconButton';
+import InputTextArea from '../Components/InputTextArea';
+import TitleCard from '../Components/TitleCard';
+import TreatmentMenu from '../Components/TreatmentMenu';
 
-export const menuItems = ["Terug naar festival", "Naar huis", "Doorverwijzing naar Arts", "ZiekenWagen", "Weigering"];
+export const menuItems = [
+    'Terug naar festival',
+    'Naar huis',
+    'Doorverwijzing naar Arts',
+    'ZiekenWagen',
+    'Weigering',
+];
 const Festival = () => {
     return (
-        <div className="flex h-auto max-w-[58rem] flex-col items-center">
+        <div className="flex h-auto max-w-[960px] flex-col items-center">
             <div className="flex w-full flex-col items-center justify-center bg-white ">
                 <Header />
                 <TitleCard
