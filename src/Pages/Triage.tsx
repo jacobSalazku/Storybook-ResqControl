@@ -53,7 +53,7 @@ const Triage = () => {
         });
     };
     return (
-        <div className="flex h-screen flex-col items-center">
+        <div className="flex h-screen flex-col items-center bg-background-color">
             <div className="flex max-w-[960px] flex-col items-center justify-center gap-2">
                 <Header />
                 <TitleCard
@@ -88,7 +88,6 @@ const Triage = () => {
                         <div className="gap-4&& flex w-full flex-row justify-between">
                             <PatientOverviewCard {...Patient} />
                             <div className="flex flex-col items-start justify-start gap-2 pl-4">
-                                <p className="font-semibold">Triage code</p>
                                 <TriageOption />
                                 <div>
                                     <p className="font-semibold">Pathologiën</p>

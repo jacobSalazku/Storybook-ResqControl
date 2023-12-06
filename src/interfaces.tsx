@@ -11,6 +11,14 @@ export interface ButtonProps {
     HandleOptions?: () => void;
     height?: string;
     shadow?: string;
+    border?: string;
+}
+
+export interface TriageOption {
+    selected?: boolean | null;
+    label: string;
+    backgroundColor?: string | void;
+    selectedColor: string;
 }
 
 export interface iconProps {

@@ -52,6 +52,18 @@ export const getBorderBottomColorClass = (urgency: string | undefined) => {
         return 'border-b-dark-green';
     }
 };
+// eslint-disable-next-line
+export const getBGColorClass = (urgency: string | undefined) => {
+    if (urgency === 'T1') {
+        return 'bg-p-green';
+    } else if (urgency === 'T2') {
+        return 'bg-p-yellow';
+    } else if (urgency === 'T3') {
+        return 'bg-[#EE7E7A]';
+    } else if (urgency === 'base') {
+        return 'bg-dark-green';
+    }
+};
 
 // eslint-disable-next-line
 export const iconDelete = (
