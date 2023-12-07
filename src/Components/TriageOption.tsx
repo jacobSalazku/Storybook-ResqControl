@@ -2,7 +2,7 @@ import { TriageButton } from './TriageButton';
 
 const TriageOption = () => {
     return (
-        <div className="flex flex-col justify-center  gap-2 bg-white px-4 py-5 shadow-md sm:h-[100px] sm:w-[432px]">
+        <div className="flex w-full flex-col justify-center gap-2 bg-white px-4 py-5 shadow-md sm:h-[100px] md:w-[432px]">
             <p className="font-base">Triage code</p>
             <div className="flex h-[40px] flex-row items-center justify-between rounded border bg-inherit px-[2px] py-[2px] shadow-md">
                 <TriageButton label="T1" selectedColor="bg-p-red text-white" />

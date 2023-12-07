@@ -3,16 +3,14 @@ import TitleCard from '../Components/TitleCard';
 import IconButtonLogoRight from '../Components/IconButtonLogoRight';
 import Header from '../Components/Header';
 import PatientOverviewCard from '../Components/PatientOverviewCard';
-import Pathology from '../Components/Pathology';
-import { IconCirclePlus } from '@tabler/icons-react';
-import { useState } from 'react';
-import { PathologyData } from '../interfaces';
 import {
     IconArrowBarLeft,
     IconArrowBarRight,
-    IconReport,
+    IconClipboardCheck,
 } from '@tabler/icons-react';
 import TriageOption from '../Components/TriageOption';
+import Pathology from '../Components/Pathology';
+import TitleCardButton from '../Components/TitleCardButton';
 
 const Patient = {
     time: '12:50',
@@ -28,40 +26,16 @@ const Patient = {
 };
 
 const Triage = () => {
-    const [pathologies, setPathologies] = useState([
-        {
-            location: '',
-            side: '',
-        },
-    ]);
-
-    const handleAddPathology = () => {
-        setPathologies((prevPathologies: PathologyData[]) => [
-            ...prevPathologies,
-            {
-                location: '',
-                side: '',
-            },
-        ]);
-    };
-
-    const DeletePathology = (index: number) => {
-        setPathologies((prevPathologies: PathologyData[]) => {
-            const updatedPathologies = [...prevPathologies];
-            updatedPathologies.splice(index, 1); // Remove the pathology at the specified index
-            return updatedPathologies;
-        });
-    };
     return (
         <div className="flex h-screen flex-col items-center bg-background-color">
-            <div className="flex max-w-[960px] flex-col items-center justify-center gap-2">
+            <div className="gap- flex w-full flex-col items-center justify-center md:max-w-[960px]">
                 <Header />
                 <TitleCard
                     title="Triage"
                     leftButton={
-                        <IconButton
+                        <TitleCardButton
                             label="Triage Annuleren"
-                            size="h-[40px] w-[171px]"
+                            size="h-auto w-auto"
                             icon={
                                 <IconArrowBarLeft
                                     color="#FFFFFF"
@@ -70,97 +44,37 @@ const Triage = () => {
                                 />
                             }
                             backgroundColor="bg-p-red border-p-red hover:bg-[#f7554f] shadow-md text-white"
-                            variant="rounded-sm"
-                        />
-                    }
-                    rightButton={
-                        <IconButton
-                            label="Naar Triage Wachtzaal"
-                            size="h-[40px] w-[px]"
-                            icon={<IconReport color="#263B54" stroke={1.5} />}
-                            backgroundColor=" bg-white border-white hover:border-[#497DAE] hover:bg-[#497DAE] hover:text-white shadow-md"
-                            variant="rounded-sm"
+                            variant="rounded"
                         />
                     }
                 />
-                <div className="max-w flex flex-col gap-6 px-8">
+                <div className="flex w-full flex-col gap-6 md:px-4 ">
                     <div className="flex flex-row justify-center ">
-                        <div className="gap-4&& flex w-full flex-row justify-between">
+                        <div className="flex w-full flex-col justify-between gap-4 md:flex-row">
                             <PatientOverviewCard {...Patient} />
-                            <div className="flex flex-col items-start justify-start gap-8 pl-4">
+                            <div className="flex flex-col items-start justify-start gap-8 md:pl-4">
+                                <Pathology />
                                 <TriageOption />
-
-                                <div className=" flex flex-col justify-center gap-3 bg-white px-4 py-5 shadow-md sm:h-[100px] sm:w-[432px] ">
-                                    <p className="font-semibold">Pathologiën</p>
-
-                                    {pathologies.length < 0 && (
-                                        <div className="bg-white ">
-                                            <p className="font-semibold">
-                                                Pathologiën
-                                            </p>
-                                            {pathologies.map(
-                                                (
-                                                    pathology: PathologyData,
-                                                    index: number,
-                                                ) => (
-                                                    <Pathology
-                                                        location={
-                                                            pathology.location
-                                                        }
-                                                        side={pathology.side}
-                                                        onDelete={() =>
-                                                            DeletePathology(
-                                                                index,
-                                                            )
-                                                        }
-                                                    />
-                                                ),
-                                            )}
-                                            <IconButtonLogoRight
-                                                label="Voeg pathologie toe"
-                                                icon={
-                                                    <IconCirclePlus
-                                                        color="#ffffFf"
-                                                        stroke={1.5}
-                                                    />
-                                                }
-                                                size="h-[40px] w-[212px]"
-                                                variant="rounded"
-                                                backgroundColor="border-p-green bg-p-green text-white shadow-md shadow-[#808080]"
-                                                onClick={() =>
-                                                    handleAddPathology()
-                                                }
-                                            />
-                                        </div>
-                                    )}
-
-                                    {pathologies.length > 0 && (
-                                        <IconButtonLogoRight
-                                            label="Voeg pathologie toe"
-                                            icon={
-                                                <IconCirclePlus
-                                                    color="#ffffFf"
-                                                    stroke={1.5}
-                                                />
-                                            }
-                                            size="h-[40px] w-[212px]"
-                                            variant="rounded"
-                                            backgroundColor="border-p-green bg-p-green text-white shadow-md shadow-[#808080]"
-                                            onClick={() => handleAddPathology()}
-                                        />
-                                    )}
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="flex w-full flex-row justify-end ">
-                        <IconButtonLogoRight
-                            label="Patient Behandelen"
-                            icon={<IconArrowBarRight />}
-                            size="h-[40px] w-[193px]"
-                            variant="rounded"
-                            backgroundColor="border-[#497DAE] bg-[#497DAE] text-white shadow-lg "
-                        />
+                    <div className="flex w-full flex-1 justify-center sm:justify-end">
+                        <div className="flex w-full flex-row justify-between md:w-1/2 md:pl-4 ">
+                            <IconButton
+                                label="Naar TRI wachtrij"
+                                backgroundColor="bg-transparant border-light-blue text-light-blue font-base"
+                                variant="rounded"
+                                size="h-[40px] w-[172px]"
+                                icon={<IconClipboardCheck size={24} />}
+                            />
+                            <IconButtonLogoRight
+                                label="Start behandeling"
+                                icon={<IconArrowBarRight size={24} />}
+                                size="h-[40px] w-[193px]"
+                                variant="rounded"
+                                backgroundColor="border-light-blue bg-light-blue text-white shadow-lg "
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

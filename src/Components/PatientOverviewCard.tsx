@@ -23,8 +23,8 @@ const PatientOverviewCard = ({
 }: PatientProps) => {
     return (
         <div
-            className={`flex h-[276px] w-[470px]
-                flex-row justify-between border-l-[6px] bg-white shadow-md shadow-[#808080]  ${getBorderColorClass(
+            className={` flex w-full flex-row justify-between border-l-[6px]
+                bg-white shadow-md shadow-[#808080] transition-all sm:h-[276px] md:w-[432px]  ${getBorderColorClass(
                     urgency,
                 )} rounded pt-3`}
         >
