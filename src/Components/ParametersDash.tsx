@@ -5,22 +5,16 @@ import {
     FAST,
     motoricResponse,
     OgenArray,
-    Pupillen,
+    pupils,
     verbalResponse,
     wapaArr,
 } from './patientData';
 import IconButton from './IconButton';
-import { DeleteIcon } from '../stories/helpers/ClientDataFunctions';
 import { useInput } from '../Hooks/useInput';
 import InputSpan from './InputSpan';
 import { Button } from './Button';
-import { IconCheck, IconChevronDown } from '@tabler/icons-react';
+import { IconCheck, IconChevronDown, IconTrashX } from '@tabler/icons-react';
 
-type ButtonData = {
-    id: number;
-    name: string;
-    selected: boolean;
-};
 const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
     const breathing = useInput();
     const heartbeat = useInput();
@@ -32,30 +26,8 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
     const glycmie = useInput();
 
     const [show, setShow] = useState(true);
-    const [selectedItem, setSelectedItems] = useState<ButtonData | null>(null);
-    const [eyesOptions, setEyesOptions] = useState<ButtonData | null>(null);
-    const [verbalResponseOptions, setVerbalResponseOptions] =
-        useState<ButtonData | null>(null);
-
-    const [isSelected, setIsSelected] = useState(false);
 
     const toggleShow = () => setShow(!show);
-
-    const HandleEyesOptions = (item: ButtonData) => {
-        // Update the state to the selected item
-        setEyesOptions(item);
-        setIsSelected(!isSelected);
-    };
-
-    const HandleVerbalOptions = (item: ButtonData) => {
-        // Update the state to the selected item
-        setVerbalResponseOptions(item);
-    };
-
-    const handleItemClick = (item: ButtonData) => {
-        // Update the state to the selected item
-        setSelectedItems(item);
-    };
 
     return (
         <div className="flex w-full flex-row justify-center py-2">
@@ -100,17 +72,14 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                     <div className="py-4 pl-2">
                                         <h2>Openen van ogen</h2>
                                     </div>
-                                    <div className="flex flex-col gap-2 ">
+                                    <div className="flex flex-row gap-2 ">
                                         {OgenArray.map((ogen) => (
                                             <div key={ogen.id}>
                                                 <Button
-                                                    backgroundColor="bg-white"
+                                                    backgroundColor="bg-white border-light-blue text-light-blue"
                                                     size="h-[40px] px-4"
                                                     variant="rounded-full"
                                                     label={ogen.name}
-                                                    onClick={() =>
-                                                        HandleEyesOptions(ogen)
-                                                    }
                                                     icon={
                                                         <IconCheck color="#FFFFFF" />
                                                     }
@@ -119,74 +88,50 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                         ))}
                                     </div>
                                     <div>
-                                        <h3>Selected Item:</h3>
-                                        {eyesOptions ? (
-                                            <p>{eyesOptions.name}</p>
-                                        ) : (
-                                            <p>No item selected</p>
-                                        )}
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="py-4">
-                                        <h2> Verbaal Antwoord</h2>
-                                    </div>
-                                    <div className="flex flex-col gap-2">
-                                        {verbalResponse.map((response) => (
-                                            <div key={response.id}>
-                                                <button
-                                                    className={
-                                                        'h-[40px] rounded-full border-2 px-4'
-                                                    }
-                                                    onClick={() =>
-                                                        HandleVerbalOptions(
-                                                            response,
-                                                        )
-                                                    }
-                                                >
-                                                    {response.name}
-                                                </button>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div>
-                                        <h3>Selected Item:</h3>
-                                        {verbalResponseOptions ? (
-                                            <p>{verbalResponseOptions.name}</p>
-                                        ) : (
-                                            <p>No item selected</p>
-                                        )}
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="py-4 pl-2">
-                                        <h2>Motorisch Antwoord</h2>
-                                    </div>
-                                    <div className="flex flex-col gap-2">
-                                        {motoricResponse.map(
-                                            (motoricResponse) => (
-                                                <div key={motoricResponse.id}>
-                                                    <button
-                                                        className={`h-[40px] rounded-full border-2 px-4`}
-                                                        onClick={() =>
-                                                            handleItemClick(
-                                                                motoricResponse,
-                                                            )
+                                        <div className="py-4 pl-2">
+                                            <h2> Verbaal Antwoord</h2>
+                                        </div>
+                                        <div className="flex flex-row gap-2">
+                                            {verbalResponse.map((response) => (
+                                                <div key={response.id}>
+                                                    <Button
+                                                        backgroundColor="bg-white border-light-blue text-light-blue"
+                                                        size="h-[40px] px-4"
+                                                        variant="rounded-full"
+                                                        label={response.name}
+                                                        icon={
+                                                            <IconCheck color="#FFFFFF" />
                                                         }
-                                                    >
-                                                        {motoricResponse.name}
-                                                    </button>
+                                                    />
                                                 </div>
-                                            ),
-                                        )}
+                                            ))}
+                                        </div>
                                     </div>
                                     <div>
-                                        <h3>Selected Item:</h3>
-                                        {selectedItem ? (
-                                            <p>{selectedItem.name}</p>
-                                        ) : (
-                                            <p>No item selected</p>
-                                        )}
+                                        <div className="py-4 pl-2">
+                                            <h2>Motorisch Antwoord</h2>
+                                        </div>
+                                        <div className="flex flex-row gap-2">
+                                            {motoricResponse.map(
+                                                (motoricResponse) => (
+                                                    <div
+                                                        key={motoricResponse.id}
+                                                    >
+                                                        <Button
+                                                            backgroundColor="bg-white border-light-blue text-light-blue"
+                                                            size="h-[40px] px-4"
+                                                            variant="rounded-full"
+                                                            label={
+                                                                motoricResponse.name
+                                                            }
+                                                            icon={
+                                                                <IconCheck color="#FFFFFF" />
+                                                            }
+                                                        />
+                                                    </div>
+                                                ),
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -194,20 +139,21 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                         <div>
                             <div className="py-4 pl-2">
                                 {' '}
-                                <h2>Motorisch Antwoord</h2>
+                                <h2>WAPA</h2>
                             </div>
                             <div>
                                 <div className="flex flex-row justify-start gap-16">
                                     {wapaArr.map((wapaItem) => (
                                         <div key={wapaItem.id}>
-                                            <button
-                                                className="h-[40px] rounded-full border-2 px-4"
-                                                onClick={() =>
-                                                    handleItemClick(wapaItem)
+                                            <Button
+                                                backgroundColor="bg-white border-light-blue text-light-blue"
+                                                size="h-[40px] px-4"
+                                                variant="rounded-full"
+                                                label={wapaItem.name}
+                                                icon={
+                                                    <IconCheck color="#FFFFFF" />
                                                 }
-                                            >
-                                                {wapaItem.name}
-                                            </button>
+                                            />
                                         </div>
                                     ))}
                                 </div>
@@ -222,14 +168,15 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                 <div className="flex flex-row justify-start gap-16">
                                     {FAST.map((item) => (
                                         <div key={item.id}>
-                                            <button
-                                                className="h-[40px] rounded-full border-2 px-4"
-                                                onClick={() =>
-                                                    handleItemClick(item)
+                                            <Button
+                                                backgroundColor="bg-white border-light-blue text-light-blue"
+                                                size="h-[40px] px-4"
+                                                variant="rounded-full"
+                                                label={item.name}
+                                                icon={
+                                                    <IconCheck color="#FFFFFF" />
                                                 }
-                                            >
-                                                {item.name}
-                                            </button>
+                                            />
                                         </div>
                                     ))}
                                 </div>
@@ -242,16 +189,17 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                             </div>
                             <div>
                                 <div className="flex flex-row justify-start gap-16">
-                                    {Pupillen.map((item) => (
+                                    {pupils.map((item) => (
                                         <div key={item.id}>
-                                            <button
-                                                className="h-[40px] rounded-full border-2 px-4"
-                                                onClick={() =>
-                                                    handleItemClick(item)
+                                            <Button
+                                                backgroundColor="bg-white border-light-blue text-light-blue"
+                                                size="h-[40px] px-4"
+                                                variant="rounded-full"
+                                                label={item.name}
+                                                icon={
+                                                    <IconCheck color="#FFFFFF" />
                                                 }
-                                            >
-                                                {item.name}
-                                            </button>
+                                            />
                                         </div>
                                     ))}
                                 </div>
@@ -280,20 +228,21 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                         <div className="mt-6 ">
                             <div className="py-4 pl-2">
                                 {' '}
-                                <h2>Pupillen</h2>
+                                <h2>Capillaire refill (CRT)</h2>
                             </div>
                             <div>
                                 <div className="flex flex-row justify-start gap-16">
                                     {crt.map((crtItem) => (
                                         <div key={crtItem.id}>
-                                            <button
-                                                className="h-[40px] rounded-full border-2 px-4"
-                                                onClick={() =>
-                                                    handleItemClick(crtItem)
+                                            <Button
+                                                backgroundColor="bg-white border-light-blue text-light-blue"
+                                                size="h-[40px] px-4"
+                                                variant="rounded-full"
+                                                label={crtItem.name}
+                                                icon={
+                                                    <IconCheck color="#FFFFFF" />
                                                 }
-                                            >
-                                                {crtItem.name}
-                                            </button>
+                                            />
                                         </div>
                                     ))}
                                 </div>
@@ -371,7 +320,7 @@ const ParametersDash = ({ topLeftLogo, title }: TreatmentDashProps) => {
                                 />
                                 <div className="flex flex-row items-end justify-end">
                                     <IconButton
-                                        icon={DeleteIcon}
+                                        icon={<IconTrashX color="#ffffff" />}
                                         variant="rounded"
                                         size="w-[132px] h-[44px]"
                                         backgroundColor="bg-p-red text-white border-p-red"

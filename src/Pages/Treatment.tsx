@@ -1,4 +1,3 @@
-import TitleCard from '../Components/TitleCard';
 import Header from '../Components/Header';
 import IconButton from '../Components/IconButton';
 import TreatmentMenu from '../Components/TreatmentMenu';
@@ -9,13 +8,14 @@ import {
     IconVaccine,
     IconStethoscope,
 } from '@tabler/icons-react';
+import TitleCardTreatmentMenu from '../Components/TitleCardTreatmentMenu';
 
 const Treatment = () => {
     return (
         <div className="flex h-auto max-w-[960px] flex-col items-center">
             <div className="flex w-full flex-col items-center justify-center bg-white ">
                 <Header />
-                <TitleCard
+                <TitleCardTreatmentMenu
                     title="Basis Verzorging"
                     icon={<IconStethoscope color="#497DAE" />}
                     rightButton={
@@ -27,10 +27,13 @@ const Treatment = () => {
                             variant="rounded-sm"
                         />
                     }
+                    menu={
+                        <TreatmentMenu menuItems={menuItems} activeTitle={0} />
+                    }
                 />
             </div>
             {/** active title prop only for storybook  */}
-            <TreatmentMenu menuItems={menuItems} activeTitle={0} />
+
             <div className="pt-5">
                 <TreatmentDash
                     title="Buikpijn"

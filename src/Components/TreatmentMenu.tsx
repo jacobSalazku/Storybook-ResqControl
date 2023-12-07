@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { menuProps } from "../interfaces";
+import { useState } from 'react';
+import { menuProps } from '../interfaces';
 
 const TreatmentMenu = ({ menuItems, activeTitle }: menuProps) => {
     //active title enkel voor storybook
-    const [activeItem, setActiveItem] = useState(menuItems[activeTitle]) || "";
+    const [activeItem, setActiveItem] = useState(menuItems[activeTitle]) || '';
 
     const activateMenu = (item: string) => {
         setActiveItem(item);
@@ -15,8 +15,10 @@ const TreatmentMenu = ({ menuItems, activeTitle }: menuProps) => {
                 {menuItems.map((menuitem, index) => (
                     <div
                         key={index}
-                        className={`cursor-pointer border-b-light-blue px-5 py-2 hover:border-b-4 ${
-                            activeItem === menuitem ? "border-b-4 border-b-light-blue" : ""
+                        className={`cursor-pointer border-b-light-blue px-5 font-thin hover:border-b-4 hover:font-normal ${
+                            activeItem === menuitem
+                                ? 'border-b-light-blued border-b-4 font-semibold'
+                                : ''
                         }`}
                         onClick={() => activateMenu(menuitem)}
                     >

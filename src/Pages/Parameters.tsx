@@ -1,15 +1,12 @@
-import {
-    IconDeviceFloppy,
-    IconStethoscope,
-    IconVaccine,
-} from '@tabler/icons-react';
+import { IconCircleCheck, IconVaccine, IconX } from '@tabler/icons-react';
 import Header from '../Components/Header';
-import IconButton from '../Components/IconButton';
 import ParametersDash from '../Components/ParametersDash';
 import { proceedsArr } from '../Components/patientData';
-import TitleCard from '../Components/TitleCard';
+
 import TreatmentMenu from '../Components/TreatmentMenu';
 import { stringTime } from '../stories/helpers/DateTime';
+import TitleCardButton from '../Components/TitleCardButton';
+import TitleCardTreatmentMenu from '../Components/TitleCardTreatmentMenu';
 
 const menuItems = [
     'Parameters',
@@ -25,21 +22,32 @@ const Parameters = () => {
             <div className="flex w-full flex-col items-center justify-center bg-white ">
                 <Header />
 
-                <TitleCard
+                <TitleCardTreatmentMenu
                     title="Behandeling"
-                    icon={<IconStethoscope color="#497DAE" />}
                     rightButton={
-                        <IconButton
-                            label="Wijzigingen opslaan"
-                            backgroundColor=" border-[#497DAE] bg-[#497DAE] text-white shadow-lg "
-                            size="h-[40px] w-[193px]"
-                            icon={<IconDeviceFloppy />}
-                            variant="rounded-sm"
+                        <TitleCardButton
+                            label="Behandelingen afronden"
+                            backgroundColor=" border-p-green bg-p-green text-white shadow-lg "
+                            size="h-[40px] w-auto"
+                            icon={<IconCircleCheck />}
+                            variant="rounded"
                         />
+                    }
+                    leftButton={
+                        <TitleCardButton
+                            label="Behandelingen afronden"
+                            backgroundColor=" border-p-red bg-p-red text-white shadow-lg "
+                            size="h-[40px] w-auto"
+                            icon={<IconX />}
+                            variant="rounded"
+                        />
+                    }
+                    menu={
+                        <TreatmentMenu menuItems={menuItems} activeTitle={0} />
                     }
                 />
             </div>
-            <TreatmentMenu menuItems={menuItems} activeTitle={0} />
+
             <ParametersDash
                 title={stringTime}
                 topLeftLogo={<IconVaccine color="#497DAE" />}

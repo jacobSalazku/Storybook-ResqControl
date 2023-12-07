@@ -65,7 +65,9 @@ export interface TitelCardProps {
     leftButton?: JSX.Element;
     icon?: JSX.Element;
 }
-
+export interface TitleCardTreatmentMenu extends TitelCardProps {
+    menu: JSX.Element;
+}
 export interface TreatmentProps {
     description: string;
     isCompleted: boolean;

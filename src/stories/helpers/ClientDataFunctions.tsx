@@ -17,9 +17,8 @@ export const SendIcon = <img src={sendIcon} alt="next"></img>;
 export const EyeLogo = <img src={eyeLogo} alt="next"></img>;
 
 export const DeleteLogo = <img src={deleteLogo} alt="Exit"></img>;
-
-// eslint-disable-next-line
-export const getUrgencyIcon = (urgency: string | undefined) => {
+export // eslint-disable-next-line
+const getUrgencyIcon = (urgency: string | undefined) => {
     if (urgency === 'T1') {
         return <img src={greenArrow} alt="minor" />;
     } else if (urgency === 'T2') {
