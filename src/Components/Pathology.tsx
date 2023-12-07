@@ -1,26 +1,29 @@
-import { DeleteLogo } from "../stories/helpers/ClientDataFunctions";
-import { useState } from "react";
-import InputSelect from "./InputSelect";
-import Searchbar from "./Searchbar";
-import { PathologyData } from "../interfaces";
+import { PathologyData } from '../interfaces';
+import { DeleteLogo } from '../stories/helpers/ClientDataFunctions';
 
-const locatie = ["inwendig", "uitwendig", "ribben"];
-const zijde = ["Linker", "Rechter"];
+import InputSelect from './InputSelect';
+import Searchbar from './Searchbar';
 
-const Pathology = ({ location, side, onDelete }: PathologyData) => {
-    const [selectedLocation, setSelectedLocation] = useState<string>(location);
-    const [selectedSide, setSelectedSide] = useState<string>(side);
+const locatie = ['inwendig', 'uitwendig', 'ribben'];
+const zijde = ['Linker', 'Rechter'];
 
+const Pathology = ({ onDelete }: PathologyData) => {
     return (
         <div className="flex h-[60px] w-full flex-col items-center gap-4 border-b-2 px-1">
             <div className="flex w-full flex-row items-center justify-between gap-2">
-                <Searchbar borderColor="light-blue" placeholder="Search" width={130} height={30} borderRadius="rounded-full" />
+                <Searchbar
+                    borderColor="light-blue"
+                    placeholder="Search"
+                    width={130}
+                    height={30}
+                    borderRadius="rounded-full"
+                />
                 <div>
-                    <InputSelect menuItems={locatie} title="Locatie" onChange={(value) => setSelectedLocation(value)} value={selectedLocation} />
+                    <InputSelect menuItems={locatie} title="Locatie" />
                 </div>
 
                 <div>
-                    <InputSelect menuItems={zijde} title="Zijde" onChange={(value) => setSelectedSide(value)} value={selectedSide} />
+                    <InputSelect menuItems={zijde} title="Zijde" />
                 </div>
                 <div className="pt-2">
                     <button onClick={() => onDelete}>{DeleteLogo}</button>

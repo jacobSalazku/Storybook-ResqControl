@@ -4,7 +4,7 @@ import IconButtonLogoRight from '../Components/IconButtonLogoRight';
 import Header from '../Components/Header';
 import PatientOverviewCard from '../Components/PatientOverviewCard';
 import Pathology from '../Components/Pathology';
-import { IconPlus } from '@tabler/icons-react';
+import { IconCirclePlus } from '@tabler/icons-react';
 import { useState } from 'react';
 import { PathologyData } from '../interfaces';
 import {
@@ -16,7 +16,7 @@ import TriageOption from '../Components/TriageOption';
 
 const Patient = {
     time: '12:50',
-    urgency: 'base',
+    urgency: 'T2',
     name: 'John Doe',
     language: 'DE',
     date: '20-03',
@@ -87,39 +87,69 @@ const Triage = () => {
                     <div className="flex flex-row justify-center ">
                         <div className="gap-4&& flex w-full flex-row justify-between">
                             <PatientOverviewCard {...Patient} />
-                            <div className="flex flex-col items-start justify-start gap-2 pl-4">
+                            <div className="flex flex-col items-start justify-start gap-8 pl-4">
                                 <TriageOption />
-                                <div>
-                                    <p className="font-semibold">Pathologiën</p>
-                                </div>
 
-                                {pathologies.map(
-                                    (
-                                        pathology: PathologyData,
-                                        index: number,
-                                    ) => (
-                                        <Pathology
-                                            location={pathology.location}
-                                            side={pathology.side}
-                                            onDelete={() =>
-                                                DeletePathology(index)
+                                <div className=" flex flex-col justify-center gap-3 bg-white px-4 py-5 shadow-md sm:h-[100px] sm:w-[432px] ">
+                                    <p className="font-semibold">Pathologiën</p>
+
+                                    {pathologies.length < 0 && (
+                                        <div className="bg-white ">
+                                            <p className="font-semibold">
+                                                Pathologiën
+                                            </p>
+                                            {pathologies.map(
+                                                (
+                                                    pathology: PathologyData,
+                                                    index: number,
+                                                ) => (
+                                                    <Pathology
+                                                        location={
+                                                            pathology.location
+                                                        }
+                                                        side={pathology.side}
+                                                        onDelete={() =>
+                                                            DeletePathology(
+                                                                index,
+                                                            )
+                                                        }
+                                                    />
+                                                ),
+                                            )}
+                                            <IconButtonLogoRight
+                                                label="Voeg pathologie toe"
+                                                icon={
+                                                    <IconCirclePlus
+                                                        color="#ffffFf"
+                                                        stroke={1.5}
+                                                    />
+                                                }
+                                                size="h-[40px] w-[212px]"
+                                                variant="rounded"
+                                                backgroundColor="border-p-green bg-p-green text-white shadow-md shadow-[#808080]"
+                                                onClick={() =>
+                                                    handleAddPathology()
+                                                }
+                                            />
+                                        </div>
+                                    )}
+
+                                    {pathologies.length > 0 && (
+                                        <IconButtonLogoRight
+                                            label="Voeg pathologie toe"
+                                            icon={
+                                                <IconCirclePlus
+                                                    color="#ffffFf"
+                                                    stroke={1.5}
+                                                />
                                             }
+                                            size="h-[40px] w-[212px]"
+                                            variant="rounded"
+                                            backgroundColor="border-p-green bg-p-green text-white shadow-md shadow-[#808080]"
+                                            onClick={() => handleAddPathology()}
                                         />
-                                    ),
-                                )}
-                                <IconButton
-                                    label="Voeg pathologie toe"
-                                    icon={
-                                        <IconPlus
-                                            color="#ffffFf"
-                                            stroke={1.5}
-                                        />
-                                    }
-                                    size="h-[40px] w-[200px]"
-                                    variant="rounded"
-                                    backgroundColor="border-[#497DAE] bg-[#497DAE] text-white shadow-md shadow-[#808080]"
-                                    onClick={() => handleAddPathology()}
-                                />
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>
